@@ -1,0 +1,36 @@
+services:
+  # nginx
+  web:
+    image: nginx:latest
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./conf/nginx/nginx.conf:/etc/nginx/conf.d/nginx.conf
+      - ./public:/site1/public
+    depends_on:
+      - php
+    restart: "no"
+  # php
+  php:
+    build:
+      context: ./conf/Docker
+      dockerfile: PHP7.3OCI.Dockerfile
+    volumes:
+      - ./public:/site1/public
+    depends_on:
+      - postgresql
+    restart: "no"
+  # postgresql
+  postgresql:
+    image: postgres:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=dev
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./conf/postgresql/data:/var/lib/postgresql/data
+      - ./conf/postgresql/schema.sql:/docker_entrypoint-initdb.d/create_schema.sql
+      - ./conf/postgresql/data.sql:/docker_entrypoint-initdb.d/data.sql
+    restart: "no"
