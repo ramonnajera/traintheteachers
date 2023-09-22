@@ -1,7 +1,7 @@
 <div class="container mx-auto mt-5">
     <div class="flex justify-end">
         <button data-open-modal class="btn btn-primary mx-3">Nueva ruta de aprendizaje</button>
-        <dialog data-modal class="rounded rounded-md p-10">
+        <dialog data-modal class="rounded-md p-10">
             <p class="text-2xl mb-5">Nueva ruta de aprendizaje</p>
             <form action="<?=htmlspecialchars(base_url . "Carrera/add")?>" method="post" enctype="multipart/form-data">
                 <div class="mb-3">

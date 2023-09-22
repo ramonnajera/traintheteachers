@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Faktum';
+    src: url('../public/assets/fonts/faktum-wide-bold.otf') 
+}
+
+body {
+    font-family: 'Faktum', sans-serif;
+}
