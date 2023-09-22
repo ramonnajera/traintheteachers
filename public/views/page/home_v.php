@@ -2,7 +2,7 @@
     <?php if(isset($_SESSION['identidad']) && isset($_SESSION['admin'])):?>
     <div class="flex justify-end">
         <button data-open-modal class="btn btn-primary mx-3">Nuevo curso</button>
-        <dialog data-modal class="rounded rounded-md p-10">
+        <dialog data-modal class="rounded-md p-10">
             <p class="text-2xl mb-5">Nuevo curso</p>
             <form action="<?=htmlspecialchars(base_url . "Curso/add")?>" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
@@ -86,27 +86,12 @@
 
     
 <section class="">
-    <p class="text-center text-gray-900 font-[Faktum] font-bold text-2xl py-5">RUTAS DE APRENDIZAJE</p>
-    <div class="w-full mx-auto justify-items-center p-6 grid grid-cols-1 gap-4 md:grid-cols-3">
-        <?php foreach($carreras as $carrera):?>
-            <div class="w-60 col-span-1 flex flex-col bg-[#009989] border-2 p-2 rounded-sm transform transition-all hover:-translate-y-2 duration-300 shadow-lg hover:shadow-2xl">
-                <!-- Heading -->
-                <!-- <div class="p-2">
-                <h2 class="font-bold font-[Faktum] text-lg mb-2 "><?=$carrera["carrera_nombre"]?></h2>
-                </div> -->
-                <!-- Image -->
-                <img class="h-40 object-cover rounded-md" h-40 object-cover rounded-xl" src="<?=base_url?>assets/img/images/<?=$carrera["carrera_img"]?>" alt="">
-                <div class="p-2">
-                    <!-- Description -->
-                    <!-- <p class="text-sm  text-gray-600 line-clamp-3"><?=$carrera["carrera_descripcion"]?></p>
-                </div> -->
-                <!-- CTA -->
-                <div class="flex mt-auto pt-3 text-xs justify-center">
-                <a role='button' href='<?=base_url?>Curso/all?id=<?=$carrera["carrera_id"]?>' class="btn btn-primary ">Ver cursos</a>
-                </div>
-            </div>
-        <?php endforeach;?>
-    </div>
+    <p class="text-center text-gray-900  font-bold text-2xl py-5">RUTAS DE APRENDIZAJE</p>
+    <?php foreach($carreras as $carrera):?>
+    <?php require_once dirname(__FILE__).'../../includes/routes/Card_v.php';?>
+    <?php endforeach;?>
+
+    
 </section>
     <?php endif;?>
 </div>
