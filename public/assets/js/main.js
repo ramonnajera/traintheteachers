@@ -1,9 +1,19 @@
 window.addEventListener('load', function() {
+
+    const toogleBtn = document.querySelector(".toggle-button");
+    const dropdown = document.querySelector(".dropdown-menu");
+
+    toogleBtn.addEventListener("click", ()=>{
+        dropdown.classList.toggle('hidden');
+    })
+
     setTimeout(() => {
         const box = document.getElementById('notification');
-      
-        box.classList.add('fade-out-right');
-        box.classList.remove('fade-in-right');
+       
+        if(box){
+            box.classList.add('fade-out-right');
+            box.classList.remove('fade-in-right');
+        }
       
     }, 3000)
 

@@ -38,9 +38,9 @@
             </form>
         </dialog>
     </div>
-    <section>
-        <p class="mb-2 mt-0 text-5xl font-medium leading-tight">Cursos</p>
-        <table class="min-w-full divide-y divide-gray-200 overflow-x-auto">
+    <p class="mb-2 text-5xl font-medium leading-tight px-2">Cursos</p>
+    <section class="pb-10 flex-shrink-0 overflow-x-auto">
+        <table class="w-fmd:min-w-full divide-y divide-gray-200 overflow-x-auto">
         <thead class="bg-gray-50">
             <tr>
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">#</th>
