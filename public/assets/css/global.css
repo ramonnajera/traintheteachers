@@ -647,16 +647,6 @@ video {
   margin-right: auto;
 }
 
-.my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-}
-
-.my-0 {
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -780,10 +770,6 @@ video {
   height: 100%;
 }
 
-.h-1 {
-  height: 0.25rem;
-}
-
 .min-h-screen {
   min-height: 100vh;
 }
@@ -824,10 +810,6 @@ video {
   width: 100%;
 }
 
-.w-screen {
-  width: 100vw;
-}
-
 .min-w-full {
   min-width: 100%;
 }
@@ -838,10 +820,6 @@ video {
 
 .max-w-screen-xl {
   max-width: 1280px;
-}
-
-.max-w-full {
-  max-width: 100%;
 }
 
 .flex-none {
@@ -1140,6 +1118,11 @@ video {
   padding-right: 3rem;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -1185,21 +1168,6 @@ video {
   padding-bottom: 1.25rem;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
 .pb-10 {
   padding-bottom: 2.5rem;
 }
@@ -1214,10 +1182,6 @@ video {
 
 .pt-10 {
   padding-top: 2.5rem;
-}
-
-.pb-3 {
-  padding-bottom: 0.75rem;
 }
 
 .text-left {
@@ -1726,10 +1690,6 @@ dialog::backdrop {
 
   .md\:hidden {
     display: none;
-  }
-
-  .md\:min-w-full {
-    min-width: 100%;
   }
 
   .md\:grid-cols-2 {

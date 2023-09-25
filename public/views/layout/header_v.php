@@ -154,7 +154,7 @@
             <button data-open-modal class="btn btn-primary mx-3">Ingresar</button>
             <a href="<?=htmlspecialchars(base_url . "Page/registro")?>"
                 class="block py-2 pl-3 pr-4 text-white border hover:bg-pink-400 hover:border-transparent ">Registro</a>
-            <dialog data-modal class="rounded-md col">
+            <dialog data-modal class="rounded-md">
                 <p class="text-2xl mb-5 pt-10 text-center">Ingresar</p>
                 <form action="<?=htmlspecialchars(base_url . "User/login")?>" method="post">
                     <div class="mb-3 px-5">
