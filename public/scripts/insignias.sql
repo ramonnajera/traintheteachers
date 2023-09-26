@@ -81,3 +81,7 @@ CREATE TABLE participantes (
         FOREIGN KEY(curso_id) 
           REFERENCES cursos(curso_id)
 );
+
+insert into usuarios (usuario_nombre, usuario_pass, usuario_correo, usuario_activo,usuario_area, usuario_tipo) values ('Admin Mariano Cabrera', '$2y$04$LSJR.Nnmme4kCD9dhe.4iOpUXNIqm36j1qAnSHjfHcMT6wdLckkFa', 'admin@uach.mx', 't', 'Area de usuario','admin');
+
+insert into usuarios (usuario_nombre, usuario_pass, usuario_correo, usuario_activo,usuario_area, usuario_tipo) values ('User Mariano Cabrera', '$2y$04$LSJR.Nnmme4kCD9dhe.4iOpUXNIqm36j1qAnSHjfHcMT6wdLckkFa', 'user@uach.mx', 't', 'Area de usuario','user');
