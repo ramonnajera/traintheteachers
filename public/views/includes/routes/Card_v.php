@@ -67,4 +67,4 @@
 </div>
 
 
-        <?phpvar_dump($carrera);?>
+        <?php var_dump($carrera);?>

@@ -142,4 +142,22 @@ class CarreraModel extends conection{
         
         return $result;
     }
+
+    public function delete(){
+        $sql = "DELETE FROM carreras WHERE carrera_id=:carrera_id;";
+
+        $data = [
+            "carrera_id" => $this->getCarrera_id(),
+        ];
+
+        $delete = parent::nonQuery($sql, $data);
+
+        $result = false;
+        
+        if($delete){
+            $result = true;
+        }
+        
+        return $result;
+    }
 }

@@ -83,5 +83,35 @@ class CarreraController{
         return $resultado;
     }
 
+    public function delete(){
+        $_respuestas = new responses();
+        if($_GET){
+            $id = isset($_GET['id']) ? $_GET['id'] :false;
+            $id = filter_var($id, FILTER_VALIDATE_INT);
+
+            if($id){
+                $_CarreraModel = new CarreraModel();
+                $_CarreraModel->setCarrera_id($id);
+
+                $delete = $_CarreraModel->delete();
+
+                if ($delete) {
+                    $_respuestas->response["result"]["mensaje"] = "Delete correcto";
+                }else{
+                    $_respuestas->error_u00001();
+                }
+
+            }else{
+                $_respuestas->error_u00001();
+            }
+        }
+
+        $_SESSION['respuesta'] = [
+            "status" => $_respuestas->response["status"],
+            "mensaje" => $_respuestas->response["result"]["mensaje"]
+        ];
+        header("Location:".base_url."Page/carreras");
+    }
+
     
 }

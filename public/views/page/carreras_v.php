@@ -47,7 +47,7 @@
             <td class="py-4 px-6 border-b border-gray-200"><?=$carrera["carrera_nombre"]?></td>
             <td class="py-4 px-6 border-b border-gray-200"><?=$carrera["carrera_descripcion"]?></td>
             <td>
-            <a class="btn bg-green" href="<?=base_url?>Carrera/delete?id=<?=$carrera["carrera_id"]?>">Eliminar</a>
+            <a class="btn bg-red-600 text-white" href="<?=base_url?>Carrera/delete?id=<?=$carrera["carrera_id"]?>">Eliminar</a>
             </td>
             </tr>
             <?php endforeach;?>
