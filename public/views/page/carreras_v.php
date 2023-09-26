@@ -1,4 +1,4 @@
-<div class="container mx-auto mt-5">
+<div class="container mx-auto mt-5 py-10">
     <div class="flex justify-end">
         <button data-open-modal class="btn btn-primary mx-3">Nueva ruta de aprendizaje</button>
         <dialog data-modal class="rounded-md p-10">
@@ -42,7 +42,7 @@
         </thead>
         <tbody>
             <?php foreach($carreras as $carrera):?>
-            <tr class="border-b hover:bg-orange-100 bg-gray-100">
+            <tr class="border-b hover:bg-pink-100 bg-gray-100 xl:bg-gray-100 py-10">
             <td class="py-4 px-6 border-b border-gray-200"><?=$carrera["carrera_id"]?></td>
             <td class="py-4 px-6 border-b border-gray-200"><?=$carrera["carrera_nombre"]?></td>
             <td class="py-4 px-6 border-b border-gray-200"><?=$carrera["carrera_descripcion"]?></td>

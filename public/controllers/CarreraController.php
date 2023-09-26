@@ -15,7 +15,7 @@ class CarreraController{
             $descripcion = Utils::limpiarData($descripcion,"texto");
 
             $nombre = filter_var($nombre, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ\s]+$/")));
-            $descripcion = filter_var($descripcion, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ\s]+$/")));
+            $descripcion = filter_var($descripcion, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ,.\s]+$/")));
 
             if ($nombre && $descripcion) {
                 $_CarreraModel = new CarreraModel();
