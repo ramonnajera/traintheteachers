@@ -37,6 +37,7 @@
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">#</th>
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nombre</th>
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descripcion</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -45,6 +46,9 @@
             <td class="py-4 px-6 border-b border-gray-200"><?=$carrera["carrera_id"]?></td>
             <td class="py-4 px-6 border-b border-gray-200"><?=$carrera["carrera_nombre"]?></td>
             <td class="py-4 px-6 border-b border-gray-200"><?=$carrera["carrera_descripcion"]?></td>
+            <td>
+            <a href="<?=base_url?>Carrera/delete?id=<?=$carrera["carrera_id"]?>">Elimininar</a>
+            </td>
             </tr>
             <?php endforeach;?>
         </tbody>

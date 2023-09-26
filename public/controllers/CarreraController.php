@@ -82,4 +82,6 @@ class CarreraController{
 
         return $resultado;
     }
+
+    
 }
