@@ -1,1 +1,2 @@
-conf/postgresql/*
+conf/postgresql/data/
+node_modules/
