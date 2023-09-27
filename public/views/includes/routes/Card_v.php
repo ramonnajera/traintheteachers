@@ -29,7 +29,7 @@
 			</div>
 		</div> -->
 
-        <div class="bg-gray-100">
+        <!-- <div class="bg-gray-100">
   <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
     <div class="md:flex md:items-center md:justify-between">
       <h2 class="text-2xl font-bold tracking-tight text-gray-900">Rutas de aprendizaje</h2>
@@ -51,10 +51,10 @@
           </a>
         </h3>
         <p class="mt-1 text-sm text-gray-500"><?=$carrera["carrera_descripcion"]?></p>
-        <!-- <img src="<?=base_url?>assets/img/images/<?=$carrera["carrera_insignia"]?>" alt="Hand stitched, orange leather long wallet." class="h-10 w-10 mt-3 object-cover object-center"> -->
+        <img src="<?=base_url?>assets/img/images/<?=$carrera["carrera_insignia"]?>" alt="Hand stitched, orange leather long wallet." class="h-10 w-10 mt-3 object-cover object-center">
       </div>
 
-      <!-- More products... -->
+      More products... comment
     </div>
 
     <div class="mt-8 text-sm md:hidden">
@@ -64,7 +64,36 @@
       </a>
     </div>
   </div>
+</div> -->
+
+<!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+-->
+<div class="bg-gray-200">
+  <div class="mx-auto max-w-2xl px-4 py-4 sm:px-6 sm:py-8 lg:max-w-7xl lg:px-8">
+    <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+      <a href="#" class="group">
+        <div class="aspect-square w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-h-8 xl:aspect-w-7">
+          <img src="<?=base_url?>assets/img/images/<?=$carrera["carrera_img"]?>" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="h-full w-full object-cover object-center group-hover:opacity-75">
+        </div>
+        <h3 class="mt-4 text-md font-medium text-gray-700"><?=$carrera["carrera_nombre"]?></h3>
+        <!-- <p class="mt-1 text-xs font-regular text-gray-900"><?=$carrera["carrera_descripcion"]?></p> -->
+      </a>
+      
+    </div>
+  </div>
 </div>
 
 
-        <?php var_dump($carrera);?>
+        <?phpvar_dump($carrera);?>
