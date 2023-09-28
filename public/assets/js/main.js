@@ -1,5 +1,17 @@
 window.addEventListener('load', function() {
 
+    const  takaka= [
+        {
+            titulo: "sadasdasdsad", text: "zczxczxczxczxc",
+        },
+        {
+            titulo: "sadasdasdsad", text: "zczxczxczxczxc",
+        },
+        {
+            titulo: "sadasdasdsad", text: "zczxczxczxczxc",
+        },
+    ]
+
     const toogleBtn = document.querySelector(".toggle-button");
     const dropdown = document.querySelector(".dropdown-menu");
 
