@@ -1,7 +1,7 @@
 <?php
 
 class Utils{
-        public static function deleteSession($name){
+    public static function deleteSession($name){
         if (isset($_SESSION[$name])) {
             $_SESSION[$name] = null;
             unset($_SESSION[$name]);
@@ -133,6 +133,47 @@ class Utils{
         }else{
             return true;
         }
+    }
+    
+
+    public function preguntasFrecuentes(){
+        $faqs = [
+            [
+                "question" => "¿Qué puedo hacer con lo aprendido en Train The Teachers?",
+                "answer" => "El objetivo es que el aprendizaje obtenido se aplique directamente en el diseño de nuevas experiencias de aprendizaje o el mejoramiento de las existentes.",
+            ],
+            [
+                "question" => "¿Cuál es la diferencia entre Train The Teachers y los cursos que ofrece el CUDD?",
+                "answer" => "En esencia ninguna. Los cursos de Train The Teachers también son gestionados y validados a través del CUDD. En cuanto a su forma, Train The Teachers es impartido por personal de la Coordinación de Tecnologías de Información de la UACH y se estructura a partir de micro-talleres de corta duración y rutas de aprendizaje.",
+            ],
+            [
+                "question" => "¿Qué es una ruta de aprendizaje?",
+                "answer" => "Train The Teachers se basa en el 'armado' de ejes temáticos -llamados 'Rutas de Aprendizaje'- que agrupan talleres que, una vez sumados, llevan al participante a desarrollar el dominio práctico de una habilidad, técnica o  herramienta concreta. Al día de hoy, Train The Teachers ofrece rutas de aprendizaje en temas como Diseño, Programación e Innovación; cada una con cursos sobre temas relevantes y prácticos.",
+            ],
+            [
+                "question" => "¿Qué son los microcréditos?",
+                "answer" => "Certificados que se conceden -en forma de insignias digitales infalsificables- al concluir satisfactoriamente cursos o talleres de corta duración. Los microcréditos pueden sumarse entre sí para acreditar un logro más extenso, como un taller o un diplomado. En Train The Teachers cada 20 horas acumuladas en microcréditos equivalen a un taller o curso convencional, con validez para el Programa de Estímulos al Desempeño Docente.",
+            ],
+            [
+                "question" => "¿Qué es una insignia?",
+                "answer" => "Es una imagen digital que representa un logro de aprendizaje. Las insignias se obtienen al acreditar satisfactoriamente un taller y se suman para obtener créditos equivalentes a un taller o curso convencional impartido en el CUDD.",
+            ],
+            [
+                "question" => "Soy maestro hora-clase, ¿puedo tomar los talleres?",
+                "answer" => "¡Por supuesto que sí! El objetivo es que todas y todos los docentes de la UACH cuenten con un espacio para aprender y mejorar sus habilidades tecnológicas, buscando en última instancia el impacto positivo en la calidad educativa.",
+            ],
+            [
+                "question" => "Soy alumno de la UACH, ¿puedo tomar los cursos de Train The Teachers?",
+                "answer" => "De momento no, aunque nos encantaría saber de ti para considerar tus inquietudes y ofrecer talleres para las y los alumnos.",
+            ],
+            [
+                "question" => "No estoy en la UACH, ¿puedo tomar los cursos de Train The Teachers?",
+                "answer" => "De momento no, aunque nos encantaría saber de ti para considerar tus requerimientos en futuras etapas del programa.",
+            ],
+
+        ];
+
+        return $faqs;
     }
 
 }
