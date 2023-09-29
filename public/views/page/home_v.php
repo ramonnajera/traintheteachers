@@ -85,27 +85,26 @@
     <?php elseif(!isset($_SESSION['identidad'])):?>
 
     
-<section class="">
-    <p class="text-center text-gray-900  font-bold text-2xl py-5">RUTAS DE APRENDIZAJE</p>
-    <?php foreach($carreras as $carrera):?>
-    <?php require_once dirname(__FILE__).'../../includes/routes/Card_v.php';?>
-    <?php endforeach;?>
+    <section class="">
+        <p class="text-center text-gray-900  font-bold text-2xl py-5">RUTAS DE APRENDIZAJE</p>
+        <?php foreach($carreras as $carrera):?>
+        <?php require_once dirname(__FILE__).'../../includes/routes/Card_v.php';?>
+        <?php endforeach;?>
+    </section>
 
-    
-</section>
+    <!-- Aqui es lo de las preguntas frecuentes -->
+    <section>
+        <h2>Preguntas frecuentes</h2>
+        <?php foreach($faqs as $faq):?>
+        <details>
+        <summary>
+            <h1><?=$faq["question"]?></h1>
+        </summary>
+        <p><?=$faq["answer"]?></p>
+        </details>
+        <?php endforeach;?>
+    </section>
+    <!-- Aqui termina lo de las preguntas frecuentes -->
 
-
-// comentario inut para que lo encuentres
-<section>
-    <h1>scklncalkncsaklnsca</h1>
-<details>
-   <summary>
-      <h1>Todo list:</h1>
-   </summary>
-   <p>Study</p>
-   <p>Grocery Shop</p>
-   <p>Clean The House</p>
-</details>
-</section>
     <?php endif;?>
 </div>

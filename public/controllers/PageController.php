@@ -7,6 +7,8 @@ class PageController{
     public function index(){
         $_CarreraModel = new CarreraModel();
         $carreras = $_CarreraModel->getAll();
+        $faqs = utils::preguntasFrecuentes();
+        
         if(isset($_SESSION['identidad']) && isset($_SESSION['admin'])){
             $_CursoModel = new CursoModel();
             $cursos = $_CursoModel->getAll();
