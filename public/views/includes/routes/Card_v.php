@@ -18,7 +18,4 @@
   </div>
 </div>
 
-
-<!-- pt-[445px] md:pt-[275px] pl-56 md:pl-32 -->
-
-        <?php var_dump($carrera);?>
+<?php var_dump($carrera);?>
