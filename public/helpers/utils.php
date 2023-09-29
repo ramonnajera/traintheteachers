@@ -170,6 +170,10 @@ class Utils{
                 "question" => "No estoy en la UACH, ¿puedo tomar los cursos de Train The Teachers?",
                 "answer" => "De momento no, aunque nos encantaría saber de ti para considerar tus requerimientos en futuras etapas del programa.",
             ],
+            [
+                "question" => "¿Cómo puedo inscribirme a los cursos?",
+                "answer" => "Los cursos se publican en la página de Train The Teachers y se abren a inscripciones en fechas específicas. Para inscribirte, debes iniciar sesión con tu cuenta de la UACH y seleccionar el curso de tu interés. Si el curso está abierto a inscripciones, podrás inscribirte de inmediato. Si no, podrás registrarte en una lista de espera para ser notificado cuando el curso esté disponible.",
+            ],
 
         ];
 

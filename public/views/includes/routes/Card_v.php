@@ -18,4 +18,3 @@
   </div>
 </div>
 
-<?php var_dump($carrera);?>

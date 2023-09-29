@@ -86,14 +86,23 @@
 
     
     <section class="">
-        <p class="text-center text-gray-900  font-bold text-2xl py-5">RUTAS DE APRENDIZAJE</p>
-        <?php foreach($carreras as $carrera):?>
+        <!-- Card Version -->
+        <!-- <p class="text-center text-gray-900  font-bold text-2xl py-5">RUTAS DE APRENDIZAJE</p>
+        
         <?php require_once dirname(__FILE__).'../../includes/routes/Card_v.php';?>
-        <?php endforeach;?>
+        
+
+        <!-- New Home -->
+        <!-- Hero -->
+        <?php require_once dirname(__FILE__).'../../includes/home/Hero_v.php';?>
+        <!-- About -->
+        <?php require_once dirname(__FILE__).'../../includes/home/About_v.php';?>
+        
+
     </section>
 
     <!-- Aqui es lo de las preguntas frecuentes -->
-    <section>
+    <!-- <section>
         <h2>Preguntas frecuentes</h2>
         <?php foreach($faqs as $faq):?>
         <details>
@@ -103,7 +112,7 @@
         <p><?=$faq["answer"]?></p>
         </details>
         <?php endforeach;?>
-    </section>
+    </section> -->
     <!-- Aqui termina lo de las preguntas frecuentes -->
 
     <?php endif;?>
