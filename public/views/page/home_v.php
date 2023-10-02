@@ -101,6 +101,8 @@
         <?php require_once dirname(__FILE__).'../../includes/home/Card_v.php';?>
         <!-- Testimonial -->
         <?php require_once dirname(__FILE__).'../../includes/home/Testimonial_v.php';?>
+        <!-- Faq -->
+        <?php require_once dirname(__FILE__).'../../includes/home/Faq_v.php';?>
         
 
     </section>
