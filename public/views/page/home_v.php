@@ -97,6 +97,8 @@
         <?php require_once dirname(__FILE__).'../../includes/home/Hero_v.php';?>
         <!-- About -->
         <?php require_once dirname(__FILE__).'../../includes/home/About_v.php';?>
+        <!-- Routes Card -->
+        <?php require_once dirname(__FILE__).'../../includes/home/Card_v.php';?>
         
 
     </section>
