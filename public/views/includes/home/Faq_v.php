@@ -1,4 +1,4 @@
-<div class="bg-white">
+<div class="bg-gray-100">
   <div class="mx-auto max-w-7xl px-6 pt-2 pb-10 sm:py-32 lg:px-8 lg:py-1 lg:pb-16">
     <div class="mx-auto max-w-4xl divide-y divide-gray-900/10">
       <h2 class="text-3xl font-bold leading-10 tracking-tight text-gray-900">Preguntas frecuentes</h2>

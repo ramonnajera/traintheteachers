@@ -1,4 +1,4 @@
-<div class="bg-white py-16 sm:py-24">
+<div class="bg-gray-100 py-16 sm:py-24">
   <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
     <div class="relative overflow-hidden bg-pink-700 px-6 py-20 shadow-xl sm:px-10 sm:py-24 md:px-12 lg:px-20">
       <img class="absolute inset-0 h-full w-full object-cover brightness-150 saturate-0" src="<?base_url?>/assets/img/images/home/ken.jpg" alt="">
