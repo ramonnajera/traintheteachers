@@ -1,4 +1,4 @@
-<div class="container mx-auto mt-5">
+<div class="mx-auto">
     <?php if(isset($_SESSION['identidad']) && isset($_SESSION['admin'])):?>
     <div class="flex justify-end">
         <button data-open-modal class="btn btn-primary mx-3">Nuevo curso</button>
@@ -89,7 +89,6 @@
         <!-- Card Version -->
         <!-- <p class="text-center text-gray-900  font-bold text-2xl py-5">RUTAS DE APRENDIZAJE</p>
         
-        <?php require_once dirname(__FILE__).'../../includes/routes/Card_v.php';?>
         
 
         <!-- New Home -->

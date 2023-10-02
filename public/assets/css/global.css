@@ -710,6 +710,11 @@ video {
   margin-bottom: 8rem;
 }
 
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -943,6 +948,10 @@ video {
 
 .w-auto {
   width: auto;
+}
+
+.w-screen {
+  width: 100vw;
 }
 
 .min-w-full {
@@ -1364,6 +1373,10 @@ video {
 .bg-pink-700 {
   --tw-bg-opacity: 1;
   background-color: rgb(190 24 93 / var(--tw-bg-opacity));
+}
+
+.bg-blue-700\/90 {
+  background-color: rgb(29 78 216 / 0.9);
 }
 
 .bg-gradient-to-t {
