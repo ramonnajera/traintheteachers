@@ -6,7 +6,6 @@
       <dl class="mt-10 space-y-6 divide-y divide-gray-900/10">
         <div class="pt-6">
           <dt>
-            <!-- Expand/collapse question button -->
             <details type="button" class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="faq-0" aria-expanded="false">
                 <summary>
                     <span class="font-medium text-gray-900"><?=$faq["question"]?></span>
@@ -15,23 +14,8 @@
             </details>
           </dt>
         </div>
-
-        <!-- More questions... -->
       </dl>
       <?php endforeach;?>
     </div>
   </div>
-  <!-- Aqui es lo de las preguntas frecuentes -->
-    <!-- <section>
-        <h2>Preguntas frecuentes</h2>
-        <?php foreach($faqs as $faq):?>
-        <details>
-        <summary>
-            <h1><?=$faq["question"]?></h1>
-        </summary>
-        <p><?=$faq["answer"]?></p>
-        </details>
-        <?php endforeach;?>
-    </section> -->
-    <!-- Aqui termina lo de las preguntas frecuentes -->
 </div>
