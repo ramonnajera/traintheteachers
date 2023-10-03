@@ -2081,6 +2081,11 @@ dialog::backdrop {
     padding-bottom: 5rem;
   }
 
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
   .sm\:text-center {
     text-align: center;
   }
