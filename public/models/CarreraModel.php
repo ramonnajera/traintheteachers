@@ -121,6 +121,18 @@ class CarreraModel extends conection{
         return $carreras;
     }
 
+    public function getOne(){
+        $sql = "SELECT * FROM carreras WHERE carreras.carrera_id = :carrera_id";
+
+        $data = [
+            "carrera_id" => $this->getCarrera_id(),
+        ];
+
+        $cursos = parent::obtenerDatos($sql, $data);
+        
+        return $cursos;
+    }
+
     public function save(){
 
         $sql = "INSERT INTO carreras (carrera_nombre, carrera_descripcion, carrera_img, carrera_insignia) VALUES(:carrera_nombre,:carrera_descripcion, :carrera_img, :carrera_insignia);";

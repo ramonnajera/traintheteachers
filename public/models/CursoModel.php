@@ -176,9 +176,14 @@ class CursoModel extends conection{
     }
 
     public function getAll(){
-        $sql = "SELECT * FROM carreras INNER JOIN cursos ON carreras.carrera_id = cursos.carrera_id";
+        $sql = "SELECT * FROM cursos
+        WHERE carrera_id= :carrera_id;";
 
-        $cursos = parent::obtenerDatos($sql);
+        $data = [
+            "carrera_id" => $this->getCarrera_id(),
+        ];
+
+        $cursos = parent::obtenerDatos($sql,$data);
         
         return $cursos;
     }

@@ -1,5 +1,6 @@
 <?php
 include_once 'models/CarreraModel.php';
+include_once 'models/CursoModel.php';
 
 class CarreraController{
     public function add(){
@@ -111,6 +112,23 @@ class CarreraController{
             "mensaje" => $_respuestas->response["result"]["mensaje"]
         ];
         header("Location:".base_url."Page/carreras");
+    }
+
+    public function carrera(){
+        $_respuestas = new responses();
+        $id = isset($_GET['id']) ? $_GET['id'] :false;
+        if($id){
+            $_CarreraModel = new CarreraModel();
+            $_CursoModel = new CursoModel();
+            $_CarreraModel->setCarrera_id($id);
+            $_CursoModel->setCarrera_id($id);
+            $carrera = $_CarreraModel->getOne();
+            $cursos = $_CursoModel->getAll();
+
+        }else{
+            $_respuestas->error_u00001();
+        }
+        require_once 'views/page/carrera_v.php';
     }
 
     

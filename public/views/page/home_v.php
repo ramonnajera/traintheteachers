@@ -97,9 +97,7 @@
         <!-- About -->
         <?php require_once dirname(__FILE__).'../../includes/home/About_v.php';?>
         <!-- Routes Card -->
-        <?php foreach ($carreras as $carrera):?>
-        <?php require_once dirname(__FILE__).'../../includes/home/Card_v.php';?>
-        <?php endforeach;?>
+            <?php require_once dirname(__FILE__).'../../includes/home/Card_v.php';?>
         <!-- Testimonial -->
         <?php require_once dirname(__FILE__).'../../includes/home/Testimonial_v.php';?>
         <!-- Faq -->
