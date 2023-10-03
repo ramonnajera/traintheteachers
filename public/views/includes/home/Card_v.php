@@ -5,8 +5,8 @@
     <div class="grid grid-cols-1 gap-x-1 md:gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-8">
     <?php foreach ($carreras as $carrera):?>
       <a href="#" class="group flex justify-center items-end">
-        <p class="absolute -z-1 flex justify-items-end pb-2 pr-20 md:pr-8">
-          <span class="mt-1 text-sm font-medium text-cyan-300">
+        <p class="absolute -z-1 flex justify-items-end pb-2">
+          <span class="mt-1 text-sm font-medium text-pink-300 pl-36 md:pl-28">
             Ver más <span aria-hidden="true">&rarr;</span>
           </span>
         </p>
