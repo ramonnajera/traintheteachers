@@ -96,9 +96,23 @@ summary::-webkit-details-marker {
 }
 
 summary::after {
-    content: ' +';
+    content: ' ver +';
 }
 details[open] summary:after {
     content: " -";
+}
+
+details.ver>summary.ver {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+summary.ver::after {
+    content: ' ver más +';
+}
+details.ver[open] summary:after {
+    content: " ver menos -";
 }
 

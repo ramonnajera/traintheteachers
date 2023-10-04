@@ -16,7 +16,7 @@ class CursoController{
             $descripcion = Utils::limpiarData($descripcion,"texto");
 
             $nombre = filter_var($nombre, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ\s]+$/")));
-            $descripcion = filter_var($descripcion, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ\s]+$/")));
+            $descripcion = filter_var($descripcion, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ.\s]+$/")));
 
             if ($carrera && $nombre && $descripcion) {
                 $_CursoModel = new CursoModel();
