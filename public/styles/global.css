@@ -83,3 +83,22 @@ dialog::backdrop {
         opacity: 0;
     }
 }
+
+details>summary {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+summary::-webkit-details-marker {
+    display: none
+}
+
+summary::after {
+    content: ' +';
+}
+details[open] summary:after {
+    content: " -";
+}
+
