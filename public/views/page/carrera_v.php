@@ -1,6 +1,8 @@
 <!-- datos -->
 <?php require_once dirname(__FILE__).'../../includes/routes/Detail_v.php';?>
 
+<!-- Route detail -->
+
 <div class="bg-white">
   <section aria-labelledby="features-heading" class="relative">
     <div class="aspect-h-2 aspect-w-3 overflow-hidden sm:aspect-w-5 px-10 py-10 md:pt-32 md:px-32 lg:aspect-none lg:absolute lg:h-full lg:w-1/1 lg:pr-4 xl:pr-16">
@@ -35,6 +37,27 @@
     </div>
   </section>
 </div>
+
+<!-- Workshop list -->
+
+<div class="flex flex-col px-10 w-ful justify-end container">
+  <ul role="list" class="flex flex-col md:justify-center px-3 md:px-96 divide-y divide-gray-100">
+    <li class="flex justify-between  gap-x-6 py-5">
+      <div class="flex min-w-0 gap-x-4">
+        <img class="h-12 w-12 flex-none bg-gray-50" src="<?=base_url?>assets/img/images/<?=$carrera[0]["carrera_insignia"]?>" alt="">
+        <div class="min-w-0 flex-auto">
+          <p class="text-sm font-semibold leading-6 text-gray-900">Leslie Alexander</p>
+          <p class="mt-1 truncate text-xs leading-5 text-gray-500">leslie.alexander@example.com</p>
+        </div>
+      </div>
+      <div class="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
+        <p class="text-sm leading-6 text-gray-900">Co-Founder / CEO</p>
+        <p class="mt-1 text-xs leading-5 text-gray-500">Last seen <time datetime="2023-01-23T13:23Z">3h ago</time></p>
+      </div>
+    </li>  
+  </ul>
+</div>
+
 
 <?php
     var_dump($carrera);

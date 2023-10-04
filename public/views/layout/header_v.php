@@ -29,7 +29,7 @@
             <li>
                 <a href="<?=htmlspecialchars(base_url)?>"
                     class="block py-2 pl-3 pr-4 text-white rounded hover:text-[#D5175E]  lg:p-0"hover:text-[#D5175E] 
-                    aria-current="page">Mis cursos</a>
+                    aria-current="page">Mis talleres</a>
             </li>
             <li>
                 <a href="<?=htmlspecialchars(base_url . "Page/carreras")?>"

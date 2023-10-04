@@ -1,9 +1,9 @@
 <div class="mx-auto">
     <?php if(isset($_SESSION['identidad']) && isset($_SESSION['admin'])):?>
     <div class="flex justify-end">
-        <button data-open-modal class="btn btn-primary mx-3">Nuevo curso</button>
+        <button data-open-modal class="btn btn-primary mx-3">Nuevo taller</button>
         <dialog data-modal class="rounded-md p-10">
-            <p class="text-2xl mb-5">Nuevo curso</p>
+            <p class="text-2xl mb-5">Nuevo taller</p>
             <form action="<?=htmlspecialchars(base_url . "Curso/add")?>" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="carrera" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ruta de aprendisaje</label>
@@ -38,7 +38,7 @@
             </form>
         </dialog>
     </div>
-    <p class="mb-2 text-5xl font-medium leading-tight px-2">Cursos</p>
+    <p class="mb-2 text-5xl font-medium leading-tight px-2">Talleres</p>
     <section class="pb-10 flex-shrink-0 overflow-x-auto">
         <table class="w-fmd:min-w-full divide-y divide-gray-200 overflow-x-auto">
         <thead class="bg-gray-50">
