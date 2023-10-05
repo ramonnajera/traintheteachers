@@ -43,7 +43,7 @@
     <div class="flex flex-col px-4 md:px-10 w-full justify-end container">
       <details class="ver">
       <summary class="ver">
-        <ul role="list" class="flex flex-col md:justify-center px-3 md:px-auto divide-y divide-gray-100">
+        <ul role="list" class="flex flex-col md:justify-center px-3 md:px-auto divide-y divide-gray-500">
           <li class="flex justify-between  gap-x-6 py-5">
             <div class="flex min-w-0 gap-x-4">
               <img class="h-24 w-20 md:h-full md:w-20 flex-none bg-gray-50" src="<?=base_url?>assets/img/images/<?=$curso["curso_insignia"]?>" alt="">
@@ -104,14 +104,13 @@
     </dl>
     <div class="mt-6 border-t border-gray-900/5 px-6 py-6">
       <a href="#" class="rounded-sm bg-primary px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Inscribirme</a>
+      </div>
     </div>
   </div>
-</div>
-
-      </div>
-      </details>
-      </div>
     </div>
+  </details>
+  </div>
+</div>
 <?php endforeach;?>
 
 
