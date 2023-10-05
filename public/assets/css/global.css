@@ -908,6 +908,14 @@ video {
   height: 6rem;
 }
 
+.h-32 {
+  height: 8rem;
+}
+
+.h-14 {
+  height: 3.5rem;
+}
+
 .max-h-12 {
   max-height: 3rem;
 }
@@ -970,6 +978,14 @@ video {
 
 .w-6 {
   width: 1.5rem;
+}
+
+.w-14 {
+  width: 3.5rem;
+}
+
+.w-12 {
+  width: 3rem;
 }
 
 .min-w-0 {
@@ -1663,6 +1679,14 @@ video {
 
 .pt-0 {
   padding-top: 0px;
+}
+
+.pb-20 {
+  padding-bottom: 5rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
 }
 
 .text-left {
@@ -2462,6 +2486,10 @@ details.ver[open] summary:after {
     justify-content: flex-start;
   }
 
+  .md\:justify-end {
+    justify-content: flex-end;
+  }
+
   .md\:justify-center {
     justify-content: center;
   }
@@ -2526,6 +2554,10 @@ details.ver[open] summary:after {
     padding-top: 1rem;
   }
 
+  .md\:pb-10 {
+    padding-bottom: 2.5rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }
@@ -2537,6 +2569,11 @@ details.ver[open] summary:after {
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .md\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .md\:blur-3xl {
