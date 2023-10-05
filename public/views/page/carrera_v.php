@@ -5,7 +5,7 @@
 
 <div class="bg-white">
   <section aria-labelledby="features-heading" class="relative">
-    <div class="aspect-h-2 aspect-w-3 overflow-hidden sm:aspect-w-5 px-10 py-10 md:pt-32 md:px-2 lg:aspect-none lg:absolute lg:h-full lg:w-1/1 lg:pr-4 xl:pr-16">
+    <div class="aspect-h-2 aspect-w-3 overflow-hidden sm:aspect-w-5 px-10 py-10 md:pt-32 md:px-20 lg:aspect-none lg:absolute lg:h-full lg:w-1/1 lg:pr-4 xl:pr-16">
       <img src="<?=base_url?>assets/img/images/<?=$carrera[0]["carrera_img"]?>" alt="" class="h-full w-full object-cover object-center lg:h-full lg:w-full">
     </div>
 
@@ -46,13 +46,13 @@
         <ul role="list" class="flex flex-col md:justify-center px-3 md:px-auto divide-y divide-gray-100">
           <li class="flex justify-between  gap-x-6 py-5">
             <div class="flex min-w-0 gap-x-4">
-              <img class="h-20 w-20 flex-none bg-gray-50" src="<?=base_url?>assets/img/images/<?=$carrera[0]["carrera_insignia"]?>" alt="">
+              <img class="h-24 w-20 md:h-full md:w-20 flex-none bg-gray-50" src="<?=base_url?>assets/img/images/<?=$curso["curso_insignia"]?>" alt="">
               <div class="min-w-0  flex-auto">
-                <p class="text-sm md:text-2xl font-semibold mt-4 leading-6 text-gray-900"><?=$curso["curso_nombre"]?></p>
+                <p class="text-sm md:text-2xl font-medium mt-4 leading-6 text-gray-900"><?=$curso["curso_nombre"]?></p>
                 <p class="mt-1 truncate text-md leading-5 text-gray-500">agalaga</p>
               </div>
             </div>
-            <div class="flex flex-col justify-center pl-80">
+            <div class="text-presencial pt-4 text-right md:text-right md:ml-[490px] md:mr-10">
               <p class="text-sm leading-6 text-gray-900">Presencial</p>
               <p class="mt-1 text-xs leading-5 text-gray-500">duración: <time datetime="2023-01-23T13:23Z">3h</time></p>
             </div>
@@ -95,8 +95,8 @@
       <div class="mt-4 flex w-full flex-none gap-x-4 px-6">
         <dt class="flex-none">
           <span class="sr-only">Status</span>
-          <svg class="h-6 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M2.5 4A1.5 1.5 0 001 5.5V6h18v-.5A1.5 1.5 0 0017.5 4h-15zM19 8.5H1v6A1.5 1.5 0 002.5 16h15a1.5 1.5 0 001.5-1.5v-6zM3 13.25a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zm4.75-.75a.75.75 0 000 1.5h3.5a.75.75 0 000-1.5h-3.5z" clip-rule="evenodd" />
+          <svg class="h-6 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
           </svg>
         </dt>
         <dd class="text-sm leading-6 text-gray-500"><?=$curso["curso_descripcion"]?></dd>

@@ -96,7 +96,7 @@ summary::-webkit-details-marker {
 }
 
 summary::after {
-    content: ' ver +';
+    content: ' +';
 }
 details[open] summary:after {
     content: " -";
