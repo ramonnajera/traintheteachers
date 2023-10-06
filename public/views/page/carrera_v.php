@@ -49,7 +49,7 @@
                 <img class="h-24 w-20  md:h-full md:w-20 flex-none bg-gray-50" src="<?=base_url?>assets/img/images/<?=$curso["curso_insignia"]?>" alt="">
                 <div class="min-w-0  flex-auto">
                   <p class="text-sm md:text-2xl font-medium mt-4 leading-6 text-gray-900"><?=$curso["curso_nombre"]?></p>
-                  <p class="mt-1 truncate text-md leading-5 text-gray-500">agalaga</p>
+                  <p class="mt-1 truncate text-sm md:text-md leading-5 text-gray-500">agalaga</p>
                 </div>
               </div>
               <div class="hidden md:block text-presencial pt-4 text-right md:text-right md:ml-[490px] md:mr-10">
@@ -90,6 +90,28 @@
             </dt>
             <dd class="text-sm leading-6 text-gray-500">
               <time datetime="2023-01-31">January 31, 2023</time>
+            </dd>
+          </div>
+          <div class="md:hidden mt-4 flex w-full flex-none gap-x-4 px-6">
+            <dt class="flex-none">
+              <span class="sr-only">Mode</span>
+              <svg class="h-6 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+              </svg>
+            </dt>
+            <dd class="text-sm leading-6 text-gray-500">
+              <p>Presencial</p>
+            </dd>
+          </div>
+          <div class="md:hidden mt-4 flex w-full flex-none gap-x-4 px-6">
+            <dt class="flex-none">
+              <span class="sr-only">Mode</span>
+              <svg class="h-6 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </dt>
+            <dd class="text-sm leading-6 text-gray-500">
+              <p>Duración: 3 hrs</p>
             </dd>
           </div>
           <div class="mt-4 flex w-full flex-none gap-x-4 px-6">
