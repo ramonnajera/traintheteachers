@@ -5,7 +5,7 @@
 
 <div class="bg-white">
   <section aria-labelledby="features-heading" class="relative">
-    <div class="aspect-h-2 aspect-w-3 overflow-hidden sm:aspect-w-5 px-10 py-10 md:pt-32 md:px-20 lg:aspect-none lg:absolute lg:h-full lg:w-1/1 lg:pr-4 xl:pr-16">
+    <div class="aspect-h-2 aspect-w-3 overflow-hidden sm:aspect-w-5 px-10 py-10 md:py-0 md:pt-32 md:px-20 lg:aspect-none lg:absolute lg:h-full lg:w-1/1 lg:pr-4 xl:pr-16">
       <img src="<?=base_url?>assets/img/images/<?=$carrera[0]["carrera_img"]?>" alt="" class="h-full w-full object-cover object-center lg:h-full lg:w-full">
     </div>
 
@@ -40,22 +40,22 @@
 
 <!-- Workshop list -->
 <?php foreach($cursos as $curso):?>
-    <div class="flex flex-col px-4 md:pb-10 md:px-10 h-full w-full justify-end container">
+    <div class="flex flex-col px-4 md:pb-10 md:px-32 h-full w-full justify-end container">
       <details class="ver">
         <summary class="ver">
-          <ul role="list" class="flex flex-col md:justify-center px-3 md:px-auto divide-y divide-gray-500">
-            <li class="flex justify-between  gap-x-6 py-5">
-              <div class="flex min-w-0 gap-x-4">
-                <img class="h-24 w-20  md:h-full md:w-20 flex-none bg-gray-50" src="<?=base_url?>assets/img/images/<?=$curso["curso_insignia"]?>" alt="">
-                <div class="min-w-0  flex-auto">
-                  <p class="text-sm md:text-2xl font-medium mt-4 leading-6 text-gray-900"><?=$curso["curso_nombre"]?></p>
-                  <p class="mt-1 truncate text-sm md:text-md leading-5 text-gray-500">agalaga</p>
+          <ul role="list" class="grid grid-cols-1 md:justify-center px-3 md:px-auto">
+            <li class="flex justify-between py-5">
+              <div class="flex w-full gap-x-4 md:flex-grow">
+                <img class="h-24 w-20  md:h-22 md:w-20 flex-none bg-gray-50" src="<?=base_url?>assets/img/images/<?=$curso["curso_insignia"]?>" alt="">
+                <div class="w-full flex-auto">
+                  <p class="text-sm md:text-xl font-medium leading-1 mt-4 text-gray-900"><?=$curso["curso_nombre"]?></p>
+                  <dd class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 mt-2 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Disponible</dd>
                 </div>
               </div>
-              <div class="hidden md:block text-presencial pt-4 text-right md:text-right md:ml-[490px] md:mr-10">
+              <!-- <div class="hidden md:block text-presencial pt-4 text-right md:text-right md:ml-[490px] md:mr-10">
                 <p class="text-sm leading-6 text-gray-900">Presencial</p>
                 <p class="mt-1 text-xs leading-5 text-gray-500">duración: <time datetime="2023-01-23T13:23Z">3h</time></p>
-              </div>
+              </div> -->
             </li>  
           </ul>
         </summary>
@@ -69,7 +69,7 @@
           </div>
           <div class="flex-none self-end px-6 pt-4">
             <dt class="sr-only">Status</dt>
-            <dd class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Disponible</dd>
+            <!-- <dd class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Disponible</dd> -->
           </div>
           <div class="mt-6 flex w-full flex-none gap-x-4 border-t border-gray-900/5 px-6 pt-6">
             <dt class="flex-none">
@@ -92,7 +92,7 @@
               <time datetime="2023-01-31">January 31, 2023</time>
             </dd>
           </div>
-          <div class="md:hidden mt-4 flex w-full flex-none gap-x-4 px-6">
+          <div class="mt-4 flex w-full flex-none gap-x-4 px-6">
             <dt class="flex-none">
               <span class="sr-only">Mode</span>
               <svg class="h-6 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -103,7 +103,7 @@
               <p>Presencial</p>
             </dd>
           </div>
-          <div class="md:hidden mt-4 flex w-full flex-none gap-x-4 px-6">
+          <div class="mt-4 flex w-full flex-none gap-x-4 px-6">
             <dt class="flex-none">
               <span class="sr-only">Mode</span>
               <svg class="h-6 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

@@ -888,10 +888,6 @@ video {
   width: 100%;
 }
 
-.min-w-0 {
-  min-width: 0px;
-}
-
 .min-w-full {
   min-width: 100%;
 }
@@ -1086,11 +1082,6 @@ video {
   border-color: rgb(229 231 235 / var(--tw-divide-opacity));
 }
 
-.divide-gray-500 > :not([hidden]) ~ :not([hidden]) {
-  --tw-divide-opacity: 1;
-  border-color: rgb(107 114 128 / var(--tw-divide-opacity));
-}
-
 .divide-gray-900\/10 > :not([hidden]) ~ :not([hidden]) {
   border-color: rgb(17 24 39 / 0.1);
 }
@@ -1105,12 +1096,6 @@ video {
 
 .overflow-x-auto {
   overflow-x: auto;
-}
-
-.truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .rounded {
@@ -1965,6 +1950,12 @@ details.ver>summary.ver {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 2px solid #e2e8f0;
+  height: auto;
+  width: 1000px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: inset 0 -1px 0 #e2e8f0;
 }
 
 summary.ver::after {
@@ -1973,6 +1964,12 @@ summary.ver::after {
 
 details.ver[open] summary:after {
   content: " ver menos -";
+}
+
+@media (max-width: 768px) {
+  details.ver>summary.ver {
+    width: 100%;
+  }
 }
 
 .hover\:-translate-y-2:hover {
@@ -2258,14 +2255,6 @@ details.ver[open] summary:after {
     display: grid;
   }
 
-  .md\:hidden {
-    display: none;
-  }
-
-  .md\:h-full {
-    height: 100%;
-  }
-
   .md\:w-20 {
     width: 5rem;
   }
@@ -2276,6 +2265,10 @@ details.ver[open] summary:after {
 
   .md\:max-w-2xl {
     max-width: 42rem;
+  }
+
+  .md\:flex-grow {
+    flex-grow: 1;
   }
 
   .md\:transform-gpu {
@@ -2312,11 +2305,6 @@ details.ver[open] summary:after {
     padding-right: 0px;
   }
 
-  .md\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
   .md\:px-12 {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -2325,6 +2313,16 @@ details.ver[open] summary:after {
   .md\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+
+  .md\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
+  .md\:py-0 {
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
   .md\:pb-10 {
@@ -2355,9 +2353,9 @@ details.ver[open] summary:after {
     text-align: right;
   }
 
-  .md\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .md\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .md\:blur-3xl {
@@ -2508,4 +2506,3 @@ details.ver[open] summary:after {
     padding-right: 4rem;
   }
 }
-
