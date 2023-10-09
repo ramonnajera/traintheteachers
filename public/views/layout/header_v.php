@@ -22,8 +22,8 @@
 <a href="<?=base_url?>" class="flex items-center">    
     <img src="https://teachers-xi.vercel.app/images/logo-white.png" class="h-6 mr-3 sm:h-9" >
 </a>
-    <div class="dropdown-menu absolute top-[64px] left-0 bg-[#45484c] w-full lg:flex lg:justify-between flex-col lg:flex-row gap-6 items-center py-2 text-lg font-bold hidden z-[2] lg:static">
-        <ul class="text-white flex flex-col lg:flex-row items-center gap-6 hover:transition-all">
+    <div class="dropdown-menu absolute top-[64px] left-0 bg-[#45484c] w-full lg:flex lg:justify-between flex-col lg:flex-row gap-6 items-start py-2 text-lg font-medium hidden z-[2] lg:static">
+        <ul class="text-white flex flex-col lg:flex-row items-start gap-6 hover:transition-all">
         <?php if(isset($_SESSION['identidad'])):?>
                 <?php if(isset($_SESSION['admin'])):?>
             <li>
@@ -45,6 +45,10 @@
                         <a href="<?=htmlspecialchars(base_url . "Curso/alls")?>"
                             class="block py-2 pl-3 pr-4 text-white rounded hover:text-[#D5175E]  lg:p-0">Todos los cursos</a>
                     </li>
+                    <li>
+                        <a href="<?=htmlspecialchars(base_url . "")?>"
+                            class="block py-2 pl-3 pr-4 text-white rounded hover:text-[#D5175E]  lg:p-0">Todas las rutas</a>
+                    </li>
                 <?php endif;?>
         <?php elseif(!isset($_SESSION['identidad'])):?>
             <li>
@@ -63,7 +67,7 @@
             </li>
         <?php endif;?>
         </ul>
-        <div class="flex flex-col lg:flex-row items-center gap-6 hover:transition-all mt-6 lg:mt-0">
+        <div class="flex flex-col lg:flex-row items-start gap-6 hover:transition-all mt-6 lg:mt-0">
         <?php if(isset($_SESSION['identidad'])):?>
             <a href="<?=htmlspecialchars(base_url . "User/logout")?>" class="btn btn-warning mx-3"><i class="fa-solid fa-arrow-right-from-bracket"></i> Salir</a>
             <?php elseif(!isset($_SESSION['identidad'])):?>

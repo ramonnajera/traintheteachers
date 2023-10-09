@@ -68,12 +68,12 @@
         </table>
     </section>
     <?php elseif(isset($_SESSION['identidad']) && isset($_SESSION['user'])):?>
-        <section class="bg-[#EAF3F0] border-2 p-2 rounded-xl mb-5">
+        <section class="bg-[#EAF3F0] border-2 mt-4 py-1 px-3 rounded-xl mb-5">
             <p>Nombre: <?=$_SESSION['identidad'][0]["usuario_nombre"]?></p>
             <p>Correo: <?=$_SESSION['identidad'][0]["usuario_correo"]?></p>
             <p>Area: <?=$_SESSION['identidad'][0]["usuario_area"]?></p>
         </section>
-        <section class="bg-[#EAF3F0] border-2 p-2 rounded-xl">
+        <section class="bg-[#EAF3F0] border-2 pt-0 rounded-xl">
         <p class="text-center text-gray-600 font-bold text-2xl py-5">MIS INSIGNIAS</p>
         <div class="w-full mx-auto justify-items-center p-6 grid grid-cols-1 gap-4 md:grid-cols-3">
         <?php foreach($insignias as $data):?>
