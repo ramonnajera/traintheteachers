@@ -5,11 +5,11 @@
 
 <div class="bg-white">
   <section aria-labelledby="features-heading" class="relative">
-    <div class="aspect-h-2 aspect-w-3 overflow-hidden sm:aspect-w-5 px-10 py-10 md:py-0 md:pt-32 md:px-20 lg:aspect-none lg:absolute lg:h-full lg:w-1/1 lg:pr-4 xl:pr-16">
+    <div class="aspect-h-2 aspect-w-3 overflow-hidden sm:aspect-w-5 px-10 pt-7 md:py-0 md:pt-32 md:px-20 lg:aspect-none lg:absolute lg:h-full lg:w-1/1 lg:pr-4 xl:pr-16">
       <img src="<?=base_url?>assets/img/images/<?=$carrera[0]["carrera_img"]?>" alt="" class="h-full w-full object-cover object-center lg:h-full lg:w-full">
     </div>
 
-    <div class="mx-auto max-w-2xl px-4 pb-24 pt-16 sm:px-6 sm:pb-32 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:pt-32">
+    <div class="mx-auto max-w-2xl px-4 pb-2 pt-16 sm:px-6 sm:pb-32 lg:grid lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8 lg:pt-32">
       <div class="lg:col-start-2">
         <h2 id="features-heading" class="font-medium text-gray-500">Ruta de aprendizaje</h2>
         <p class="mt-4 text-4xl font-bold tracking-tight text-gray-900"><?=$carrera[0]["carrera_nombre"]?></p>
@@ -39,6 +39,7 @@
 </div>
 
 <!-- Workshop list -->
+<h1 class="text-start px-32 mt-5 text-4xl font-medium tracking-tight text-gray-900">Talleres</h1>
 <?php foreach($cursos as $curso):?>
     <div class="flex flex-col px-4 md:pb-10 md:px-32 h-full w-full justify-end container">
       <details class="ver">
