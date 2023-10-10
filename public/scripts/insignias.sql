@@ -43,6 +43,13 @@ CREATE TABLE carreras (
 -- carrera_id
 -- curso_nombre
 -- curso_descripcion
+
+-- curso_modo
+-- curso_status
+-- curso_duracion
+-- curso_instructor
+-- curso_fecha
+
 -- curso_insignia
 -- curso_datec
 CREATE TABLE cursos (
@@ -51,7 +58,14 @@ CREATE TABLE cursos (
     carrera_id          INT NOT NULL,
     curso_nombre        VARCHAR (200) NOT NULL,
     curso_descripcion   VARCHAR (500) NOT NULL,
-    curso_img           VARCHAR (300) NOT NULL,
+
+    curso_modo          VARCHAR (200) NOT NULL,
+    curso_status        BOOLEAN NOT NULL DEFAULT FALSE,
+    curso_duracion      INT NOT NULL,
+    curso_instructor    INT NOT NULL,
+    curso_fecha         DATE,
+    curso_horario       VARCHAR (300) NOT NULL,
+
     curso_insignia      VARCHAR (300) NOT NULL,
     curso_datec         TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(curso_id),

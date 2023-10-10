@@ -21,13 +21,36 @@
                     <label for="derscripcion" class="input-label">Descripcion</label>
                     <textarea id="descripcion" name="descripcion" class="input-text" rows="4" placeholder="Aqui descripcion..." required></textarea>
                 </div>
-                <div class="mb-3"> 
-                    <label class="block mb-2 text-sm font-medium text-gray-900 " for="insignia">Imagen del Curso</label>
-                    <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-md cursor-pointer bg-gray-50 focus:outline-none " aria-describedby="curso_help" id="curso_img" name="img" type="file" required>
-                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="curso_help">PNG (MAX. 800x400px).</p>
+                <div class="mb-3">
+                    <label class="block mb-2 text-sm font-medium text-gray-900" for="modo">Modo</label>
+                    <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" name="modo" id="modo" name="modo">
+                        <option value="virtual">Virtual</option>
+                        <option value="presencial">Precencial</option>
+                    </select>
+
                 </div>
                 <div class="mb-3"> 
-                    <label class="block mb-2 text-sm font-medium text-gray-900 " for="insignia">Insignia del curso</label>
+                    <label class="block mb-2 text-sm font-medium text-gray-900" for="duracion">Numero de horas</label>
+                    <input type="number" id="duracion" name="duracion" class="input-text" required>
+                </div>
+                <div class="mb-3">
+                    <label for="instructor" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Instructor</label>
+                    <select id="carrera" name="instructor" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                        <?php foreach($instructores as $instructor):?>
+                        <option value="<?=$instructor["usuario_id"]?>"><?=$instructor["usuario_nombre"]?></option>
+                        <?php endforeach;?>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="start">Fecha de inicio</label>
+                    <input type="date" id="fecha" name="fecha" value="<?=date('Y-m-d')?>" min="2018-01-01" />
+                </div>
+                <div class="mb-3">
+                    <label for="horario" class="input-label">Horario</label>
+                    <textarea id="horario" name="horario" class="input-text" rows="2" placeholder="Aqui el horario..." required></textarea>
+                </div>
+                <div class="mb-3"> 
+                    <label class="block mb-2 text-sm font-medium text-gray-900" for="insignia">Insignia del curso</label>
                     <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-md cursor-pointer bg-gray-50 focus:outline-none " aria-describedby="insignia_help" id="insignia" name="insignia" type="file" required>
                     <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="insignia_help">PNG (MAX. 800x400px).</p>
                 </div>
@@ -61,6 +84,7 @@
             <td class="py-4 px-6 border-b border-gray-200"><?=$data["curso_descripcion"]?></td>
             <td class="py-4 px-6 border-b border-gray-200">
                 <a href="<?=base_url?>Participante/all?id=<?=$data["curso_id"]?>" class="btn btn-primary"><i class="fa-solid fa-users"></i></a>
+                <a class="btn bg-red-600 text-white" href="<?=base_url?>Curso/delete?id=<?=$data["curso_id"]?>">Eliminar</a>
             </td>
             </tr>
             <?php endforeach;?>

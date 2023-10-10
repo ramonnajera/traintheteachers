@@ -9,35 +9,45 @@ class CursoController{
             $carrera = isset($_POST['carrera']) ? $_POST['carrera'] :false;
             $nombre = isset($_POST['nombre']) ? $_POST['nombre'] :false;
             $descripcion = isset($_POST['descripcion']) ? $_POST['descripcion'] :false;
-            $img = empty($_FILES['img']['name']) == 0 ? $_FILES['img'] :false;
+            $modo = isset($_POST['modo']) ? $_POST['modo'] :false;
+            $duracion = isset($_POST['duracion']) ? $_POST['duracion'] :false;
+            $instructor = isset($_POST['instructor']) ? $_POST['instructor'] :false;
+            $fecha = isset($_POST['fecha']) ? $_POST['fecha'] :false;
+            $horario = isset($_POST['horario']) ? $_POST['horario'] :"";
             $insignia = empty($_FILES['insignia']['name']) == 0 ? $_FILES['insignia'] :false;
 
             $nombre = Utils::limpiarData($nombre,"texto");
             $descripcion = Utils::limpiarData($descripcion,"texto");
+            $modo = Utils::limpiarData($modo,"texto");
+            // $horario = Utils::limpiarData($horario,"texto");
 
             $nombre = filter_var($nombre, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ\s]+$/")));
             $descripcion = filter_var($descripcion, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ.\s]+$/")));
+            $modo = filter_var($modo, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ.\s]+$/")));
+            $horario = filter_var($horario, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ.-_123456789:\s]+$/")));
 
-            if ($carrera && $nombre && $descripcion) {
+            if ($carrera && $nombre && $descripcion && $modo && $duracion && $instructor && $fecha) {
                 $_CursoModel = new CursoModel();
-                $subido = $this->subirImagen($img);
-                $subido2 = $this->subirImagen($insignia);
+                $insignia = $this->subirImagen($insignia);
                 
-                if($subido["subido"] && $subido2["subido"]){
+                if($insignia["subido"]){
                     $_CursoModel->setUsuario_id($_SESSION["identidad"][0]["usuario_id"]);
                     $_CursoModel->setCarrera_id($carrera);
                     $_CursoModel->setCurso_nombre($nombre);
                     $_CursoModel->setCurso_descripcion($descripcion);
-                    $_CursoModel->setCurso_img($subido["nombre"]);
-                    $_CursoModel->setCurso_insignia($subido2["nombre"]);
+                    $_CursoModel->setCurso_modo($modo);
+                    $_CursoModel->setCurso_duracion($duracion);
+                    $_CursoModel->setCurso_instructor($instructor);
+                    $_CursoModel->setCurso_fecha($fecha);
+                    $_CursoModel->setCurso_horario($horario);
+                    $_CursoModel->setCurso_insignia($insignia["nombre"]);
                     
                     $save = $_CursoModel->save();
 
                     if ($save) {
                         $_respuestas->response["result"]["mensaje"] = "Registro correcto";
                     }else{
-                        unlink("assets/img/images/" . $subido["nombre"]);
-                        unlink("assets/img/images/" . $subido2["nombre"]);
+                        unlink("assets/img/images/" . $insignia["nombre"]);
                         $_respuestas->error_u00001();
                     }
                 }else{
@@ -101,5 +111,35 @@ class CursoController{
         $_CursoModel->setUsuario_id($_SESSION["identidad"][0]["usuario_id"]);
         $cursos = $_CursoModel->getAlls();
         require_once 'views/page/cursos_v.php';
+    }
+
+    public function delete(){
+        $_respuestas = new responses();
+        if($_GET){
+            $id = isset($_GET['id']) ? $_GET['id'] :false;
+            $id = filter_var($id, FILTER_VALIDATE_INT);
+
+            if($id){
+                $_CursoModel = new CursoModel();
+                $_CursoModel->setCurso_id($id);
+
+                $delete = $_CursoModel->delete();
+
+                if ($delete) {
+                    $_respuestas->response["result"]["mensaje"] = "Delete correcto";
+                }else{
+                    $_respuestas->error_u00001();
+                }
+
+            }else{
+                $_respuestas->error_u00001();
+            }
+        }
+
+        $_SESSION['respuesta'] = [
+            "status" => $_respuestas->response["status"],
+            "mensaje" => $_respuestas->response["result"]["mensaje"]
+        ];
+        header("Location:".base_url);
     }
 }

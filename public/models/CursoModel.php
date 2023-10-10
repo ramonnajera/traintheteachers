@@ -7,7 +7,11 @@ class CursoModel extends conection{
     private $carrera_id;
     private $curso_nombre;
     private $curso_descripcion;
-    private $curso_img;
+    private $curso_modo;
+    private $curso_duracion;
+    private $curso_instructor;
+    private $curso_fecha;
+    private $curso_horario;
     private $curso_insignia;
     private $curso_datec;
 
@@ -116,6 +120,106 @@ class CursoModel extends conection{
     }
 
     /**
+     * Get the value of curso_modo
+     */ 
+    public function getCurso_modo()
+    {
+        return $this->curso_modo;
+    }
+
+    /**
+     * Set the value of curso_modo
+     *
+     * @return  self
+     */ 
+    public function setCurso_modo($curso_modo)
+    {
+        $this->curso_modo = $curso_modo;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of curso_duracion
+     */ 
+    public function getCurso_duracion()
+    {
+        return $this->curso_duracion;
+    }
+
+    /**
+     * Set the value of curso_duracion
+     *
+     * @return  self
+     */ 
+    public function setCurso_duracion($curso_duracion)
+    {
+        $this->curso_duracion = $curso_duracion;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of curso_instructor
+     */ 
+    public function getCurso_instructor()
+    {
+        return $this->curso_instructor;
+    }
+
+    /**
+     * Set the value of curso_instructor
+     *
+     * @return  self
+     */ 
+    public function setCurso_instructor($curso_instructor)
+    {
+        $this->curso_instructor = $curso_instructor;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of curso_fecha
+     */ 
+    public function getCurso_fecha()
+    {
+        return $this->curso_fecha;
+    }
+
+    /**
+     * Set the value of curso_fecha
+     *
+     * @return  self
+     */ 
+    public function setCurso_fecha($curso_fecha)
+    {
+        $this->curso_fecha = $curso_fecha;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of curso_horario
+     */ 
+    public function getCurso_horario()
+    {
+        return $this->curso_horario;
+    }
+
+    /**
+     * Set the value of curso_horario
+     *
+     * @return  self
+     */ 
+    public function setCurso_horario($curso_horario)
+    {
+        $this->curso_horario = $curso_horario;
+
+        return $this;
+    }
+
+    /**
      * Get the value of curso_insignia
      */ 
     public function getCurso_insignia()
@@ -151,26 +255,6 @@ class CursoModel extends conection{
     public function setCurso_datec($curso_datec)
     {
         $this->curso_datec = $curso_datec;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of curso_img
-     */ 
-    public function getCurso_img()
-    {
-        return $this->curso_img;
-    }
-
-    /**
-     * Set the value of curso_img
-     *
-     * @return  self
-     */ 
-    public function setCurso_img($curso_img)
-    {
-        $this->curso_img = $curso_img;
 
         return $this;
     }
@@ -225,15 +309,19 @@ class CursoModel extends conection{
 
     public function save(){
 
-        $sql = "INSERT INTO cursos (usuario_id, carrera_id, curso_nombre, curso_descripcion, curso_insignia, curso_img) VALUES(:usuario_id, :carrera_id, :curso_nombre, :curso_descripcion, :curso_insignia, :curso_img);";
+        $sql = "INSERT INTO cursos (usuario_id, carrera_id, curso_nombre, curso_descripcion, curso_modo, curso_duracion, curso_instructor, curso_fecha, curso_horario, curso_insignia) VALUES(:usuario_id, :carrera_id, :curso_nombre, :curso_descripcion, :curso_modo, :curso_duracion, :curso_instructor, :curso_fecha, :curso_horario, :curso_insignia);";
 
         $data = [
             "usuario_id" => $this->getUsuario_id(),
             "carrera_id" => $this->getCarrera_id(),
             "curso_nombre" => $this->getCurso_nombre(),
             "curso_descripcion" => $this->getCurso_descripcion(),
+            "curso_modo" => $this->getcurso_modo(), 
+            "curso_duracion" => $this->getCurso_duracion(), 
+            "curso_instructor" => $this->getCurso_instructor(), 
+            "curso_fecha" => $this->getCurso_fecha(), 
+            "curso_horario" => $this->getCurso_horario(),
             "curso_insignia" => $this->getCurso_insignia(),
-            "curso_img" => $this->getCurso_img(),
         ];
 
         
@@ -248,5 +336,21 @@ class CursoModel extends conection{
         return $result;
     }
 
+    public function delete(){
+        $sql = "DELETE FROM cursos WHERE curso_id=:curso_id;";
 
+        $data = [
+            "curso_id" => $this->getCurso_id(),
+        ];
+
+        $delete = parent::nonQuery($sql, $data);
+
+        $result = false;
+        
+        if($delete){
+            $result = true;
+        }
+        
+        return $result;
+    }
 }

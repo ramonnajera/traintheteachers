@@ -2,11 +2,16 @@
 include_once 'models/CarreraModel.php';
 include_once 'models/CursoModel.php';
 include_once 'models/ParticipanteModel.php';
+include_once 'models/UserModel.php';
 
 class PageController{
     public function index(){
         $_CarreraModel = new CarreraModel();
         $carreras = $_CarreraModel->getAll();
+
+        $_UserModel = new UserModel();
+        $instructores = $_UserModel->getAllInstructores();
+        
         $faqs = utils::preguntasFrecuentes();
         
         if(isset($_SESSION['identidad']) && isset($_SESSION['admin'])){

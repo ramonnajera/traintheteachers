@@ -227,4 +227,13 @@ class UserModel extends conection{
         
         return $result;
     }
+
+    public function getAllInstructores(){
+        $sql = "SELECT usuario_id, usuario_nombre FROM usuarios WHERE usuario_tipo='admin';";
+
+        $instructores = parent::obtenerDatos($sql);
+        
+        return $instructores;
+    }
+
 }
