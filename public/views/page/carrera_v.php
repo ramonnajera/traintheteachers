@@ -50,7 +50,7 @@
                 <img class="h-24 w-20  md:h-22 md:w-20 flex-none bg-gray-50" src="<?=base_url?>assets/img/images/<?=$curso["curso_insignia"]?>" alt="">
                 <div class="w-full flex-auto">
                   <p class="text-sm md:text-xl font-medium leading-1 mt-4 text-gray-900"><?=$curso["curso_nombre"]?></p>
-                  <dd class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 mt-2 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Disponible</dd>
+                  <dd class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 mt-2 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20"><?=$curso["curso_status"]?></dd>
                 </div>
               </div>
               <!-- <div class="hidden md:block text-presencial pt-4 text-right md:text-right md:ml-[490px] md:mr-10">

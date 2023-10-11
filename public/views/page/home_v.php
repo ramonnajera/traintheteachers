@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <div>
-=======
-<div class="mx-0">
->>>>>>> eb0ff91c4211ea52e71cbce8890fdf706b4a7c63
     <?php if(isset($_SESSION['identidad']) && isset($_SESSION['admin'])):?>
     <div class="flex justify-end">
         <button data-open-modal class="btn btn-primary mx-3 mt-4">Nuevo taller</button>
@@ -65,10 +61,10 @@
             </form>
         </dialog>
     </div>
-    <div class="flex justify-between">
+    <div class="flex justify-between px-10">
     <p class="mb-2 text-5xl font-medium leading-tight px-2">Talleres</p>
     </div>
-    <section class="pb-10 flex-shrink-0 overflow-x-auto">
+    <section class="px-10 pb-10 flex-shrink-0 overflow-x-auto">
         <table class="w-fmd:min-w-full divide-y divide-gray-200 overflow-x-auto">
         <thead class="bg-gray-50">
             <tr>
@@ -86,9 +82,11 @@
             <td class="py-4 px-6 border-b border-gray-200"><?=$data["carrera_nombre"]?></td>
             <td class="py-4 px-6 border-b border-gray-200"><?=$data["curso_nombre"]?></td>
             <td class="py-4 px-6 border-b border-gray-200"><?=$data["curso_descripcion"]?></td>
-            <td class="py-4 px-6 border-b border-gray-200">
+            <td class="py-6 px-6 border-b border-gray-200">
                 <a href="<?=base_url?>Participante/all?id=<?=$data["curso_id"]?>" class="btn btn-primary"><i class="fa-solid fa-users"></i></a>
-                <a class="btn bg-red-600 text-white" href="<?=base_url?>Curso/delete?id=<?=$data["curso_id"]?>">Eliminar</a>
+            </td>
+            <td class="py-6 px-6 border-b border-gray-200">
+                <a class="btn bg-red-600 hover:bg-red-700 text-white" href="<?=base_url?>Curso/delete?id=<?=$data["curso_id"]?>"><i class="fa-solid fa-trash"></i></a>
             </td>
             </tr>
             <?php endforeach;?>

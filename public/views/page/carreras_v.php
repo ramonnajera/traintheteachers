@@ -29,7 +29,7 @@
             </form>
         </dialog>
     </div>
-    <section>
+    <section class="px-10">
         <p class="mb-2 mt-0 text-5xl font-medium leading-tight">Rutas de aprendizaje</p>
         <table class="min-w-full divide-y divide-gray-200 overflow-x-auto">
         <thead class="bg-gray-50">

@@ -1,6 +1,6 @@
 <footer class="flex flex-col justify-center bg-[#371e49] mt-auto px-10 h-96 ">
     <!-- Corner images -->
-    <div class="relative">
+    <div class="hidden md:block relative">
         <img class="absolute -top-[60px] right-0 -mr-10 w-20 h-20" src="<?=base_url?>assets/img/iconoFondo_6.svg" alt="Imagen en la esquina superior derecha">
     </div>
     <div class="container mx-auto md:grid md:grid-cols-2 gap-3 text-white py-5">
@@ -19,7 +19,7 @@
                 </div>
             </div>
         </div>
-        <div class="grid grid-flow-row gap-4 px-5 md:px-0">
+        <div class="grid grid-flow-row-dense gap-4 px-5 md:px-0">
             <div class="flex">
                 <p class="flex-none border-b border-y-amber-400">LIGAS DE INTERES</p>
                 <span class="grow border-b border-dotted"></span>
@@ -37,7 +37,7 @@
         </div>
         <div class="bar grid md:grid-cols-2 gap-2 col-span-2">
             <div class="mx-auto md:m-0">
-                <img class="absolute w-8 mb-2 left-1" src="<?=base_url?>assets/img/iconoFondo_4.svg" alt="">
+                <img class="hidden md:block absolute w-8 mb-2 left-1" src="<?=base_url?>assets/img/iconoFondo_4.svg" alt="">
                 <ul class="flex space-x-2">
                     <li><img class="w-7 social hover:bg-blue-800" src="<?=base_url?>assets/img/facebook.png" alt=""></li>
                     <li><img class="w-7 social hover:bg-blue-500" src="<?=base_url?>assets/img/twitter.png" alt=""></li>
@@ -48,11 +48,11 @@
                 </ul>
             </div>
             <div class="mx-auto md:mx-0">
-                <p class="font-medium">2023 © Todos los derechos reservados | <a class="text-amber-400 link hover:text-amber-200" href="https://uach.mx/visitantes/privacidad-y-politicas-institucionales-para-el-uso-de-la-pagina-web/">Privacidad y Políticas</a></p>
+                <p class="font-normal">2023 © Todos los derechos reservados | <a class="text-amber-400 link hover:text-amber-200" href="https://uach.mx/visitantes/privacidad-y-politicas-institucionales-para-el-uso-de-la-pagina-web/">Privacidad y Políticas</a></p>
             </div>
         </div>
     </div>
-</footer>
+    </footer>
     <script src="<?=base_url?>assets/js/main.js"></script>
     <script src="https://kit.fontawesome.com/72c46a6083.js" crossorigin="anonymous"></script>
 </body>
