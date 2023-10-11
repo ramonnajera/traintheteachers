@@ -43,7 +43,7 @@
                     </li>
                     <li>
                         <a href="<?=htmlspecialchars(base_url . "Curso/alls")?>"
-                            class="block py-2 pl-3 pr-4 text-white rounded hover:text-[#D5175E]  lg:p-0">Todos los cursos</a>
+                            class="block py-2 pl-3 pr-4 text-white rounded hover:text-[#D5175E]  lg:p-0">Todos los talleres</a>
                     </li>
                     <li>
                         <a href="<?=htmlspecialchars(base_url . "")?>"

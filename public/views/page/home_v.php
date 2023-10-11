@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <div>
+=======
+<div class="mx-0">
+>>>>>>> eb0ff91c4211ea52e71cbce8890fdf706b4a7c63
     <?php if(isset($_SESSION['identidad']) && isset($_SESSION['admin'])):?>
     <div class="flex justify-end">
         <button data-open-modal class="btn btn-primary mx-3 mt-4">Nuevo taller</button>
