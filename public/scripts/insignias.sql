@@ -31,7 +31,7 @@ CREATE TABLE usuarios (
 CREATE TABLE carreras (
     carrera_id          INT GENERATED ALWAYS AS IDENTITY,
     carrera_nombre      VARCHAR (200) UNIQUE NOT NULL,
-    carrera_descripcion VARCHAR (500) NOT NULL,
+    carrera_descripcion VARCHAR (700) NOT NULL,
     carrera_img         VARCHAR (300) NOT NULL,
     carrera_insignia    VARCHAR (300) NOT NULL,
     PRIMARY KEY(carrera_id)
@@ -57,7 +57,7 @@ CREATE TABLE cursos (
     usuario_id          INT NOT NULL,
     carrera_id          INT NOT NULL,
     curso_nombre        VARCHAR (200) NOT NULL,
-    curso_descripcion   VARCHAR (500) NOT NULL,
+    curso_descripcion   VARCHAR (700) NOT NULL,
 
     curso_modo          VARCHAR (200) NOT NULL,
     curso_status        BOOLEAN NOT NULL DEFAULT FALSE,

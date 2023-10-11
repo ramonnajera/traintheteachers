@@ -19,13 +19,20 @@ class CursoController{
             $nombre = Utils::limpiarData($nombre,"texto");
             $descripcion = Utils::limpiarData($descripcion,"texto");
             $modo = Utils::limpiarData($modo,"texto");
-            // $horario = Utils::limpiarData($horario,"texto");
+            $horario = Utils::limpiarData($horario,"texto");
 
-            $nombre = filter_var($nombre, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ\s]+$/")));
-            $descripcion = filter_var($descripcion, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ.\s]+$/")));
-            $modo = filter_var($modo, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ.\s]+$/")));
-            $horario = filter_var($horario, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ.-_123456789:\s]+$/")));
+            var_dump($nombre);
+            echo("<br>");
+            echo("<br>");
 
+            $nombre = filter_var($nombre, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789:., \-\s]+$/")));
+            $descripcion = filter_var($descripcion, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789:., \-\s]+$/")));
+            $modo = filter_var($modo, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789:., \-\s]+$/")));
+            $horario = filter_var($horario, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789:., \-\s]+$/")));
+
+            $descripcion = nl2br($descripcion);
+            $horario = nl2br($horario);
+            
             if ($carrera && $nombre && $descripcion && $modo && $duracion && $instructor && $fecha) {
                 $_CursoModel = new CursoModel();
                 $insignia = $this->subirImagen($insignia);

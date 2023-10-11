@@ -25,9 +25,9 @@ class Utils{
         }
 
         if($saneamiento == 'texto'){
-            $data = filter_var($data,FILTER_SANITIZE_STRING);
-            $data = preg_replace('([^A-ZÑÁÉÍÓÚa-zñáéíóú. ])', '', $data);
-            $data = filter_var($data, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ.\s]+$/")));
+            // $data = filter_var($data,FILTER_SANITIZE_STRING);
+            $data = preg_replace('([^A-Za-z0-9áéíóúÁÉÍÓÚÑñ .,-_:\n])', '', $data);
+            $data = filter_var($data, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ.,-_:\s]+$/")));
         }
 
         if($saneamiento == 'pass'){

@@ -15,11 +15,13 @@ class CarreraController{
             $nombre = Utils::limpiarData($nombre,"texto");
             $descripcion = Utils::limpiarData($descripcion,"texto");
 
-            $nombre = filter_var($nombre, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ\s]+$/")));
-            $descripcion = filter_var($descripcion, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ,.\s]+$/")));
-
+            var_dump($descripcion);
+            $nombre = filter_var($nombre, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789:., \-\s]+$/")));
+            $descripcion = filter_var($descripcion, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789<>:., \-\s]+$/")));
+            $descripcion = nl2br($descripcion);
             
             if ($nombre && $descripcion) {
+
                 $_CarreraModel = new CarreraModel();
                 $subido = $this->subirImagen($img);
                 $subido2 = $this->subirImagen($insignia);
