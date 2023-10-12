@@ -16,7 +16,7 @@ CREATE TABLE usuarios (
     usuario_nombre  VARCHAR (200) NOT NULL,
     usuario_pass    VARCHAR (100) NOT NULL,
     usuario_correo  VARCHAR (200) UNIQUE NOT NULL,
-    usuario_activo  BOOLEAN NOT NULL DEFAULT FALSE,
+    usuario_activo  BOOLEAN NOT NULL DEFAULT TRUE,
     usuario_area    VARCHAR (200) NOT NULL,
     usuario_tipo    VARCHAR (50) NOT NULL DEFAULT 'user',
     PRIMARY KEY(usuario_id)
@@ -58,14 +58,12 @@ CREATE TABLE cursos (
     carrera_id          INT NOT NULL,
     curso_nombre        VARCHAR (200) NOT NULL,
     curso_descripcion   VARCHAR (700) NOT NULL,
-
     curso_modo          VARCHAR (200) NOT NULL,
     curso_status        BOOLEAN NOT NULL DEFAULT FALSE,
     curso_duracion      INT NOT NULL,
     curso_instructor    INT NOT NULL,
     curso_fecha         DATE,
     curso_horario       VARCHAR (300) NOT NULL,
-
     curso_insignia      VARCHAR (300) NOT NULL,
     curso_datec         TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY(curso_id),

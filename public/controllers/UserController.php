@@ -145,7 +145,18 @@ class UserController{
             $save = $_UserModel->save();
 
             if($save){
-                $_respuestas->response["result"]["mensaje"] = "Registro correcto";
+                $identidad = $this->loginRegistro($correo,$pass);
+                if($identidad){
+                    $_SESSION['identidad'] = $identidad;
+                    if($identidad[0]['usuario_tipo'] == "admin"){
+                        $_SESSION['admin'] = true;
+                    }elseif($identidad[0]['usuario_tipo'] == "user"){
+                        $_SESSION['user'] = true;
+                    }
+                    $_respuestas->response["result"]["mensaje"] = "Registro correcto";
+                }else{
+                    $_respuestas->error_u00001();
+                }
             }else{
                 $_respuestas->error_u00001();
             }
@@ -160,6 +171,29 @@ class UserController{
         ];
         
         header("Location:".base_url);
+    }
+
+    public function loginRegistro($user, $pass){
+            
+            if($user && $pass){
+
+                $_UserModel = new UserModel();
+            
+                $_UserModel->setUsuario_correo($user);
+                $_UserModel->setUsuario_pass($pass);
+
+                $identidad = $_UserModel->login();
+
+                if(!empty($identidad) && isset($identidad[0]['usuario_tipo'])){
+                    $respuesta =$identidad;
+                }else{
+                    $respuesta =false;
+                }
+            
+            }else{
+                $respuesta =false;
+            }
+            return $respuesta;
     }
 
     public function logout(){

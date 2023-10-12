@@ -686,6 +686,10 @@ video {
   grid-column: span 2 / span 2;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .mx-3 {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
@@ -1553,6 +1557,10 @@ video {
 
 .text-start {
   text-align: start;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .font-\[Faktum\] {
