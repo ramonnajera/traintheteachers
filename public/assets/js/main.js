@@ -1,17 +1,5 @@
 window.addEventListener('load', function() {
 
-    const  takaka= [
-        {
-            titulo: "sadasdasdsad", text: "zczxczxczxczxc",
-        },
-        {
-            titulo: "sadasdasdsad", text: "zczxczxczxczxc",
-        },
-        {
-            titulo: "sadasdasdsad", text: "zczxczxczxczxc",
-        },
-    ]
-
     const toogleBtn = document.querySelector(".toggle-button");
     const dropdown = document.querySelector(".dropdown-menu");
 
@@ -35,6 +23,7 @@ window.addEventListener('load', function() {
 
     if (openButton) {
         openButton.addEventListener("click", () =>{
+            console.log("clic");
             modal.showModal()
         })
     }

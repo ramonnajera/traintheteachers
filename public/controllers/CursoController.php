@@ -21,14 +21,11 @@ class CursoController{
             $modo = Utils::limpiarData($modo,"texto");
             $horario = Utils::limpiarData($horario,"texto");
 
-            var_dump($nombre);
-            echo("<br>");
-            echo("<br>");
 
-            $nombre = filter_var($nombre, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789:., \-\s]+$/")));
-            $descripcion = filter_var($descripcion, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789:., \-\s]+$/")));
-            $modo = filter_var($modo, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789:., \-\s]+$/")));
-            $horario = filter_var($horario, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789:., \-\s]+$/")));
+            $nombre = filter_var($nombre, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789:;., \-\s]+$/")));
+            $descripcion = filter_var($descripcion, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789:;., \-\s]+$/")));
+            $modo = filter_var($modo, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789:;., \-\s]+$/")));
+            $horario = filter_var($horario, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789:;., \-\s]+$/")));
 
             $descripcion = nl2br($descripcion);
             $horario = nl2br($horario);

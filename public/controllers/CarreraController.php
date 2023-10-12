@@ -15,9 +15,8 @@ class CarreraController{
             $nombre = Utils::limpiarData($nombre,"texto");
             $descripcion = Utils::limpiarData($descripcion,"texto");
 
-            var_dump($descripcion);
-            $nombre = filter_var($nombre, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789:., \-\s]+$/")));
-            $descripcion = filter_var($descripcion, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789<>:., \-\s]+$/")));
+            $nombre = filter_var($nombre, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789:;., \-\s]+$/")));
+            $descripcion = filter_var($descripcion, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÁÉÍÓÚÑñ123456789<>:;., \-\s]+$/")));
             $descripcion = nl2br($descripcion);
             
             if ($nombre && $descripcion) {
@@ -132,6 +131,13 @@ class CarreraController{
             $_respuestas->error_u00001();
         }
         require_once 'views/page/carrera_v.php';
+    }
+
+    public function alls(){
+        Utils::isLog();
+        $_CarreraModel = new CarreraModel();
+        $carreras = $_CarreraModel->getAll();
+        require_once 'views/page/rutass_v.php';
     }
 
     

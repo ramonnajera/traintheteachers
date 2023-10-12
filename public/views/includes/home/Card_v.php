@@ -1,4 +1,3 @@
-
 <div class="bg-gray-100">
   <h1 class="text-3xl text-center font-medium pt-10 md:pt-0" >Rutas de aprendizaje</h1>
   <div class="mx-auto md:max-w-2xl px-4 py-4 sm:px-6 sm:py-8 lg:max-w-7xl lg:px-8">
