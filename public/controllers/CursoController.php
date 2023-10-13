@@ -117,7 +117,42 @@ class CursoController{
         require_once 'views/page/cursos_v.php';
     }
 
+    public function statusUpdate(){
+        Utils::isAdmin();
+        $_respuestas = new responses();
+        if($_GET){
+            $id = isset($_GET['id']) ? $_GET['id'] :false;
+            $id = filter_var($id, FILTER_VALIDATE_INT);
+
+            $status = isset($_GET['status']) ? $_GET['status'] :false;
+
+            if($id){
+                $_CursoModel = new CursoModel();
+                $_CursoModel->setCurso_id($id);
+                $_CursoModel->setCurso_status($status);
+
+                $change = $_CursoModel->changeStatus();
+
+                if ($change) {
+                    $_respuestas->response["result"]["mensaje"] = "Status cambiado";
+                }else{
+                    $_respuestas->error_u00001();
+                }
+            }else{
+                $_respuestas->error_u00001();
+            }
+        }else{
+            $_respuestas->error_u00001();
+        }
+        $_SESSION['respuesta'] = [
+            "status" => $_respuestas->response["status"],
+            "mensaje" => $_respuestas->response["result"]["mensaje"]
+        ];
+        header("Location:".base_url);
+    }
+
     public function delete(){
+        Utils::isAdmin();
         $_respuestas = new responses();
         if($_GET){
             $id = isset($_GET['id']) ? $_GET['id'] :false;
@@ -138,6 +173,8 @@ class CursoController{
             }else{
                 $_respuestas->error_u00001();
             }
+        }else{
+            $_respuestas->error_u00001();
         }
 
         $_SESSION['respuesta'] = [

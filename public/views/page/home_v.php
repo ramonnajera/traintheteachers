@@ -72,6 +72,7 @@
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Curso</th>
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ruta de aprendisaje</th>
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descripcion</th>
+            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
             </tr>
         </thead>
@@ -82,10 +83,10 @@
             <td class="py-4 px-6 border-b border-gray-200"><?=$data["carrera_nombre"]?></td>
             <td class="py-4 px-6 border-b border-gray-200"><?=$data["curso_nombre"]?></td>
             <td class="py-4 px-6 border-b border-gray-200"><?=$data["curso_descripcion"]?></td>
+            <td class="py-4 px-6 border-b border-gray-200 <?=$data["curso_status"] == true ? 'text-green-600' : 'text-red-600'?>"><?=$data["curso_status"] == true ? 'Activo' : 'Inactivo'?></td>
             <td class="py-6 px-6 border-b border-gray-200">
                 <a href="<?=base_url?>Participante/all?id=<?=$data["curso_id"]?>" class="btn btn-primary"><i class="fa-solid fa-users"></i></a>
-            </td>
-            <td class="py-6 px-6 border-b border-gray-200">
+                <a class="btn <?= $data["curso_status"] == true ? 'bg-yellow-400 hover:bg-yellow-700' : 'bg-slate-400 hover:bg-slate-600'?> text-white" href="<?=base_url?>Curso/statusUpdate?id=<?=$data["curso_id"] . '&status=' . $data["curso_status"] ?>"><i class="fa-solid <?= $data["curso_status"] == true ? 'fa-eye-slash' : 'fa-eye'?>"></i></a>
                 <a class="btn bg-red-600 hover:bg-red-700 text-white" href="<?=base_url?>Curso/delete?id=<?=$data["curso_id"]?>"><i class="fa-solid fa-trash"></i></a>
             </td>
             </tr>

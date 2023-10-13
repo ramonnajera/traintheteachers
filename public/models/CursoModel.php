@@ -8,6 +8,7 @@ class CursoModel extends conection{
     private $curso_nombre;
     private $curso_descripcion;
     private $curso_modo;
+    private $curso_status;
     private $curso_duracion;
     private $curso_instructor;
     private $curso_fecha;
@@ -135,6 +136,26 @@ class CursoModel extends conection{
     public function setCurso_modo($curso_modo)
     {
         $this->curso_modo = $curso_modo;
+
+        return $this;
+    }
+
+        /**
+     * Get the value of curso_modo
+     */ 
+    public function getCurso_status()
+    {
+        return $this->curso_status;
+    }
+
+    /**
+     * Set the value of curso_modo
+     *
+     * @return  self
+     */ 
+    public function setCurso_status($curso_status)
+    {
+        $this->curso_status = $curso_status;
 
         return $this;
     }
@@ -330,6 +351,32 @@ class CursoModel extends conection{
         $result = false;
         
         if($save){
+            $result = true;
+        }
+        
+        return $result;
+    }
+
+    public function changeStatus(){
+        $status= $this->getCurso_status();
+
+        if($status == "1"){
+            $status = 0;
+        }else{
+            $status = 1;
+        }
+
+        $sql = "UPDATE cursos SET curso_status='$status' WHERE curso_id=:curso_id;";
+
+        $data = [
+            "curso_id" => $this->getCurso_id(),
+        ];
+
+        $update = parent::nonQuery($sql, $data);
+
+        $result = false;
+        
+        if($update){
             $result = true;
         }
         
