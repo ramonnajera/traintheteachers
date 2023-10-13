@@ -1,5 +1,6 @@
 <?php
 include_once 'models/CursoModel.php';
+include_once 'models/ParticipanteModel.php';
 
 class CursoController{
     public function add(){
@@ -114,6 +115,14 @@ class CursoController{
         $_CursoModel = new CursoModel();
         $_CursoModel->setUsuario_id($_SESSION["identidad"][0]["usuario_id"]);
         $cursos = $_CursoModel->getAlls();
+        if(isset($_SESSION['identidad'])){
+            $_ParticipanteModel = new ParticipanteModel();
+            $_ParticipanteModel->setUsuario_id($_SESSION["identidad"][0]["usuario_id"]);
+            $cursos_inscrito=$_ParticipanteModel->getAllCursosInscrito();
+            $cursos_inscrito=array_map(function ($curso) {
+                return $curso["curso_id"];
+            }, $cursos_inscrito);
+        }
         require_once 'views/page/cursos_v.php';
     }
 

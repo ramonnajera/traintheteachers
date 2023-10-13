@@ -172,4 +172,5 @@ class CarreraModel extends conection{
         
         return $result;
     }
+
 }

@@ -1,6 +1,7 @@
 <?php
 include_once 'models/CarreraModel.php';
 include_once 'models/CursoModel.php';
+include_once 'models/ParticipanteModel.php';
 
 class CarreraController{
     public function add(){
@@ -87,6 +88,7 @@ class CarreraController{
     }
 
     public function delete(){
+        Utils::isAdmin();
         $_respuestas = new responses();
         if($_GET){
             $id = isset($_GET['id']) ? $_GET['id'] :false;
@@ -120,15 +122,24 @@ class CarreraController{
         $_respuestas = new responses();
         $id = isset($_GET['id']) ? $_GET['id'] :false;
 
+        
         if($id){
             $_CarreraModel = new CarreraModel();
-            $_CursoModel = new CursoModel();
             $_CarreraModel->setCarrera_id($id);
-            $_CursoModel->setCarrera_id($id);
-
-            // $inscrito = $_CursoModel->buscarInscito();
             $carrera = $_CarreraModel->getOne();
+            
+            $_CursoModel = new CursoModel();
+            $_CursoModel->setCarrera_id($id);
             $cursos = $_CursoModel->getAll();
+
+            if(isset($_SESSION['identidad'])){
+                $_ParticipanteModel = new ParticipanteModel();
+                $_ParticipanteModel->setUsuario_id($_SESSION["identidad"][0]["usuario_id"]);
+                $cursos_inscrito=$_ParticipanteModel->getAllCursosInscrito();
+                $cursos_inscrito=array_map(function ($curso) {
+                    return $curso["curso_id"];
+                }, $cursos_inscrito);
+            }
 
         }else{
             $_respuestas->error_u00001();

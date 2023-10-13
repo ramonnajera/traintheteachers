@@ -11,6 +11,11 @@
                 <div class="w-full flex-auto">
                   <p class="text-sm md:text-xl font-medium leading-1 mt-4 text-gray-900"><?=$curso["curso_nombre"]?></p>
                   <dd class="inline-flex items-center rounded-md  px-2 py-1 mt-2 text-xs font-medium ring-1 ring-inset <?= $curso["curso_status"] == 't' ? 'bg-green-50 text-green-700 ring-green-600/20' : 'bg-red-50 text-red-700 ring-red-600/20' ?>"><?= $curso["curso_status"] == "t" ? "Activo" : "Inactivo" ?></dd>
+
+                  <?php if(isset($_SESSION['identidad']) && in_array($curso["curso_id"], $cursos_inscrito)):?>
+                    <dd class="inline-flex items-center rounded-md  px-2 py-1 mt-2 text-xs font-medium ring-1 ring-inset bg-green-50 text-green-700 ring-green-600/20"><i class="fa-solid fa-circle-check"></i> Inscrito</dd>
+                  <?php endif?>
+
                 </div>
               </div>
               <!-- <div class="hidden md:block text-presencial pt-4 text-right md:text-right md:ml-[490px] md:mr-10">
@@ -88,7 +93,7 @@
         <div class="mt-6 border-t border-gray-900/5 px-6 py-6">
           
         <?php if(isset($_SESSION['identidad'])):?>
-          <?php if($curso["curso_status"]):?>
+          <?php if($curso["curso_status"] && !in_array($curso["curso_id"], $cursos_inscrito)):?>
             <a href="<?=base_url?>Participante/add?id=<?=$curso["curso_id"]?>" class="rounded-sm bg-primary px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Inscribirme</a>
           <?php else:?>
             <button class="rounded-sm bg-primary px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:opacity-50" disabled>Inscribirme</button>

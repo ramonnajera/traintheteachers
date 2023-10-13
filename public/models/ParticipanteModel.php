@@ -187,4 +187,16 @@ class ParticipanteModel extends conection{
 
         return $participante;
     }
+
+    public function getAllCursosInscrito(){
+        $sql = "SELECT curso_id FROM participantes WHERE usuario_id = :usuario_id";
+
+        $data = [
+            "usuario_id" => $this->getUsuario_id(),
+        ];
+
+        $cursos = parent::obtenerDatos($sql,$data);
+        
+        return $cursos;
+    }
 }

@@ -294,9 +294,7 @@ class CursoModel extends conection{
     }
 
     public function getAlls(){
-        $sql = "SELECT * FROM carreras 
-                INNER JOIN cursos ON carreras.carrera_id = cursos.carrera_id 
-                LEFT JOIN participantes ON cursos.curso_id = participantes.curso_id;";
+        $sql = "SELECT * FROM cursos;";
 
 
         $cursos = parent::obtenerDatos($sql);
@@ -400,4 +398,5 @@ class CursoModel extends conection{
         
         return $result;
     }
+
 }
