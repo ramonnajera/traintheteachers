@@ -23,12 +23,18 @@ class ParticipanteController{
             $_ParticipanteModel->setUsuario_id($_SESSION["identidad"][0]["usuario_id"]);
             $_ParticipanteModel->setCurso_id($curso);
             
-            $save = $_ParticipanteModel->save();
+            $inscrito = $_ParticipanteModel->buscarParticipante();
 
-            if ($save) {
-                $_respuestas->response["result"]["mensaje"] = "Registro correcto";
+            if(!$inscrito){
+                $save = $_ParticipanteModel->save();
+                if ($save) {
+                    $_respuestas->response["result"]["mensaje"] = "Registro correcto";
+                }else{
+                    $_respuestas->error_u00001();
+                }
             }else{
-                $_respuestas->error_u00001();
+                $_respuestas->response["status"] = "error";
+                $_respuestas->response["result"]["mensaje"] = "Usted ya esta inscrito";
             }
 
         }else{

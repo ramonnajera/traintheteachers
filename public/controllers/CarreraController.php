@@ -119,11 +119,14 @@ class CarreraController{
     public function carrera(){
         $_respuestas = new responses();
         $id = isset($_GET['id']) ? $_GET['id'] :false;
+
         if($id){
             $_CarreraModel = new CarreraModel();
             $_CursoModel = new CursoModel();
             $_CarreraModel->setCarrera_id($id);
             $_CursoModel->setCarrera_id($id);
+
+            // $inscrito = $_CursoModel->buscarInscito();
             $carrera = $_CarreraModel->getOne();
             $cursos = $_CursoModel->getAll();
 

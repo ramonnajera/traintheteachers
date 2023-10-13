@@ -89,7 +89,7 @@
           
         <?php if(isset($_SESSION['identidad'])):?>
           <?php if($curso["curso_status"]):?>
-          <a href="" class="rounded-sm bg-primary px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Inscribirme</a>
+            <a href="<?=base_url?>Participante/add?id=<?=$curso["curso_id"]?>" class="rounded-sm bg-primary px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Inscribirme</a>
           <?php else:?>
             <button class="rounded-sm bg-primary px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:opacity-50" disabled>Inscribirme</button>
           <?php endif;?>

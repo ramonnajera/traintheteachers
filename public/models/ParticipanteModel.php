@@ -174,4 +174,17 @@ class ParticipanteModel extends conection{
         
         return $participantes;
     }
+
+    public function buscarParticipante(){
+        $sql = "SELECT * FROM participantes WHERE usuario_id = :usuario_id AND curso_id = :curso_id";
+
+        $data = [
+            "usuario_id" => $this->getUsuario_id(),
+            "curso_id" => $this->getCurso_id(),
+        ];
+
+        $participante = parent::nonQuery($sql, $data);
+
+        return $participante;
+    }
 }
