@@ -25,7 +25,7 @@
                     <label class="block mb-2 text-sm font-medium text-gray-900" for="modo">Modo</label>
                     <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" name="modo" id="modo" name="modo">
                         <option value="virtual">Virtual</option>
-                        <option value="presencial">Precencial</option>
+                        <option value="presencial">Presencial</option>
                     </select>
 
                 </div>
@@ -95,11 +95,13 @@
         </table>
     </section>
     <?php elseif(isset($_SESSION['identidad']) && isset($_SESSION['user'])):?>
-        <section class="bg-[#EAF3F0] border-2 mt-4 py-1 px-3 rounded-xl mb-5">
+       <section class="w-80 mx-auto"> 
+        <div class="bg-[#EAF3F0] border-2 mt-4 py-1 px-3 rounded-xl mb-5">
             <p>Nombre: <?=$_SESSION['identidad'][0]["usuario_nombre"]?></p>
             <p>Correo: <?=$_SESSION['identidad'][0]["usuario_correo"]?></p>
             <p>Area: <?=$_SESSION['identidad'][0]["usuario_area"]?></p>
-        </section>
+        </d>
+    </div>
         <section class="bg-[#EAF3F0] border-2 pt-0 mb-4 rounded-xl">
         <p class="text-center text-gray-600 font-bold text-2xl py-5">MIS INSIGNIAS</p>
         <div class="w-full mx-auto justify-items-center p-6 grid grid-cols-1 gap-4 md:grid-cols-3">
