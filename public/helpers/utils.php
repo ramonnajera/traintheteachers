@@ -32,8 +32,8 @@ class Utils{
 
         if($saneamiento == 'pass'){
             $data = filter_var($data,FILTER_SANITIZE_STRING);
-            $data = preg_replace('([^A-Za-z.0-9])', '', $data);
-            $data = filter_var($data, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ!.\s]+$/")));
+            $data = preg_replace('([^A-Za-z.0-9_!])', '', $data);
+            $data = filter_var($data, FILTER_VALIDATE_REGEXP, array("options" => array("regexp"=>"/^[\wáéíóúÑñ!_.\s]+$/")));
         }
 
         if($saneamiento == 'identificador'){

@@ -94,6 +94,4 @@ CREATE TABLE participantes (
           REFERENCES cursos(curso_id)
 );
 
-insert into usuarios (usuario_nombre, usuario_pass, usuario_correo, usuario_activo,usuario_area, usuario_tipo) values ('Admin Mariano Cabrera', '$2y$04$LSJR.Nnmme4kCD9dhe.4iOpUXNIqm36j1qAnSHjfHcMT6wdLckkFa', 'admin@uach.mx', 't', 'Area de usuario','admin');
-
-insert into usuarios (usuario_nombre, usuario_pass, usuario_correo, usuario_activo,usuario_area, usuario_tipo) values ('User Mariano Cabrera', '$2y$04$LSJR.Nnmme4kCD9dhe.4iOpUXNIqm36j1qAnSHjfHcMT6wdLckkFa', 'user@uach.mx', 't', 'Area de usuario','user');
+insert into usuarios (usuario_nombre, usuario_pass, usuario_correo, usuario_activo,usuario_area, usuario_tipo) values ('Bart Lopez', '$2y$04$Cxa03AYd4nQxM1gbEb4H.eyTftjt4OJ7qvt/Pui3jf3f4KBmhN/aq', 'dalopez@uach.mx', 't', 'CIET','admin');
