@@ -1,4 +1,4 @@
-<div class=" mx-auto px-4">
+<div class=" mx-auto px-4 pb-10">
     <form action="<?=htmlspecialchars(base_url . "User/signup")?>" method="post">
         <div class="flex flex-col  justify-center items-center text-center ">
             <br/>
