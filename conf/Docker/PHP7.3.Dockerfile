@@ -1,6 +1,12 @@
 FROM php:7.3-fpm
 RUN apt-get update
 
+RUN apt-get update && apt-get install -y \
+    libldap2-dev
+
+RUN docker-php-ext-configure ldap --with-libdir=lib/x86_64-linux-gnu/
+RUN docker-php-ext-install ldap
+
 RUN apt-get install -y --no-install-recommends \
     libfreetype6-dev \
     libicu-dev \

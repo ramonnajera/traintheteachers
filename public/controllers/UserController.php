@@ -6,25 +6,29 @@ class UserController{
         $_respuestas = new responses();
 
         if (isset($_POST)) {
-            $user = isset($_POST['user']) ? $_POST['user'] :false;
+            $user = isset($_POST['user']) ? $_POST['user']."@uach.mx" :false;
             $pass = isset($_POST['pass']) ? $_POST['pass'] :false;
-            
+
+            $ldap_user = isset($_POST['user']) ? $_POST['user']:false;
+
             $user = Utils::limpiarData($user,"email");
+            $user = Utils::validarData($user,"email");
+
             $pass = Utils::limpiarData($pass,"pass");
             
-            $user = Utils::validarData($user,"email");
+            $ldap_user = Utils::validarData($ldap_user,"texto");
             
             if($user && $pass){
             // Conexion con LDAP
-            // $ldapconn = ldap_connect("buzon.uach.mx","389")
-            // or die("Could not connect to LDAP server.");
-            // $id = "uid=".$user.",ou=People,o=uach.mx,o=uach.mx";
+            $ldapconn = ldap_connect("buzon.uach.mx","389")
+            or die("Could not connect to LDAP server.");
+            $id = "uid=".$ldap_user.",ou=People,o=uach.mx,o=uach.mx";
 
-            // $ldapbind = ldap_bind($ldapconn, $id, $pass);
+            $ldapbind = ldap_bind($ldapconn, $id, $pass);
     
-            // ldap_close($ldapconn);
+            ldap_close($ldapconn);
 
-            // if($ldapbind){
+            if($ldapbind){
 
                 $_UserModel = new UserModel();
             
@@ -48,10 +52,10 @@ class UserController{
                     $_respuestas->error_u00002();
                     $_respuestas->response["result"]["mensaje"] = "Usuario o contraseña incorrectos";
                 }
-            // }else{
-            //     $_respuestas->error_u00002();
-            //     $_respuestas->response["result"]["mensaje"] = "Usuario o contraseña incorrectos";
-            // }
+            }else{
+                $_respuestas->error_u00002();
+                $_respuestas->response["result"]["mensaje"] = "Usuario o contraseña incorrectos en ldap";
+            }
             
             }else{
                 $_respuestas->error_u00001();
@@ -113,34 +117,38 @@ class UserController{
         $pass = Utils::limpiarData($pass,"pass");
         $pass = Utils::validarData($pass,"pass");
 
-        $correo = isset($_POST['correo']) && !empty($_POST['correo']) ? $_POST['correo'] :false;
+        $correo = isset($_POST['correo']) && !empty($_POST['correo']) ? $_POST['correo']."@uach.mx" :false;
+        
         $correo = Utils::limpiarData($correo,"email");
         $correo = Utils::validarData($correo,"email");
+
+        $ldap_user = isset($_POST['correo']) && !empty($_POST['correo']) ? $_POST['correo']:false;
 
         $area = isset($_POST['area']) && !empty($_POST['area']) ? $_POST['area'] :false;
         $area = Utils::limpiarData($area,"texto");
         $area = Utils::validarData($area,"texto");
 
         // // Conexion con LDAP
-        // $ldapconn = ldap_connect("buzon.uach.mx","389")
-        // or die("Could not connect to LDAP server.");
-        // $id = "uid=".$user.",ou=People,o=uach.mx,o=uach.mx";
+        $ldapconn = ldap_connect("buzon.uach.mx","389")
+        or die("Could not connect to LDAP server.");
+        $id = "uid=".$ldap_user.",ou=People,o=uach.mx,o=uach.mx";
 
-        // try {
-        //     $ldapbind = ldap_bind($ldapconn, $id, $pass);
-        // } catch (Exception $e) {
-        //     echo 'Excepción capturada: ',  $e->getMessage(), "\n";
-        // }
+        try {
+            $ldapbind = ldap_bind($ldapconn, $id, $pass);
+        } catch (Exception $e) {
+            echo 'Excepción capturada: ',  $e->getMessage(), "\n";
+        }
 
-        // ldap_close($ldapconn);
+        ldap_close($ldapconn);
 
-        // if(isset($ldapbind) && $ldapbind){
+        if(isset($ldapbind) && $ldapbind){
             $_UserModel = new UserModel();
             
             $_UserModel->setUsuario_nombre($user);
             $_UserModel->setUsuario_pass($pass);
             $_UserModel->setUsuario_correo($correo);
             $_UserModel->setUsuario_area($area);
+            
 
             $save = $_UserModel->save();
 
@@ -161,9 +169,10 @@ class UserController{
                 $_respuestas->error_u00001();
             }
 
-        // }else{
-        //     $_respuestas->error_u00001();
-        // }
+        }else{
+            $_respuestas->error_u00002();
+            $_respuestas->response["result"]["mensaje"] = "Usuario o contraseña en ldap incorrectos";
+        }
 
         $_SESSION['respuesta'] = [
             "status" => $_respuestas->response["status"],

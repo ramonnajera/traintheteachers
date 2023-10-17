@@ -52,7 +52,7 @@
 
                 <?php endif;?>
         <?php elseif(!isset($_SESSION['identidad'])):?>
-            <li>
+            <!-- <li>
                 <a href="#"
                     class="block py-2 pl-3 pr-4 text-white rounded hover:text-[#D5175E]  lg:p-0"
                     aria-current="page">menu 1</a>
@@ -65,7 +65,7 @@
             <li>
                 <a href="#"
                     class="block py-2 pl-3 pr-4 text-white rounded hover:text-[#D5175E]  lg:p-0">menu 2</a>
-            </li>
+            </li> -->
         <?php endif;?>
         </ul>
         <div class="flex flex-col lg:flex-row items-start gap-6 hover:transition-all mt-6 lg:mt-0">
@@ -80,7 +80,10 @@
                 <form action="<?=htmlspecialchars(base_url . "User/login")?>" method="post">
                     <div class="mb-3 px-5">
                         <label for="user" class="input-label">Correo</label>
-                        <input type="email" id="userlog" name="user" class="input-text" placeholder="rnajera@uach.mx" required>
+                        <div class="flex flex-wrap items-stretch">
+                            <input type="text" id="userlog" name="user" class="bg-gray-100 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-auto md:w-80 p-2.5 rounded-l-lg" placeholder="rnajera" required>
+                            <span dir="ltr" class="flex items-center whitespace-nowrap rounded-r-lg border border-l-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700" id="basic-addon2" >@uach.mx</span>
+                        </div>
                     </div>
                     <div class="mb-5 px-5">
                         <label for="pass" class="input-label">Contraseña</label>
