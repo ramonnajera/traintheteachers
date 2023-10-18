@@ -77,7 +77,7 @@
               </svg>
             </dt>
             <dd class="text-sm leading-6 text-gray-500">
-              <p><?=$curso["curso_duracion"]?> horas</p>
+              <p><?=$curso["curso_duracion"]?> <?=$curso["curso_duracion"] == 1 ? "hora" : "horas"?></p>
             </dd>
           </div>
           <div class="mt-4 flex w-full flex-none gap-x-4 px-6">
