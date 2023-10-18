@@ -99,7 +99,8 @@
             <button class="rounded-sm bg-primary px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:opacity-50" disabled>Inscribirme</button>
           <?php endif;?>
         <?php elseif(!isset($_SESSION['identidad'])):?>
-          <a href="<?=htmlspecialchars(base_url . "Page/registro")?>" class="rounded-sm bg-primary px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Registrarme</a>
+          <!-- <a href="<?=htmlspecialchars(base_url . "Page/registro")?>" class="rounded-sm bg-primary px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Registrarme</a> -->
+          <button data-open-modal class="btn btn-primary mx-3">Ingresar</button>
         <?php endif;?>
           </div>
         </div>

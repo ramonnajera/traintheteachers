@@ -17,19 +17,34 @@ window.addEventListener('load', function() {
       
     }, 3000)
 
-    const openButton = document.querySelector("[data-open-modal]")
-    const closeButton = document.querySelector("[data-close-modal]")
-    const modal = document.querySelector("[data-modal]")
+    // const openButton = document.querySelector("[data-open-modal]")
+    // const closeButton = document.querySelector("[data-close-modal]")
+    // const modal = document.querySelector("[data-modal]")
 
-    if (openButton) {
-        openButton.addEventListener("click", () =>{
-            console.log("clic");
-            modal.showModal()
-        })
-    }
-    if (openButton) {
-        closeButton.addEventListener("click", () =>{
-            modal.close()
-        })
-    }
+    // if (openButton) {
+    //     openButton.addEventListener("click", () =>{
+    //         console.log("clic");
+    //         modal.showModal()
+    //     })
+    // }
+    // if (openButton) {
+    //     closeButton.addEventListener("click", () =>{
+    //         modal.close()
+    //     })
+    // }
+
+    const openButtons = document.querySelectorAll("[data-open-modal]");
+    const closeButton = document.querySelector("[data-close-modal]");
+    const modal = document.querySelector("[data-modal]");
+
+    openButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        modal.showModal();
+    });
+    });
+
+    closeButton.addEventListener("click", () => {
+    modal.close();
+    });
+
 });
