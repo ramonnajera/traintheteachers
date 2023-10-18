@@ -95,7 +95,7 @@
         </table>
     </section>
     <?php elseif(isset($_SESSION['identidad']) && isset($_SESSION['user'])):?>
-       <section class="w-80 mx-auto"> 
+       <section class="px-10"> 
         <div class="bg-[#EAF3F0] border-2 mt-4 py-1 px-3 rounded-xl mb-5">
             <p>Nombre: <?=$_SESSION['identidad'][0]["usuario_nombre"]?></p>
             <p>Correo: <?=$_SESSION['identidad'][0]["usuario_correo"]?></p>
@@ -106,8 +106,8 @@
         <p class="text-center text-gray-600 font-bold text-2xl py-5">MIS INSIGNIAS</p>
         <div class="w-full mx-auto justify-items-center p-6 grid grid-cols-1 gap-4 md:grid-cols-3">
         <?php foreach($insignias as $data):?>
-            <div>
-                <img class="w-40 h-40 rounded-full mx-auto mb-3 <?=$data["participante_terminado"] ?"":"grayscale"?>" src="<?=base_url."assets/img/images/".$data["curso_insignia"]?>" alt="">
+            <div class="flex flex-col">
+                <img class="w-[40%] mx-auto mb-3 <?=$data["participante_terminado"] ?"":"grayscale"?>" src="<?=base_url."assets/img/images/".$data["curso_insignia"]?>" alt="">
                 <p class="text-center"><?=$data["curso_nombre"]?></p>
             </div>
         <?php endforeach;?>

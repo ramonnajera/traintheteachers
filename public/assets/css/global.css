@@ -841,6 +841,18 @@ video {
   height: 100%;
 }
 
+.h-\[50\%\] {
+  height: 50%;
+}
+
+.h-\[430\%\] {
+  height: 430%;
+}
+
+.h-\[40\%\] {
+  height: 40%;
+}
+
 .max-h-12 {
   max-height: 3rem;
 }
@@ -907,6 +919,18 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[50\%\] {
+  width: 50%;
+}
+
+.w-\[30\%\] {
+  width: 30%;
+}
+
+.w-\[40\%\] {
+  width: 40%;
 }
 
 .min-w-full {
@@ -1501,6 +1525,11 @@ video {
 .py-\[0\.25rem\] {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .pb-0 {
