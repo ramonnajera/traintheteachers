@@ -1817,6 +1817,18 @@ video {
   opacity: 0.45;
 }
 
+.opacity-10 {
+  opacity: 0.1;
+}
+
+.opacity-5 {
+  opacity: 0.05;
+}
+
+.opacity-30 {
+  opacity: 0.3;
+}
+
 .mix-blend-multiply {
   mix-blend-mode: multiply;
 }

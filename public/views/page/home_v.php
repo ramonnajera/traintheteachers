@@ -107,7 +107,7 @@
         <div class="w-full mx-auto justify-items-center p-6 grid grid-cols-1 gap-4 md:grid-cols-3">
         <?php foreach($insignias as $data):?>
             <div class="flex flex-col">
-                <img class="w-[40%] mx-auto mb-3 <?=$data["participante_terminado"] ?"":"grayscale"?>" src="<?=base_url."assets/img/images/".$data["curso_insignia"]?>" alt="">
+                <img class="w-[40%] mx-auto mb-3 <?=$data["participante_terminado"] ?"":"grayscale opacity-10"?>" src="<?=base_url."assets/img/images/".$data["curso_insignia"]?>" alt="">
                 <p class="text-center"><?=$data["curso_nombre"]?></p>
             </div>
         <?php endforeach;?>
