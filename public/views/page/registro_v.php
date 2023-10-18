@@ -10,7 +10,7 @@
                 </div>
                 <div class="mb-3 text-left">
                         <label for="user" class="input-label">Correo</label>
-                        <div class="flex flex-wrap items-stretch">
+                        <div class="flex items-stretch w-80">
                             <input type="text" id="userlog" name="correo" class="bg-gray-100 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-auto md:w-80 p-2.5 rounded-l-lg" placeholder="rnajera" required>
                             <span dir="ltr" class="flex items-center whitespace-nowrap rounded-r-lg border border-l-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700" id="basic-addon2" >@uach.mx</span>
                         </div>
