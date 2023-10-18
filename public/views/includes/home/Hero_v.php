@@ -27,7 +27,7 @@
     <div class="mx-auto grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 py-20 sm:max-w-xl sm:grid-cols-3 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 		<img
 			class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
-			src="assets/img/images/home/logo-ciet-blanco.png"
+			src="assets/img/images/home/CGTI.png"
 			alt="ciet"
 			width={158}
 			height={48}
