@@ -109,6 +109,7 @@
             <div class="flex flex-col">
                 <img class="w-[40%] mx-auto mb-3 <?=$data["participante_terminado"] ?"":"grayscale opacity-10"?>" src="<?=base_url."assets/img/images/".$data["curso_insignia"]?>" alt="">
                 <p class="text-center"><?=$data["curso_nombre"]?></p>
+                <p class="text-gray-400 text-sm text-center"><?=$data["participante_terminado"] ?"":"Termina el taller para obtener la insignia"?></p>
             </div>
         <?php endforeach;?>
         </div>
