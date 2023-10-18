@@ -281,7 +281,9 @@ class CursoModel extends conection{
     }
 
     public function getAll(){
+
         $sql = "SELECT * FROM cursos
+        INNER JOIN usuarios ON usuarios.usuario_id = cursos.usuario_id
         WHERE carrera_id= :carrera_id order by curso_id;";
 
         $data = [
