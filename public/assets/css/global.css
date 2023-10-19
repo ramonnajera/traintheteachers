@@ -1977,6 +1977,12 @@ dialog::backdrop {
   --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
 }
 
+@media (min-width: 768px) {
+  .input-text {
+    width: 100%;
+  }
+}
+
 .input-text1 {
   display: block;
   width: auto;
