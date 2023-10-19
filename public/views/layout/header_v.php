@@ -10,7 +10,7 @@
     <link href="<?=base_url?>/assets/css/global.css" rel="stylesheet">
     
     
-    <title>Insignias UACH</title>
+    <title>Train The Teachers</title>
     <link rel="icon" href="../../assets/img/favicon.ico">
 
 </head>

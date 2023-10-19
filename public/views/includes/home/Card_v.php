@@ -1,4 +1,4 @@
-<div class="bg-gray-100">
+<div class="bg-gray-100" id="routes">
   <h1 class="text-3xl text-center font-medium pt-10 md:pt-0" >Rutas de aprendizaje</h1>
   <div class="mx-auto md:max-w-2xl px-4 py-4 sm:px-6 sm:py-8 lg:max-w-7xl lg:px-8">
     <div class="grid grid-cols-1 gap-x-1 md:gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-4 xl:gap-x-8">

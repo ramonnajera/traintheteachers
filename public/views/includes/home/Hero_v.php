@@ -19,8 +19,8 @@
         <h1 class="text-2xl font-medium tracking-tight text-white sm:text-5xl">Diseña y construye experiencias innovadoras para tu clase</h1>
         <p class="mt-6 text-lg leading-8 text-gray-300">Talleres para innovar tu práctica docente con las herramientas y tecnologias más actuales.</p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a href="#" class="rounded-sm bg-primary px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Ver talleres</a>
-          <a href="#" class="text-sm font-medium leading-6 text-white">¿Cómo funciona?<span aria-hidden="true">→</span></a>
+          <a href="#routes" class="rounded-sm bg-primary px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Ver talleres</a>
+          <a href="#about" class="text-sm font-medium leading-6 text-white">¿Cómo funciona?<span aria-hidden="true">→</span></a>
         </div>
       </div>
     </div>

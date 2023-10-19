@@ -131,3 +131,7 @@ details.ver[open] summary:after {
         width: 100%;
     }
 }
+
+html {
+    scroll-behavior: smooth;
+}

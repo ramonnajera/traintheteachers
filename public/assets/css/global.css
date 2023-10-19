@@ -2101,6 +2101,10 @@ details.ver[open] summary:after {
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .hover\:border-transparent:hover {
   border-color: transparent;
 }
