@@ -1,4 +1,4 @@
-<footer class="flex flex-col justify-center bg-[#371e49] mt-auto px-10 h-96 ">
+<footer class="hidden md:block md:flex flex-col justify-center bg-[#371e49] mt-auto px-10 h-96 ">
     <!-- Corner images -->
     <div class="hidden md:block relative">
         <img class="absolute -top-[60px] right-0 -mr-10 w-20 h-20" src="<?=base_url?>assets/img/iconoFondo_6.svg" alt="Imagen en la esquina superior derecha">
