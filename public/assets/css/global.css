@@ -1956,7 +1956,8 @@ dialog::backdrop {
 
 .input-text {
   display: block;
-  width: auto;
+  width: 100%;
+  justify-content: center;
   border-radius: 0.5rem;
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -1985,7 +1986,7 @@ dialog::backdrop {
 
 .input-text1 {
   display: block;
-  width: auto;
+  width: 100%;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
   border-width: 1px;

@@ -40,11 +40,11 @@ dialog::backdrop {
 }
 
 .input-text{
-    @apply bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-auto md:w-full p-2.5;
+    @apply bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full md:w-full justify-center p-2.5;
 }
 
 .input-text1{
-    @apply bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-auto md:w-full p-2.5;
+    @apply bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full md:w-full p-2.5;
 }
 
 .input-label{

@@ -88,7 +88,7 @@
     <form action="<?=htmlspecialchars(base_url . "User/login")?>" method="post">
         <div class="mb-3 px-5 flex flex-col">
             <label for="user" class="input-label">Correo</label>
-            <div class="estemero flex">
+            <div class="estemero flex pr-auto">
                 <input type="text" id="userlog" name="user" class="input-text1" placeholder="rnajera" required>
                 <span dir="ltr" class="flex items-center whitespace-nowrap rounded-r-lg border border-l-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700" id="basic-addon2" >@uach.mx</span>
             </div>
