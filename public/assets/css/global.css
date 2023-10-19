@@ -961,6 +961,10 @@ video {
   width: 15rem;
 }
 
+.w-96 {
+  width: 24rem;
+}
+
 .min-w-full {
   min-width: 100%;
 }
