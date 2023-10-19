@@ -10,10 +10,10 @@
                 <img class="h-24 w-20  md:h-22 md:w-20 flex-none bg-gray-50" src="<?=base_url?>assets/img/images/<?=$curso["curso_insignia"]?>" alt="">
                 <div class="w-full flex-auto">
                   <p class="text-sm md:text-xl font-medium leading-1 mt-4 text-gray-900"><?=$curso["curso_nombre"]?></p>
-                  <dd class="inline-flex items-center rounded-md  px-2 py-1 mt-2 text-xs font-medium ring-1 ring-inset <?= $curso["curso_status"] == 't' ? 'bg-green-50 text-green-700 ring-green-600/20' : 'bg-red-50 text-red-700 ring-red-600/20' ?>"><?= $curso["curso_status"] == "t" ? "Activo" : "Inactivo" ?></dd>
+                  <dd class="inline-flex items-center rounded-md  px-2 py-1 mt-2 text-xs font-medium ring-1 ring-inset <?= $curso["curso_status"] == 't' ? 'bg-green-50 text-green-700 ring-green-600/20' : 'bg-red-50 text-red-700 ring-red-600/20' ?>"><?= $curso["curso_status"] == "t" ? "Disponible" : "No disponible" ?></dd>
 
                   <?php if(isset($_SESSION['identidad']) && in_array($curso["curso_id"], $cursos_inscrito)):?>
-                    <dd class="inline-flex items-center rounded-md  px-2 py-1 mt-2 text-xs font-medium ring-1 ring-inset bg-green-50 text-green-700 ring-green-600/20"><i class="fa-solid fa-circle-check"></i> Inscrito</dd>
+                    <dd class="inline-flex items-center rounded-md  px-2 py-1 mt-2 text-xs font-medium ring-1 ring-inset bg-green-50 text-green-700 ring-green-600/20"><i class="fa-solid fa-circle-check mr-1"></i> Estás inscrito en este taller</dd>
                   <?php endif?>
 
                 </div>
@@ -31,7 +31,7 @@
       <div class="rounded-lg bg-gray-50 shadow-sm ring-1 ring-gray-900/5">
         <dl class="flex flex-wrap">
           <div class="flex-auto pl-6 pt-6">
-            <dd class="mt-1 text-base font-semibold leading-6 text-gray-900">Detalles:</dd>
+            <dd class="mt-1 text-base font-semibold leading-6 text-gray-900">Información del taller:</dd>
           </div>
           <div class="flex-none self-end px-6 pt-4">
             <dt class="sr-only">Status</dt>
@@ -100,7 +100,7 @@
           <?php endif;?>
         <?php elseif(!isset($_SESSION['identidad'])):?>
           <!-- <a href="<?=htmlspecialchars(base_url . "Page/registro")?>" class="rounded-sm bg-primary px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">Registrarme</a> -->
-          <button data-open-modal class="btn btn-primary mx-3">Inscribirse</button>
+          <button data-open-modal class="btn btn-primary mx-3">Inscribete</button>
         <?php endif;?>
           </div>
         </div>

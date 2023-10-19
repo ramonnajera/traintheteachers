@@ -5,8 +5,8 @@
     <?php foreach ($carreras as $carrera):?>
       <a href="<?=htmlspecialchars(base_url . "Carrera/carrera?id=".$carrera["carrera_id"])?>" class="group flex justify-center items-end">
         <p class="absolute -z-1 flex justify-items-end pb-2">
-          <span class="mt-1 text-sm font-medium text-pink-300 pl-36 md:pl-28">
-            Ver más <span aria-hidden="true">&rarr;</span>
+          <span class="mt-1 text-lg font-medium text-pink-300 pl-36 md:pl-28">
+            Ver talleres <span aria-hidden="true">&rarr;</span>
           </span>
         </p>
         <div class="aspect-h-1 w-80 md:w-full overflow-hidden bg-gray-100 xl:aspect-h-8 xl:aspect-w-7">

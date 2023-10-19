@@ -2,7 +2,6 @@
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl sm:text-center">
       <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">¿Cómo funciona?</p>
-      <p class="mt-6 text-lg leading-8 text-gray-600">Train The Teachers (T3) es un programa de actualización tecnológica diseñado para docentes que quieren perfeccionar sus habilidades tecnológicas. T3 ofrece rutas de aprendizaje compuestas por talleres breves (entre 3 y 6 horas) que, una vez acreditadas, cuentan para la Beca de Estímulos al Desempeño Docente en la UACH. El programa es impartido por expertos de la Coordinación General de Tecnologías de Información y se ofrece en conjunto con el Centro Universitario para el Desarrollo Docente. ¡Súmate al reto de innovar con tecnologías para el aprendizaje!</p>
     </div>
   </div>
   <div class="relative overflow-hidden pt-16">
