@@ -952,6 +952,10 @@ video {
   height: 200px;
 }
 
+.h-10 {
+  height: 2.5rem;
+}
+
 .max-h-12 {
   max-height: 3rem;
 }
@@ -2036,6 +2040,11 @@ video {
   color: rgb(249 250 251 / var(--tw-text-opacity));
 }
 
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
+}
+
 .opacity-10 {
   opacity: 0.1;
 }
@@ -2547,6 +2556,14 @@ html {
 
   .sm\:h-9 {
     height: 2.25rem;
+  }
+
+  .sm\:h-10 {
+    height: 2.5rem;
+  }
+
+  .sm\:h-12 {
+    height: 3rem;
   }
 
   .sm\:w-\[72\.1875rem\] {
