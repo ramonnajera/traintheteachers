@@ -19,13 +19,13 @@
   </section>
 </div> -->
 
-<div class="bg-white pb-12">
+<div class="bg-white pb-20 md:pb-12">
   <div aria-hidden="true" class="relative">
     <img src="/assets/img/route-bg.png" alt="" class="h-96 w-full object-cover object-center">
     <div class="absolute  "></div>
   </div>
 
-  <div class="relative mx-auto -mt-60 max-w-7xl px-4 pb-16 sm:px-6 sm:pb-24 lg:px-8">
+  <div class="relative mx-auto -mt-72 md:-mt-60 max-w-7xl px-4 md:pb-16 sm:px-6 sm:pb-32 lg:px-8">
     <div class="mx-auto max-w-2xl text-center lg:max-w-4xl">
       <h2 class="text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl"><?=$carrera[0]["carrera_nombre"]?></h2>
       <p class="mt-4 text-gray-50"><?=$carrera[0]["carrera_descripcion"]?></p>
