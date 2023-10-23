@@ -37,6 +37,15 @@
             <dt class="sr-only">Status</dt>
             <!-- <dd class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">Disponible</dd> -->
           </div>
+          <div class="mt-4 flex w-full flex-none gap-x-4 px-6">
+            <dt class="flex-none">
+              <span class="sr-only">Status</span>
+              <svg class="h-6 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+              </svg>
+            </dt>
+            <dd class="text-sm leading-6 text-gray-500"><?=$curso["curso_descripcion"]?></dd>
+          </div>
           <div class="mt-6 flex w-full flex-none gap-x-4 border-t border-gray-900/5 px-6 pt-6">
             <dt class="flex-none">
               <span class="sr-only">Workshop</span>
@@ -80,15 +89,7 @@
               <p><?=$curso["curso_duracion"]?> <?=$curso["curso_duracion"] == 1 ? "hora" : "horas"?></p>
             </dd>
           </div>
-          <div class="mt-4 flex w-full flex-none gap-x-4 px-6">
-            <dt class="flex-none">
-              <span class="sr-only">Status</span>
-              <svg class="h-6 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-              </svg>
-            </dt>
-            <dd class="text-sm leading-6 text-gray-500"><?=$curso["curso_descripcion"]?></dd>
-          </div>
+          
         </dl>
         <div class="mt-6 border-t border-gray-900/5 px-6 py-6">
           
