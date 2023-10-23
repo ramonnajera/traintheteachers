@@ -97,7 +97,7 @@
             <label for="pass" class="input-label">Contraseña</label>
             <input type="password" id="passlog" name="pass" class="input-text" required>
         </div>
-        <p class="mx-5 my-4">¿No tienes cuenta? <a class="text-pink-500 hover:text-pink-700 " href="#">regístrate. </a></p>
+        <p class="mx-5 my-4">¿No tienes cuenta? <a class="text-pink-500 hover:text-pink-700 " href="<?=base_url?>Page/registro">regístrate. </a></p>
         <div class=" pb-10 flex justify-center">
             <button data-close-modal class="btn  border border-gray-500 text-black hover:text-white hover:border-transparent hover:bg-[#D5175E] mx-5">Cerrar</button>
             <button type="submit" class="btn btn-primary mr-5">Entrar</button>
