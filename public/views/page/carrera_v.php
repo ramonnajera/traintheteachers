@@ -19,16 +19,16 @@
   </section>
 </div> -->
 
-<div class="bg-white pb-6">
+<div class="bg-white pb-12">
   <div aria-hidden="true" class="relative">
-    <img src="https://plus.unsplash.com/premium_photo-1664045646367-569c52c50ade?auto=format&fit=crop&q=80&w=1407&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="" class="h-96 w-full object-cover object-center">
-    <div class="absolute inset-0 bg-gradient-to-t from-white"></div>
+    <img src="/assets/img/route-bg.png" alt="" class="h-96 w-full object-cover object-center">
+    <div class="absolute  "></div>
   </div>
 
   <div class="relative mx-auto -mt-60 max-w-7xl px-4 pb-16 sm:px-6 sm:pb-24 lg:px-8">
     <div class="mx-auto max-w-2xl text-center lg:max-w-4xl">
-      <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"><?=$carrera[0]["carrera_nombre"]?></h2>
-      <p class="mt-4 text-gray-800"><?=$carrera[0]["carrera_descripcion"]?></p>
+      <h2 class="text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl"><?=$carrera[0]["carrera_nombre"]?></h2>
+      <p class="mt-4 text-gray-50"><?=$carrera[0]["carrera_descripcion"]?></p>
     </div>
 
     
