@@ -29,7 +29,7 @@
                 <a class="link" href="https://uach.mx/noticias/">Sala de prensa</a>
                 <a class="link" href="https://uach.mx/eventos/">Eventos</a>
                 <a class="link" href="https://uach.mx/estudiantes/movilidad-estudiantil/">Estudia en el extranjero</a>
-                <a class="link" href="https://uach.mx/suba/">Biblioteca universitarias</a>
+                <a class="link" href="https://uach.mx/suba/">Bibliotecas universitarias</a>
                 <a class="link" href="https://uach.mx/acerca/redes-sociales/">Redes sociales</a>
                 <a class="link" href="http://usr.uach.mx/">UACH Socialmente Responsable</a>
                 <a class="link" href="https://uach.mx/radio/">Radio Universidad</a>

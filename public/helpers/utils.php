@@ -144,11 +144,11 @@ class Utils{
             ],
             [
                 "question" => "¿Cuál es la diferencia entre Train The Teachers y los cursos que ofrece el CUDD?",
-                "answer" => "En esencia ninguna. Los cursos de Train The Teachers también son gestionados y validados a través del CUDD. En cuanto a su forma, Train The Teachers es impartido por personal de la Coordinación de Tecnologías de Información de la UACH y se estructura a partir de micro-talleres de corta duración y rutas de aprendizaje.",
+                "answer" => "En esencia, ninguna. Los cursos de Train The Teachers también son gestionados y validados a través del CUDD. En cuanto a su forma, Train The Teachers es impartido por personal de la Coordinación de Tecnologías de Información de la UACH y se estructura a partir de micro-talleres de corta duración y rutas de aprendizaje.",
             ],
             [
                 "question" => "¿Qué es una ruta de aprendizaje?",
-                "answer" => "Train The Teachers se basa en el 'armado' de ejes temáticos -llamados 'Rutas de Aprendizaje'- que agrupan talleres que, una vez sumados, llevan al participante a desarrollar el dominio práctico de una habilidad, técnica o  herramienta concreta. Al día de hoy, Train The Teachers ofrece rutas de aprendizaje en temas como Diseño, Programación e Innovación; cada una con cursos sobre temas relevantes y prácticos.",
+                "answer" => "Train The Teachers se basa en el \"armado\" de ejes temáticos -llamados \"Rutas de Aprendizaje\"- que agrupan talleres que, una vez sumados, llevan al participante a desarrollar el dominio práctico de una habilidad, técnica o  herramienta concreta. Al día de hoy, Train The Teachers ofrece rutas de aprendizaje en temas como Diseño, Programación e Innovación; cada una con cursos sobre temas relevantes y prácticos.",
             ],
             [
                 "question" => "¿Qué son los microcréditos?",

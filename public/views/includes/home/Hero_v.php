@@ -15,7 +15,7 @@
 		class="py-5 w-80 mx-auto"
 	/>
       <div class="text-center">
-        <h1 class="text-4xl font-medium tracking-tight text-white sm:text-5xl">Toma talleres, completa rutas y gana insignias</h1>
+        <h1 class="text-4xl font-medium tracking-tight text-white sm:text-5xl">Cursa talleres, completa rutas y gana insignias</h1>
         <p class="mt-6 text-lg leading-8 text-gray-300">Innova tu práctica docente con las tecnologías más actuales.</p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <a href="#about" class="rounded-sm bg-primary px-3.5 py-2.5 text-sm font-medium text-white shadow-sm hover:bg-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">¿Cómo funciona?</a>
