@@ -46,7 +46,8 @@
             </dt>
             <dd class="text-sm leading-6 text-gray-500"><?=$curso["curso_descripcion"]?></dd>
           </div>
-          <div class="mt-6 flex w-full flex-none gap-x-4 border-t border-gray-900/5 px-6 pt-6">
+          <?php if ($curso["curso_status"] == "t"):?>
+            <div class="mt-6 flex w-full flex-none gap-x-4 border-t border-gray-900/5 px-6 pt-6">
             <dt class="flex-none">
               <span class="sr-only">Workshop</span>
               <svg class="h-6 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -78,6 +79,7 @@
               <p><?=$curso["curso_modo"]?></p>
             </dd>
           </div>
+          <?php endif;?>
           <div class="mt-4 flex w-full flex-none gap-x-4 px-6">
             <dt class="flex-none">
               <span class="sr-only">Mode</span>
