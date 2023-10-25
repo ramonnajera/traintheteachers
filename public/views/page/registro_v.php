@@ -1,5 +1,5 @@
 <div class="flex min-h-full">
-    <div class="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+    <div class="flex flex-1 flex-col justify-center px-4 py-2 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <div class="mx-auto w-full max-w-sm lg:w-96">
             <div>
                 <img class="h-10 w-auto" src="/assets/img/isotipo-TTT.png" alt="Your Company">
@@ -33,7 +33,7 @@
                             <label for="pass" class="input-label">Contraseña</label>
                             <input type="password" id="pass" name="pass" class="input-text" required>
                         </div>
-                        <div class="flex items-center justify-between pb-4">
+                        <div class="flex items-center justify-between pb-1">
                             <div class="text-sm leading-6">
                                 <a href="#" class="font-semibold text-pink-600 hover:text-pink-500">¿Olvidaste tu contraseña?</a>
                             </div>
