@@ -85,9 +85,9 @@
                             <td class="py-4 px-6 border-b border-gray-200"><?= $data["curso_descripcion"] ?></td>
                             <td class="py-4 px-6 border-b border-gray-200 <?= $data["curso_status"] == true ? 'text-green-600' : 'text-red-600' ?>"><?= $data["curso_status"] == true ? 'Activo' : 'Inactivo' ?></td>
                             <td class="flex space-x-2 py-6 px-6 border-b border-gray-200">
-                                <a href="<?= base_url ?>Participante/all?id=<?= $data["curso_id"] ?>" class="btn btn-primary"><i class="fa-solid fa-users"></i></a>
-                                <a class="btn <?= $data["curso_status"] == true ? 'bg-yellow-400 hover:bg-yellow-700' : 'bg-slate-400 hover:bg-slate-600' ?> text-white" href="<?= base_url ?>Curso/statusUpdate?id=<?= $data["curso_id"] . '&status=' . $data["curso_status"] ?>"><i class="fa-solid <?= $data["curso_status"] == true ? 'fa-eye-slash' : 'fa-eye' ?>"></i></a>
-                                <a class="btn bg-red-600 hover:bg-red-700 text-white" href="<?= base_url ?>Curso/delete?id=<?= $data["curso_id"] ?>"><i class="fa-solid fa-trash"></i></a>
+                                <a href="<?= htmlspecialchars(base_url.'Participante/all?id=<?='.$data["curso_id"]) ?>" class="btn btn-primary"><i class="fa-solid fa-users"></i></a>
+                                <a class="btn <?= $data["curso_status"] == true ? 'bg-yellow-400 hover:bg-yellow-700' : 'bg-slate-400 hover:bg-slate-600' ?> text-white" href="<?= htmlspecialchars(base_url.'Curso/statusUpdate?id=<?='. $data["curso_id"] . '&status=' . $data["curso_status"]) ?>"><i class="fa-solid <?= $data["curso_status"] == true ? 'fa-eye-slash' : 'fa-eye' ?>"></i></a>
+                                <a class="btn bg-red-600 hover:bg-red-700 text-white" href="<?= htmlspecialchars(base_url.'Curso/delete?id=<?='. $data["curso_id"]) ?>"><i class="fa-solid fa-trash"></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
