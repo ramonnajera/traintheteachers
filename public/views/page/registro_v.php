@@ -34,7 +34,7 @@
                                 <option value="4">Facultad de Ciencias de la Cultura Fïsica</option>
                                 <option value="5">Facultad de Ciencias Políticas y Sociales</option>
                                 <option value="6">Facultad de Ciencias Químicas</option>
-                                <option value="7">Facultad de COntaduría y Administración</option>
+                                <option value="7">Facultad de Contaduría y Administración</option>
                                 <option value="8">Facultad de Derecho</option>
                                 <option value="9">Facultad de Economía Internacional</option>
                                 <option value="10">Facultad de Enfermería y Nutriología</option>
