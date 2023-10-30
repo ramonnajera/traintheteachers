@@ -26,8 +26,8 @@
                             </div>
                         </div>
                         <div class="mb-3 text-left ">
-                            <label for="area" class="input-label">Area</label>
-                            <input type="text" id="area" name="area" class="input-text" placeholder="Cordinacion General de Tecnologias de la informacion" required>
+                            <label for="area" class="input-label">Unidad Académica</label>
+                            <input type="text" id="area" name="area" class="input-text" placeholder="Facultad de artes" required>
                         </div>
                         <div class="mb-5 text-left ">
                             <label for="pass" class="input-label">Contraseña</label>

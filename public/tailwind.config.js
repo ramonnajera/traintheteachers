@@ -18,6 +18,7 @@ module.exports = {
 				softgray: "#808490",
 				hardgray: "#45484c",
 				black: "#232323",
+				purpleuach: "#371e49",
 			},
 		},
 	},
