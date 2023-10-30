@@ -26,8 +26,31 @@
                             </div>
                         </div>
                         <div class="mb-3 text-left ">
-                            <label for="area" class="input-label">Unidad Académica</label>
-                            <input type="text" id="area" name="area" class="input-text" placeholder="Facultad de artes" required>
+                            <div class="mb-3">
+                                <label for="area" class="input-label">Unidad Académica</label>
+                                <select type="text" id="area" name="area" class="input-text" placeholder="Facultad de artes" required>
+                                    <option value="1">Facultad de Artes</option>
+                                    <option value="2">Facultad de Ciencias Agrícolas y Forestales</option>
+                                    <option value="3">Facultad de Ciencias Agrotecnológicas</option>
+                                    <option value="4">Facultad de Ciencias de la Cultura Fïsica</option>
+                                    <option value="5">Facultad de Ciencias Políticas y Sociales</option>
+                                    <option value="6">Facultad de Ciencias Químicas</option>
+                                    <option value="7">Facultad de COntaduría y Administración</option>
+                                    <option value="8">Facultad de Derecho</option>
+                                    <option value="9">Facultad de Economía Internacional</option>
+                                    <option value="10">Facultad de Enfermería y Nutriología</option>
+                                    <option value="11">Facultad de Filosofía y Letras</option>
+                                    <option value="12">Facultad de Ingeniería</option>
+                                    <option value="13">Facultad de Medicina y Ciencias Biomédicas</option>
+                                    <option value="14">Facultad de Odontología</option>
+                                    <option value="15">Facultad de Zootecnia y Ecología</option>
+                            </div>
+                        </div>
+                        <!-- a select component -->
+                        <div class="mb-3 text-left ">
+                            <label for="area" class="input-label">Carrera</label>
+                            <select name="carrera" id="carrera" class="input-text">
+
                         </div>
                         <div class="mb-5 text-left ">
                             <label for="pass" class="input-label">Contraseña</label>
