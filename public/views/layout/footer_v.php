@@ -60,10 +60,21 @@
 </html> -->
 
 <footer class="bg-purpleuach md:grid md:grid-cols-2">
-    <div class="md:grid grid-cols-2">
-        <img src="<?= base_url ?>assets/img/2023.png" alt="Año naranja" class="h-28 mx-auto my-6"></img>
+    <div class="md:grid grid-cols-2 h-32">
+        <div class="flex flex-col items-end">
+            <img src="<?= base_url ?>assets/img/2023.png" alt="Año naranja" class="h-28 mx-auto my-6"></img>
+            <ul class="flex justify-center space-x-2 pt-24 items-end">
+                <li><img class="w-7 social hover:bg-blue-800" src="<?= base_url ?>assets/img/facebook.png" alt=""></li>
+                <li><img class="w-7 social hover:bg-blue-500" src="<?= base_url ?>assets/img/twitter.png" alt=""></li>
+                <li><img class="w-7 social hover:bg-fuchsia-400" src="<?= base_url ?>assets/img/instagram.png" alt=""></li>
+                <li><img class="w-7 social hover:bg-amber-400" src="<?= base_url ?>assets/img/facebook.png" alt=""></li>
+                <li><img class="w-7 social hover:bg-red-700" src="<?= base_url ?>assets/img/youtube.png" alt=""></li>
+                <li><img class="h-7" src="<?= base_url ?>assets/img/contraloria-social.png" alt=""></li>
+            </ul>
+        </div>
+
         <div>
-            <img src="<?= base_url ?>assets/img/uach_Plus.svg" alt="Logo de la UACH" class="h-16 mx-auto my-6"></img>
+            <img src="<?= base_url ?>assets/img/uach_Plus.svg" alt="Logo de la UACH" class="h-16 mx-auto mt-6"></img>
             <p class="text-center text-white">"Luchar para lograr, lograr para dar"</p>
             <div class="text-white text-center mt-5">
                 <p>Universidad Autonoma de Chihuahua</p>
@@ -72,6 +83,7 @@
                     <p>Tel. +52 (614) 439 1500</p>
                     <p>Chihuahua, Chih. México</p>
                 </div>
+
             </div>
         </div>
     </div>
@@ -92,17 +104,10 @@
                 <a class="Link" href="https://uach.mx/radio/">Radio Universidad</a>
             </div>
         </div>
-        <div class="social flex flex-col justify-between pt-10">
-            <ul class="flex justify-center space-x-2 pt-4">
-                <li><img class="w-7 social hover:bg-blue-800" src="<?= base_url ?>assets/img/facebook.png" alt=""></li>
-                <li><img class="w-7 social hover:bg-blue-500" src="<?= base_url ?>assets/img/twitter.png" alt=""></li>
-                <li><img class="w-7 social hover:bg-fuchsia-400" src="<?= base_url ?>assets/img/instagram.png" alt=""></li>
-                <li><img class="w-7 social hover:bg-amber-400" src="<?= base_url ?>assets/img/facebook.png" alt=""></li>
-                <li><img class="w-7 social hover:bg-red-700" src="<?= base_url ?>assets/img/youtube.png" alt=""></li>
-                <li><img class="h-7" src="<?= base_url ?>assets/img/contraloria-social.png" alt=""></li>
-            </ul>
-            <div>
-                <p class="font-normal text-white text-center pt-4">2023 © Todos los derechos reservados | <a class="text-amber-400 link hover:text-amber-200" href="https://uach.mx/visitantes/privacidad-y-politicas-institucionales-para-el-uso-de-la-pagina-web/">Privacidad y Políticas</a></p>
+        <div class="social flex flex-cols-2 pt-10 w-full">
+
+            <div class="w-full">
+                <p class="font-normal text-white text-right mr-2 pt-6">2023 © Todos los derechos reservados | <a class="text-amber-400 link hover:text-amber-200" href="https://uach.mx/visitantes/privacidad-y-politicas-institucionales-para-el-uso-de-la-pagina-web/">Privacidad y Políticas</a></p>
             </div>
         </div>
     </div>
