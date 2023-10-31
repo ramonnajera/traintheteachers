@@ -59,11 +59,13 @@
 
 </html> -->
 
-<footer class="bg-purpleuach md:grid md:grid-cols-2">
+<footer class="bg-purpleuach md:grid md:grid-cols-2 pt-10">
     <div class="md:grid grid-cols-2 h-32">
+        <img src="<?= base_url ?>assets/img/uach_Plus.svg" alt="Logo de la UACH" class="md:hidden h-16 mx-auto mt-6"></img>
         <div class="flex flex-col items-end">
             <img src="<?= base_url ?>assets/img/2023.png" alt="Año naranja" class="h-28 mx-auto my-6"></img>
-            <ul class="flex justify-center space-x-2 pt-24 items-end">
+
+            <ul class="hidden md:block md:flex justify-center space-x-2 pt-24 items-end">
                 <li><img class="w-7 social hover:bg-blue-800" src="<?= base_url ?>assets/img/facebook.png" alt=""></li>
                 <li><img class="w-7 social hover:bg-blue-500" src="<?= base_url ?>assets/img/twitter.png" alt=""></li>
                 <li><img class="w-7 social hover:bg-fuchsia-400" src="<?= base_url ?>assets/img/instagram.png" alt=""></li>
@@ -73,12 +75,12 @@
             </ul>
         </div>
 
-        <div>
-            <img src="<?= base_url ?>assets/img/uach_Plus.svg" alt="Logo de la UACH" class="h-16 mx-auto mt-6"></img>
-            <p class="text-center text-white">"Luchar para lograr, lograr para dar"</p>
-            <div class="text-white text-center mt-5">
+        <div class="hidden md:block">
+            <img src="<?= base_url ?>assets/img/uach_Plus.svg" alt="Logo de la UACH" class="hidden md:block h-16 mx-auto mt-6"></img>
+            <p class="text-center text-white text-xs mt-2">"Luchar para lograr, lograr para dar"</p>
+            <div class="text-white text-center text-xs mt-10">
                 <p>Universidad Autonoma de Chihuahua</p>
-                <div class="text-sm text-gray-400">
+                <div class="text-xs text-gray-400">
                     <p>C. Escorza 900, Col. Centro 31000</p>
                     <p>Tel. +52 (614) 439 1500</p>
                     <p>Chihuahua, Chih. México</p>
@@ -89,7 +91,7 @@
     </div>
     <div class="text-center text-white py-4">
         <div>
-            <div class="">
+            <div class="mt-20 md:mt-0">
                 <p class="text-white text-left pt-4 px-3">LIGAS DE INTERES</p>
                 <span class="grow border-b border-dotted"></span>
             </div>
@@ -107,7 +109,7 @@
         <div class="social flex flex-cols-2 pt-10 w-full">
 
             <div class="w-full">
-                <p class="font-normal text-white text-right mr-2 pt-6">2023 © Todos los derechos reservados | <a class="text-amber-400 link hover:text-amber-200" href="https://uach.mx/visitantes/privacidad-y-politicas-institucionales-para-el-uso-de-la-pagina-web/">Privacidad y Políticas</a></p>
+                <p class="font-normal text-white text-right mr-14 pt-8">2023 © Todos los derechos reservados | <a class="text-amber-400 link hover:text-amber-200" href="https://uach.mx/visitantes/privacidad-y-politicas-institucionales-para-el-uso-de-la-pagina-web/">Privacidad y Políticas</a></p>
             </div>
         </div>
     </div>
