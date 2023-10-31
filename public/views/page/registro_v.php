@@ -1,9 +1,9 @@
 <div class="flex min-h-full">
-    <div class="flex flex-1 flex-col justify-center px-4 py-2 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+    <div class="flex flex-1 flex-col justify-center px-4 pt-2 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <div class="mx-auto w-full max-w-sm lg:w-96">
             <div>
                 <img class="h-10 w-auto" src="/assets/img/isotipo-TTT.png" alt="Your Company">
-                <h2 class="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900">Regístrate</h2>
+                <h2 class="mt-5 text-2xl font-bold leading-9 tracking-tight text-gray-900">Regístrate</h2>
                 <p class="mt-2 text-sm leading-6 text-gray-500">
                     ¿Ya tienes cuenta?
                     <a href="<?= htmlspecialchars(base_url.'Page/login')" class="font-semibold text-pink-600 hover:text-pink-500">Inicia sesión</a>
@@ -25,9 +25,25 @@
                                 <span dir="ltr" class="flex items-center whitespace-nowrap rounded-r-lg border border-l-0 border-solid border-neutral-300 px-3 py-[0.25rem] text-center text-base font-normal leading-[1.6] text-neutral-700" id="basic-addon2">@uach.mx</span>
                             </div>
                         </div>
-                        <div class="mb-3 text-left ">
-                            <label for="area" class="input-label">Area</label>
-                            <input type="text" id="area" name="area" class="input-text" placeholder="Cordinacion General de Tecnologias de la informacion" required>
+                        <div class="mb-3">
+                            <label for="area" class="input-label">Unidad Académica</label>
+                            <select type="text" id="area" name="area" class="input-text" placeholder="Facultad de artes" required>
+                                <option value="1">Facultad de Artes</option>
+                                <option value="2">Facultad de Ciencias Agrícolas y Forestales</option>
+                                <option value="3">Facultad de Ciencias Agrotecnológicas</option>
+                                <option value="4">Facultad de Ciencias de la Cultura Fïsica</option>
+                                <option value="5">Facultad de Ciencias Políticas y Sociales</option>
+                                <option value="6">Facultad de Ciencias Químicas</option>
+                                <option value="7">Facultad de Contaduría y Administración</option>
+                                <option value="8">Facultad de Derecho</option>
+                                <option value="9">Facultad de Economía Internacional</option>
+                                <option value="10">Facultad de Enfermería y Nutriología</option>
+                                <option value="11">Facultad de Filosofía y Letras</option>
+                                <option value="12">Facultad de Ingeniería</option>
+                                <option value="13">Facultad de Medicina y Ciencias Biomédicas</option>
+                                <option value="14">Facultad de Odontología</option>
+                                <option value="15">Facultad de Zootecnia y Ecología</option>
+                            </select>
                         </div>
                         <div class="mb-5 text-left ">
                             <label for="pass" class="input-label">Contraseña</label>
