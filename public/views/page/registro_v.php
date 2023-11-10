@@ -6,12 +6,13 @@
                 <h2 class="mt-5 text-2xl font-bold leading-9 tracking-tight text-gray-900">Regístrate</h2>
                 <p class="mt-2 text-sm leading-6 text-gray-500">
                     ¿Ya tienes cuenta?
-                    <a href="<?= htmlspecialchars(base_url.'Page/login')" class="font-semibold text-pink-600 hover:text-pink-500">Inicia sesión</a>
+                    <a href="<?= htmlspecialchars(base_url.'Page/login')?>" class="font-semibold text-pink-600 hover:text-pink-500">Inicia sesión</a>
+
                 </p>
             </div>
             <div class="mt-1">
                 <div>
-                    <form action="<?= htmlspecialchars(base_url . "User/signup") ?>" method="post" class="space-y-5">
+                    <form action="<?= htmlspecialchars(base_url . 'User/signup') ?>" method="post" class="space-y-5">
                         <div>
                             <label for="name" class="input-label">Nombre</label>
                             <div class="mt-2">

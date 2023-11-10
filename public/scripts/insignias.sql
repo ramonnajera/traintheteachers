@@ -1,7 +1,9 @@
 DROP TABLE IF EXISTS participantes;
 DROP TABLE IF EXISTS cursos;
 DROP TABLE IF EXISTS carreras;
+DROP TABLE IF EXISTS intentos;
 DROP TABLE IF EXISTS usuarios;
+
 
 -- usuarios
 -- usuario_id
@@ -20,6 +22,17 @@ CREATE TABLE usuarios (
     usuario_area    VARCHAR (200) NOT NULL,
     usuario_tipo    VARCHAR (50) NOT NULL DEFAULT 'user',
     PRIMARY KEY(usuario_id)
+);
+
+-- intentos
+-- intento_id
+-- intento_ip
+-- intento_date
+CREATE TABLE intentos (
+    intento_id      INT GENERATED ALWAYS AS IDENTITY,
+    intento_ip      VARCHAR (100) NOT NULL,
+    intento_date    TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(intento_id)
 );
 
 -- carrera

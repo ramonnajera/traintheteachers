@@ -1,69 +1,127 @@
 <?php
 include_once 'models/UserModel.php';
+include_once 'models/IntentoModel.php';
 
 class UserController{
     public function login(){
         $_respuestas = new responses();
+        
+        $numIntentos = $this->revisarIntentos();
 
-        if (isset($_POST)) {
-            $user = isset($_POST['user']) ? $_POST['user']."@uach.mx" :false;
-            $pass = isset($_POST['pass']) ? $_POST['pass'] :false;
+        if(count($numIntentos) >=3){
+            echo "Entre en 3 o mas";
+            $fecha_actual = strtotime(date('Y-m-d H:i:s'));
+            $ultimoIntento = end($numIntentos);
+            $ultimoIntento = strtotime($ultimoIntento["intento_date"]);
+            // $ultimoIntento -= 300;
+            $diferencia = $fecha_actual - $ultimoIntento;
+            var_dump($diferencia);
 
-            $ldap_user = isset($_POST['user']) ? $_POST['user']:false;
-
-            $user = Utils::limpiarData($user,"email");
-            $user = Utils::validarData($user,"email");
-
-            $pass = Utils::limpiarData($pass,"pass");
-            
-            $ldap_user = Utils::validarData($ldap_user,"texto");
-            
-            if($user && $pass){
-            // Conexion con LDAP
-            $ldapconn = ldap_connect("buzon.uach.mx","389")
-            or die("Could not connect to LDAP server.");
-            $id = "uid=".$ldap_user.",ou=People,o=uach.mx,o=uach.mx";
-
-            $ldapbind = ldap_bind($ldapconn, $id, $pass);
-    
-            ldap_close($ldapconn);
-
-            if($ldapbind){
-
-                $_UserModel = new UserModel();
-            
-                $_UserModel->setUsuario_correo($user);
-                $_UserModel->setUsuario_pass($pass);
-
-                $identidad = $_UserModel->login();
-
-                if(!empty($identidad) && isset($identidad[0]['usuario_tipo'])){
-                                      
-                    $_SESSION['identidad'] = $identidad;
-                    if($identidad[0]['usuario_tipo'] == "admin"){
-                        $_SESSION['admin'] = true;
-                    }elseif($identidad[0]['usuario_tipo'] == "user"){
-                        $_SESSION['user'] = true;
-                    }
-
-                    $_respuestas->response;
-                    $_respuestas->response["result"]["mensaje"] = "Login correcto";
-                }else{
-                    $_respuestas->error_u00002();
-                    $_respuestas->response["result"]["mensaje"] = "Usuario o contraseña incorrectos";
-                }
+            if($diferencia > 300){
+                $ip = end($numIntentos);
+                $ip = $ip["intento_ip"];
             }else{
-                $_respuestas->error_u00002();
-                $_respuestas->response["result"]["mensaje"] = "Usuario o contraseña incorrectos en ldap";
-            }
-            
-            }else{
-                $_respuestas->error_u00001();
+                $ip = False;
             }
 
-            
+        }elseif(count($numIntentos) == 0){
+            echo "Entre en 0";
+            $ip = $this->getIpAddr();
         }else{
-            $_respuestas->error_u00001();
+            echo "Entre en 1 o 2";
+            $ip = end($numIntentos);
+            $ip = $ip["intento_ip"];
+        }
+
+        if($ip){
+            $_IntentoModel = new IntentoModel();
+            $_IntentoModel->setIntento_ip($ip);
+
+            if (isset($_POST)) {
+                $user = isset($_POST['user']) ? $_POST['user']."@uach.mx" :false;
+                $pass = isset($_POST['pass']) ? $_POST['pass'] :false;
+    
+                $ldap_user = isset($_POST['user']) ? $_POST['user']:false;
+    
+                $user = Utils::limpiarData($user,"email");
+                $user = Utils::validarData($user,"email");
+    
+                $pass = Utils::limpiarData($pass,"pass");
+                
+                $ldap_user = Utils::validarData($ldap_user,"texto");
+                
+                if($user && $pass){
+                // Conexion con LDAP
+                $ldapconn = ldap_connect("buzon.uach.mx","389")
+                or die("Could not connect to LDAP server.");
+                $id = "uid=".$ldap_user.",ou=People,o=uach.mx,o=uach.mx";
+    
+                $ldapbind = ldap_bind($ldapconn, $id, $pass);
+        
+                ldap_close($ldapconn);
+    
+                if($ldapbind){
+    
+                    $_UserModel = new UserModel();
+                
+                    $_UserModel->setUsuario_correo($user);
+                    $_UserModel->setUsuario_pass($pass);
+    
+                    $identidad = $_UserModel->login();
+    
+                    if(!empty($identidad) && isset($identidad[0]['usuario_tipo'])){
+                                          
+                        $_SESSION['identidad'] = $identidad;
+                        if($identidad[0]['usuario_tipo'] == "admin"){
+                            $_SESSION['admin'] = true;
+                        }elseif($identidad[0]['usuario_tipo'] == "user"){
+                            $_SESSION['user'] = true;
+                        }
+    
+                        $_respuestas->response;
+                        $_respuestas->response["result"]["mensaje"] = "Login correcto";
+                    }else{
+                        if($ip){
+                
+                            $_IntentoModel->save();
+        
+                            $_respuestas->error_u00002();
+                            $_respuestas->response["result"]["mensaje"] = "Usuario o contraseña incorrectos";
+                        }
+                    }
+                }else{
+                    if($ip){
+            
+                        $_IntentoModel->save();
+        
+                        $_respuestas->error_u00002();
+                        $_respuestas->response["result"]["mensaje"] = "Usuario o contraseña incorrectos en ldap";
+                    }
+                }
+                
+                }else{
+                    if($ip){
+            
+                        $_IntentoModel->save();
+        
+                        $_respuestas->error_u00001();
+                    }
+    
+                }
+    
+                
+            }else{
+                if($ip){
+        
+                    $_IntentoModel->save();
+        
+                    $_respuestas->error_u00001();
+                }
+            }
+
+        }else{
+            $_respuestas->error_u00002();
+            $_respuestas->response["result"]["mensaje"] = "Has alcanzado el límite de intentos de inicio de sesión";
         }
 
         $_SESSION['respuesta'] = [
@@ -203,6 +261,28 @@ class UserController{
                 $respuesta =false;
             }
             return $respuesta;
+    }
+
+    public function getIpAddr(){
+        if (!empty($_SERVER['HTTP_CLIENT_IP'])){
+            $ipAddr=$_SERVER['HTTP_CLIENT_IP'];
+        }elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+            $ipAddr=$_SERVER['HTTP_X_FORWARDED_FOR'];
+        }else{
+            $ipAddr=$_SERVER['REMOTE_ADDR'];
+        }
+        return $ipAddr;
+    }
+
+    public function revisarIntentos(){
+        $_respuestas = new responses();
+        $_IntentoModel = new IntentoModel();
+        $ip = $this->getIpAddr();
+        $_IntentoModel->setIntento_ip($ip);
+
+        $numIntentos = $_IntentoModel->getNumIntentos();
+
+        return $numIntentos;
     }
 
     public function logout(){

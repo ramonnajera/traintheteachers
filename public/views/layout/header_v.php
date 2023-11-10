@@ -67,7 +67,8 @@
                 <?php if (isset($_SESSION['identidad'])) : ?>
                     <a href="<?= htmlspecialchars(base_url . "User/logout") ?>" class="btn btn-warning mx-3"><i class="fa-solid fa-arrow-right-from-bracket"></i> Salir</a>
                 <?php elseif (!isset($_SESSION['identidad'])) : ?>
-                    <button data-open-modal class="btn btn-primary mx-3">Ingresar</button>
+                    <!-- <button data-open-modal class="btn btn-primary mx-3">Ingresar</button> -->
+                    <a href="<?= htmlspecialchars(base_url . "Page/login") ?>" class="btn btn-primary mx-3">Ingresar</a>
                     <a href="<?= htmlspecialchars(base_url . "Page/registro") ?>" class="block py-2 pl-3 pr-4 text-white border hover:bg-pink-400 hover:border-transparent ">Registro</a>
                 <?php endif; ?>
             </div>
