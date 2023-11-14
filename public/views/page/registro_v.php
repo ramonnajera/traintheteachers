@@ -2,12 +2,11 @@
     <div class="flex flex-1 flex-col justify-center px-4 pt-2 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <div class="mx-auto w-full max-w-sm lg:w-96">
             <div>
-                <!-- <img class="h-10 w-auto" src="/assets/img/isotipo-TTT.png" alt="Your Company"> -->
                 <h2 class="mt-5 text-2xl font-bold leading-9 tracking-tight text-gray-900">Regístrate</h2>
                 <p><?=$curso[0]["curso_nombre"]?></p>
                 <p class="mt-2 text-sm leading-6 text-gray-500">
                     ¿Ya tienes cuenta?
-                    <a href="<?= htmlspecialchars(base_url . 'Page/login') ?>" class="font-semibold text-pink-600 hover:text-pink-500">Inicia sesión</a>
+                    <a href="<?= htmlspecialchars(base_url.'Page/login')?>" class="font-semibold text-pink-600 hover:text-pink-500">Inicia sesión</a>
                 </p>
             </div>
             <div class="mt-1">
