@@ -32,6 +32,10 @@ class PageController
 
     public function registro()
     {
+        $idCurso = isset($_GET['id']) ? $_GET['id'] :false;
+        $_CursoModel = new CursoModel();
+        $_CursoModel->setCurso_id($idCurso);
+        $curso = $_CursoModel->getOneCourse();
         require_once 'views/page/registro_v.php';
     }
 

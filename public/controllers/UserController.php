@@ -1,6 +1,7 @@
 <?php
 include_once 'models/UserModel.php';
 include_once 'models/IntentoModel.php';
+include_once 'models/ParticipanteModel.php';
 
 class UserController{
     public function login(){
@@ -13,9 +14,7 @@ class UserController{
             $fecha_actual = strtotime(date('Y-m-d H:i:s'));
             $ultimoIntento = end($numIntentos);
             $ultimoIntento = strtotime($ultimoIntento["intento_date"]);
-            // $ultimoIntento -= 300;
             $diferencia = $fecha_actual - $ultimoIntento;
-            var_dump($diferencia);
 
             if($diferencia > 300){
                 $ip = end($numIntentos);
@@ -166,6 +165,7 @@ class UserController{
 
     public function signup(){
         $_respuestas = new responses();
+        $curso = isset($_GET['curso']) && !empty($_GET['curso']) ? $_GET['curso'] :false;
         // r 
         $user = isset($_POST['name']) && !empty($_POST['name']) ? $_POST['name'] :false;
         $user = Utils::limpiarData($user,"texto");
@@ -207,10 +207,26 @@ class UserController{
             $_UserModel->setUsuario_correo($correo);
             $_UserModel->setUsuario_area($area);
             
-
-            $save = $_UserModel->save();
+            if(!$curso){
+                $save = $_UserModel->save();
+            }else{
+                $save = $_UserModel->save_id();
+            }
 
             if($save){
+                if($curso){
+                    $_ParticipanteModel = new ParticipanteModel();
+                    $_ParticipanteModel->setUsuario_id($save);
+                    $_ParticipanteModel->setCurso_id($curso);
+
+                    $inscrito = $_ParticipanteModel->buscarParticipante();
+
+                    if(!$inscrito){
+                        $savep = $_ParticipanteModel->save();
+                    }else{
+                        $_respuestas->response["status"] = "error";
+                    }
+                }
                 $identidad = $this->loginRegistro($correo,$pass);
                 if($identidad){
                     $_SESSION['identidad'] = $identidad;

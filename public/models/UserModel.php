@@ -228,6 +228,28 @@ class UserModel extends conection{
         return $result;
     }
 
+    public function save_id(){
+
+        $sql = "INSERT INTO usuarios (usuario_nombre, usuario_pass, usuario_correo, usuario_area) VALUES(:usuario_nombre,:usuario_pass, :usuario_correo, :usuario_area);";
+
+        $data = [
+            "usuario_nombre" => $this->getUsuario_nombre(),
+            "usuario_pass" => $this->getUsuario_pass(),
+            "usuario_correo" => $this->getUsuario_correo(),
+            "usuario_area" => $this->getUsuario_area(),
+        ];
+
+        $save = parent::nonQueryId($sql, $data);
+
+        $result = false;
+        
+        if($save){
+            $result = $save;
+        }
+        
+        return $result;
+    }
+
     public function getAllInstructores(){
         $sql = "SELECT usuario_id, usuario_nombre FROM usuarios WHERE usuario_tipo='admin';";
 

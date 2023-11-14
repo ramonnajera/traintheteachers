@@ -402,4 +402,16 @@ class CursoModel extends conection{
         return $result;
     }
 
+    public function getOneCourse(){
+        $sql = "SELECT * FROM cursos WHERE cursos.curso_id = :curso_id";
+
+        $data = [
+            "curso_id" => $this->getCurso_id(),
+        ];
+
+        $cursos = parent::obtenerDatos($sql, $data);
+        
+        return $cursos;
+    }
+
 }

@@ -4,15 +4,19 @@
             <div>
                 <img class="h-10 w-auto" src="/assets/img/isotipo-TTT.png" alt="Your Company">
                 <h2 class="mt-5 text-2xl font-bold leading-9 tracking-tight text-gray-900">Regístrate</h2>
+                <p><?=$curso[0]["curso_nombre"]?></p>
                 <p class="mt-2 text-sm leading-6 text-gray-500">
                     ¿Ya tienes cuenta?
                     <a href="<?= htmlspecialchars(base_url.'Page/login')?>" class="font-semibold text-pink-600 hover:text-pink-500">Inicia sesión</a>
-
                 </p>
             </div>
             <div class="mt-1">
                 <div>
+                    <?php if(isset($_GET['id'])):?>
+                    <form action="<?= htmlspecialchars(base_url . 'User/signup?curso='.$_GET['id']) ?>" method="post" class="space-y-5">
+                    <?php elseif(!isset($_GET['id'])):?>
                     <form action="<?= htmlspecialchars(base_url . 'User/signup') ?>" method="post" class="space-y-5">
+                    <?php endif;?>
                         <div>
                             <label for="name" class="input-label">Nombre</label>
                             <div class="mt-2">
@@ -55,6 +59,7 @@
                                 <a href="#" class="font-semibold text-pink-600 hover:text-pink-500">¿Olvidaste tu contraseña?</a>
                             </div>
                         </div>
+                        <div></div>
                         <div>
                             <button type="submit" class="btn btn-primary">Registrarte</button>
                         </div>
