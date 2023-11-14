@@ -11,7 +11,7 @@
     <link href="<?= base_url ?>/assets/css/global.css" rel="stylesheet">
 
 
-    <title>Train The Teachers</title>
+    <title>EDU HCKRS</title>
     <link rel="icon" href="../../assets/img/favicon.ico">
 
 </head>
