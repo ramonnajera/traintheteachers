@@ -63,7 +63,7 @@
     <div class="md:grid grid-cols-2 h-32">
         <img src="<?= base_url ?>assets/img/uach_Plus.svg" alt="Logo de la UACH" class="md:hidden h-16 mx-auto mt-6"></img>
         <div class="flex flex-col items-end">
-            <img src="<?= base_url ?>assets/img/2023.png" alt="Año naranja" class="h-28 mx-auto my-6"></img>
+            <img src="<?= base_url ?>assets/img/2023.png" alt="Año naranja" class="hidden md:block h-28 mx-auto my-6"></img>
 
             <ul class="hidden md:block md:flex justify-center space-x-2 pt-24 items-end">
                 <li><img class="w-7 social hover:bg-blue-800" src="<?= base_url ?>assets/img/facebook.png" alt=""></li>
@@ -75,7 +75,7 @@
             </ul>
         </div>
 
-        <div class="hidden md:block">
+        <div class="md:block">
             <img src="<?= base_url ?>assets/img/uach_Plus.svg" alt="Logo de la UACH" class="hidden md:block h-16 mx-auto mt-6"></img>
             <p class="text-center text-white text-xs mt-2">"Luchar para lograr, lograr para dar"</p>
             <div class="text-white text-center text-xs mt-10">
