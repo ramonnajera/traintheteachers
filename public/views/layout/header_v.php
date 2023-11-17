@@ -11,7 +11,7 @@
     <link href="<?= base_url ?>/assets/css/global.css" rel="stylesheet">
 
 
-    <title>EDU HCKRS</title>
+    <title>train the teachers</title>
     <link rel="icon" href="../../assets/img/favicon.ico">
 
 </head>
@@ -22,7 +22,7 @@
 
     <nav class="flex items-center justify-between px-12 h-16 lg:gap-5 bg-[#45484c] border-gray-200">
         <a href="<?= base_url ?>" class="flex items-center">
-            <img src="/assets/img/images/home/logo-white.png" class="h-6 mr-3 sm:h-12">
+            <img src="/assets/img/images/home/logo-train-white.png" class="h-6 mr-3 sm:h-12">
         </a>
         <div class="dropdown-menu absolute top-[64px] left-0 bg-[#45484c] w-full lg:flex lg:justify-between flex-col lg:flex-row gap-6 items-start py-2 text-lg font-medium hidden z-[2] lg:static">
             <ul class="text-white flex flex-col lg:flex-row items-start gap-6 hover:transition-all">
