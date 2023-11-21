@@ -114,7 +114,7 @@
                         </div>
                     <?php endforeach; ?>
                     <?php else:?>
-                        <p>Aun no te haz inscrito a ningun taller</p>
+                        <p class="text-center">Aún no te has inscrito a ningún taller.  ¡ Es el momento ! ¡ Te invitamos a inscribirte !</p>
                     <?php endif;?>
                 </div>
             </section>

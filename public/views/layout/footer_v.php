@@ -131,13 +131,12 @@
         prevBtnText: 'Regresar',
         doneBtnText: 'Cerrar',
         steps: [
-            { popover: { title: 'Bienvenido a train the teachers', description: 'Este es un pequeño tour por la plataforma de train the teachers, presiona "Siguiente" para ir avanzando. Si no quieres este tour solo utiliza la tecla Esc en tu teclado o haz click fuera de este recuadro' } },
-            { element: '#mis_datos', popover: { title: 'Mis datos', description: 'Aqui encontraras tus datos personales. Es importante que los revices y nos hagas saber si hay errores', side: "bottom", align: 'start' }},
-            { element: '#mis_insignias', popover: { title: 'Insignias', description: 'En esta area encontraras tus insignias, estas representan los talleres en los que estas inscrito', side: "top", align: 'start' }},
-            { element: '#all_talleres', popover: { title: 'Talleres', description: 'En el menu "Todos los talleres" encontraras la lista de talleres que tenemos disponibles con su informacion detallada, revisalo mas tarde para elegir los que te interesen', side: "bottom", align: 'start' }},
-            { element: '#all_rutas', popover: { title: 'Insignias', description: 'En el menu "Todas las rutas" encontraras las rutas de aprendizaje que tenemos y recomendamos, dentro estan los talleres correspondientes a cada ruta de aprendizaje.', side: "bottom", align: 'start' }},
-            { element: '#inicio', popover: { title: 'Mis insignias', description: 'Siempre podras regresar a esta pagina desde el menu "Mis insignias".', side: "bottom", align: 'start' }},
-            { popover: { title: '¡Listo!', description: 'Ahora puedes iniciar a inscribirte en los talleres, ya sea por medio de una ruta de aprendizaje o al taller por separado. Excelente dia y cualquier cosa estamos a la orden en el correo: t3@uach.mx' } }
+            { popover: { title: '¡ Bienvenido a Train the Teachers !', description: 'A través de esta guía podrás conocer rápidamente cada una de las opciones que te ofrece la plataforma. Da click en < Siguiente > para iniciar el recorrido. Presiona la tecla ESC o haz click afuera del recuadro, para salir de la guía.' } },
+            { element: '#mis_datos', popover: { title: 'Mis datos', description: 'Aquí encontrarás tus datos personales. Es importante verificar que toda la información esté correcta, si no es así, favor de notificarlo al administrador.', side: "bottom", align: 'start' }},
+            { element: '#mis_insignias', popover: { title: 'Insignias', description: 'En esta sección encontrarás las insignias que representan los talleres a los que te has inscrito y los que ya has terminado.', side: "top", align: 'start' }},
+            { element: '#all_talleres', popover: { title: 'Talleres', description: 'En esta sección podrás visualizar toda la lista de talleres que están o no disponibles, así como la información detallada de cada uno.', side: "bottom", align: 'start' }},
+            { element: '#all_rutas', popover: { title: 'Rutas de aprendizaje', description: 'EAquí encontrarás todas las rutas de aprendizaje, así como los talleres que corresponden a cada una de ellas.', side: "bottom", align: 'start' }},
+            { popover: { title: '¡ Listo ! ¡ Ya puedes inscribirte !', description: 'Si tienes alguna duda puedes enviar un correo a t3@uach.mx y con gusto te atenderemos.¡ Gracias !' } }
         ]
         });
 
