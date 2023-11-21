@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,900&display=swap" rel="stylesheet">
     <link href="<?= base_url ?>/assets/css/global.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css"/>
+
 
     <title>train the teachers</title>
     <link rel="icon" href="../../assets/img/favicon.ico">
@@ -39,10 +41,10 @@
                             <a href="<?= htmlspecialchars(base_url) ?>" class="block py-2 pl-3 pr-4 text-white  rounded hover:text-[#D5175E]  lg:p-0" aria-current="page">Mis insignias</a>
                         </li>
                         <li>
-                            <a href="<?= htmlspecialchars(base_url . "Carrera/alls") ?>" class="block py-2 pl-3 pr-4 text-white rounded hover:text-[#D5175E]  lg:p-0">Todas las rutas</a>
+                            <a id="all_talleres" href="<?= htmlspecialchars(base_url . "Carrera/alls") ?>" class="block py-2 pl-3 pr-4 text-white rounded hover:text-[#D5175E]  lg:p-0">Todas las rutas</a>
                         </li>
                         <li>
-                            <a href="<?= htmlspecialchars(base_url . "Curso/alls") ?>" class="block py-2 pl-3 pr-4 text-white rounded hover:text-[#D5175E]  lg:p-0">Todos los talleres</a>
+                            <a id="all_rutas" href="<?= htmlspecialchars(base_url . "Curso/alls") ?>" class="block py-2 pl-3 pr-4 text-white rounded hover:text-[#D5175E]  lg:p-0">Todos los talleres</a>
                         </li>
 
                     <?php endif; ?>

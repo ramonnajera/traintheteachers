@@ -113,3 +113,31 @@
             </div>
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+    <?php if (isset($_SESSION['identidad']) && isset($_SESSION['user']) && empty($insignias)) : ?>
+    <script>
+        const driver = window.driver.js.driver;
+
+        const driverObj = driver({
+        showProgress: true,
+        nextBtnText: 'Siguiente',
+        prevBtnText: 'Regresar',
+        doneBtnText: 'Cerrar',
+        steps: [
+            { popover: { title: 'Bienvenido a train the teachers', description: 'Este es un pequeño tour por la plataforma de train the teachers.' } },
+            { element: '#mis_datos', popover: { title: 'Mis datos', description: 'Aqui encontraras tus datos personales. Es importante que los revices y nos hagas saber si hay errores', side: "bottom", align: 'start' }},
+            { element: '#mis_insignias', popover: { title: 'Insignias', description: 'En esta area encontraras tus insignias, estas representan los talleres en los que estas inscrito', side: "top", align: 'start' }},
+            { element: '#all_talleres', popover: { title: 'Talleres', description: 'En el menu "Todos los talleres" encontraras la lista de talleres que tenemos disponibles con su informacion detallada, revisalo mas tarde para elegir los que te interesen', side: "bottom", align: 'start' }},
+            { element: '#all_rutas', popover: { title: 'Insignias', description: 'En el menu "Todas las rutas" encontraras las rutas de aprendizaje que tenemos y recomendamos, dentro estan los talleres correspondientes a cada ruta de aprendizaje.', side: "bottom", align: 'start' }},
+            { popover: { title: '¡Listo!', description: 'Ahora puedes iniciar a inscribirte en los talleres, ya sea por medio de una ruta de aprendizaje o al taller por separado. Excelente dia y cualquier cosa estamos a la orden en el correo: t3@uach.mx' } }
+        ]
+        });
+
+        driverObj.drive();
+
+    </script>
+    <?php endif;?>
+    </body>
+
+</html>

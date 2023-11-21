@@ -96,15 +96,16 @@
         </section>
     <?php elseif (isset($_SESSION['identidad']) && isset($_SESSION['user'])) : ?>
         <section class="px-10">
-            <div class="bg-[#EAF3F0] border-2 mt-4 py-1 px-3 rounded-xl mb-5">
+            <div id="mis_datos" class="bg-[#EAF3F0] border-2 mt-4 py-1 px-3 rounded-xl mb-5">
                 <p>Nombre: <?= $_SESSION['identidad'][0]["usuario_nombre"] ?></p>
                 <p>Correo: <?= $_SESSION['identidad'][0]["usuario_correo"] ?></p>
                 <p>Area: <?= $_SESSION['identidad'][0]["usuario_area"] ?></p>
                 </d>
             </div>
-            <section class="bg-[#EAF3F0] border-2 pt-0 mb-4 rounded-xl">
+            <section id="mis_insignias" class="bg-[#EAF3F0] border-2 pt-0 mb-4 rounded-xl">
                 <p class="text-center text-gray-600 font-bold text-2xl py-5">MIS INSIGNIAS</p>
                 <div class="w-full mx-auto justify-items-center p-6 grid grid-cols-1 gap-4 md:grid-cols-3">
+                    <?php if(!empty($insignias)):?>
                     <?php foreach ($insignias as $data) : ?>
                         <div class="flex flex-col">
                             <img class="w-[40%] mx-auto mb-3 <?= $data["participante_terminado"] ? "" : "grayscale opacity-10" ?>" src="<?= base_url . "assets/img/images/" . $data["curso_insignia"] ?>" alt="">
@@ -112,6 +113,9 @@
                             <p class="text-gray-400 text-sm text-center"><?= $data["participante_terminado"] ? "" : "Obtendrás esta insignia al concluir el taller" ?></p>
                         </div>
                     <?php endforeach; ?>
+                    <?php else:?>
+                        <p>Aun no te haz inscrito a ningun taller</p>
+                    <?php endif;?>
                 </div>
             </section>
         <?php elseif (!isset($_SESSION['identidad'])) : ?>
