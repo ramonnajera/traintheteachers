@@ -104,8 +104,8 @@
             </div>
             <section id="mis_insignias" class="bg-[#EAF3F0] border-2 pt-0 mb-4 rounded-xl">
                 <p class="text-center text-gray-600 font-bold text-2xl py-5">MIS INSIGNIAS</p>
+                <?php if(!empty($insignias)):?>
                 <div class="w-full mx-auto justify-items-center p-6 grid grid-cols-1 gap-4 md:grid-cols-3">
-                    <?php if(!empty($insignias)):?>
                     <?php foreach ($insignias as $data) : ?>
                         <div class="flex flex-col">
                             <img class="w-[40%] mx-auto mb-3 <?= $data["participante_terminado"] ? "" : "grayscale opacity-10" ?>" src="<?= base_url . "assets/img/images/" . $data["curso_insignia"] ?>" alt="">
@@ -113,10 +113,10 @@
                             <p class="text-gray-400 text-sm text-center"><?= $data["participante_terminado"] ? "" : "Obtendrás esta insignia al concluir el taller" ?></p>
                         </div>
                     <?php endforeach; ?>
-                    <?php else:?>
-                        <p class="text-center">Aún no te has inscrito a ningún taller.  ¡ Es el momento ! ¡ Te invitamos a inscribirte !</p>
-                    <?php endif;?>
                 </div>
+                    <?php else:?>
+                        <p class="text-center py-5 text-gray-400 text-xl">Aún no te has inscrito a ningún taller, es el momento ¡Te invitamos a inscribirte!</p>
+                    <?php endif;?>
             </section>
         <?php elseif (!isset($_SESSION['identidad'])) : ?>
 

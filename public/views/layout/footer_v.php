@@ -59,7 +59,7 @@
 
 </html> -->
 
-<footer class="bg-purpleuach md:grid md:grid-cols-2 pt-10">
+<footer class="bg-purpleuach md:grid md:grid-cols-2 pt-10 mt-auto">
     <div class="md:grid grid-cols-2 h-32">
         <img src="<?= base_url ?>assets/img/uach_Plus.svg" alt="Logo de la UACH" class="md:hidden h-16 mx-auto mt-6"></img>
         <div class="flex flex-col items-end">

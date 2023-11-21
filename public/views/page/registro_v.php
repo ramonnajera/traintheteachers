@@ -32,21 +32,21 @@
                         <div class="mb-3">
                             <label for="area" class="input-label">Unidad Académica</label>
                             <select type="text" id="area" name="area" class="input-text" placeholder="Facultad de artes" required>
-                                <option value="1">Facultad de Artes</option>
-                                <option value="2">Facultad de Ciencias Agrícolas y Forestales</option>
-                                <option value="3">Facultad de Ciencias Agrotecnológicas</option>
-                                <option value="4">Facultad de Ciencias de la Cultura Fïsica</option>
-                                <option value="5">Facultad de Ciencias Políticas y Sociales</option>
-                                <option value="6">Facultad de Ciencias Químicas</option>
-                                <option value="7">Facultad de Contaduría y Administración</option>
-                                <option value="8">Facultad de Derecho</option>
-                                <option value="9">Facultad de Economía Internacional</option>
-                                <option value="10">Facultad de Enfermería y Nutriología</option>
-                                <option value="11">Facultad de Filosofía y Letras</option>
-                                <option value="12">Facultad de Ingeniería</option>
-                                <option value="13">Facultad de Medicina y Ciencias Biomédicas</option>
-                                <option value="14">Facultad de Odontología</option>
-                                <option value="15">Facultad de Zootecnia y Ecología</option>
+                                <option value="Facultad de Artes">Facultad de Artes</option>
+                                <option value="Facultad de Ciencias Agrícolas y Forestales">Facultad de Ciencias Agrícolas y Forestales</option>
+                                <option value="Facultad de Ciencias Agrotecnológicas">Facultad de Ciencias Agrotecnológicas</option>
+                                <option value="Facultad de Ciencias de la Cultura Fïsica">Facultad de Ciencias de la Cultura Fïsica</option>
+                                <option value="Facultad de Ciencias Políticas y Sociales">Facultad de Ciencias Políticas y Sociales</option>
+                                <option value="Facultad de Ciencias Químicas">Facultad de Ciencias Químicas</option>
+                                <option value="Facultad de Contaduría y Administración">Facultad de Contaduría y Administración</option>
+                                <option value="Facultad de Derecho">Facultad de Derecho</option>
+                                <option value="Facultad de Economía Internacional">Facultad de Economía Internacional</option>
+                                <option value="Facultad de Enfermería y Nutriología">Facultad de Enfermería y Nutriología</option>
+                                <option value="Facultad de Filosofía y Letras">Facultad de Filosofía y Letras</option>
+                                <option value="Facultad de Ingeniería">Facultad de Ingeniería</option>
+                                <option value="Facultad de Medicina y Ciencias Biomédicas">Facultad de Medicina y Ciencias Biomédicas</option>
+                                <option value="Facultad de Odontología">Facultad de Odontología</option>
+                                <option value="Facultad de Zootecnia y Ecología">Facultad de Zootecnia y Ecología</option>
                             </select>
                         </div>
                         <div class="mb-5 text-left ">
