@@ -10,7 +10,6 @@ class UserController{
         $numIntentos = $this->revisarIntentos();
 
         if(count($numIntentos) >=3){
-            echo "Entre en 3 o mas";
             $fecha_actual = strtotime(date('Y-m-d H:i:s'));
             $ultimoIntento = end($numIntentos);
             $ultimoIntento = strtotime($ultimoIntento["intento_date"]);
@@ -24,10 +23,8 @@ class UserController{
             }
 
         }elseif(count($numIntentos) == 0){
-            echo "Entre en 0";
             $ip = $this->getIpAddr();
         }else{
-            echo "Entre en 1 o 2";
             $ip = end($numIntentos);
             $ip = $ip["intento_ip"];
         }
@@ -75,7 +72,16 @@ class UserController{
                             $_SESSION['admin'] = true;
                         }elseif($identidad[0]['usuario_tipo'] == "user"){
                             $_SESSION['user'] = true;
+                            $_ParticipanteModel = new ParticipanteModel();
+                            $_ParticipanteModel->setUsuario_id($identidad[0]['usuario_id']);
+                            $taller = $_ParticipanteModel->allUserCourses();
+                            if(empty($taller)){
+                                $_SESSION['tour'] = true;
+                            }else{
+                                $_SESSION['tour'] = false;
+                            }
                         }
+                        
     
                         $_respuestas->response;
                         $_respuestas->response["result"]["mensaje"] = "Login correcto";
@@ -234,6 +240,14 @@ class UserController{
                         $_SESSION['admin'] = true;
                     }elseif($identidad[0]['usuario_tipo'] == "user"){
                         $_SESSION['user'] = true;
+                        $_ParticipanteModel = new ParticipanteModel();
+                        $_ParticipanteModel->setUsuario_id($identidad[0]['usuario_id']);
+                        $taller = $_ParticipanteModel->allUserCourses();
+                        if(empty($taller)){
+                            $_SESSION['tour'] = true;
+                        }else{
+                            $_SESSION['tour'] = false;
+                        }
                     }
                     $_respuestas->response["result"]["mensaje"] = "Registro correcto";
                 }else{

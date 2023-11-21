@@ -38,13 +38,13 @@
                         </li>
                     <?php elseif (isset($_SESSION['user'])) : ?>
                         <li>
-                            <a href="<?= htmlspecialchars(base_url) ?>" class="block py-2 pl-3 pr-4 text-white  rounded hover:text-[#D5175E]  lg:p-0" aria-current="page">Mis insignias</a>
+                            <a id="inicio" href="<?= htmlspecialchars(base_url) ?>" class="block py-2 pl-3 pr-4 text-white  rounded hover:text-[#D5175E]  lg:p-0" aria-current="page">Mis insignias</a>
                         </li>
                         <li>
-                            <a id="all_talleres" href="<?= htmlspecialchars(base_url . "Carrera/alls") ?>" class="block py-2 pl-3 pr-4 text-white rounded hover:text-[#D5175E]  lg:p-0">Todas las rutas</a>
+                            <a id="all_rutas" href="<?= htmlspecialchars(base_url . "Carrera/alls") ?>" class="block py-2 pl-3 pr-4 text-white rounded hover:text-[#D5175E]  lg:p-0">Todas las rutas</a>
                         </li>
                         <li>
-                            <a id="all_rutas" href="<?= htmlspecialchars(base_url . "Curso/alls") ?>" class="block py-2 pl-3 pr-4 text-white rounded hover:text-[#D5175E]  lg:p-0">Todos los talleres</a>
+                            <a id="all_talleres" href="<?= htmlspecialchars(base_url . "Curso/alls") ?>" class="block py-2 pl-3 pr-4 text-white rounded hover:text-[#D5175E]  lg:p-0">Todos los talleres</a>
                         </li>
 
                     <?php endif; ?>

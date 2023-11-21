@@ -106,7 +106,7 @@ class ParticipanteModel extends conection{
 
     public function allUserCourses(){
         $sql = "SELECT * FROM usuarios INNER JOIN participantes ON usuarios.usuario_id = participantes.usuario_id
-                INNER JOIN cursos ON cursos.curso_id = participantes.curso_id WHERE usuario_id=:usuario_id";
+                INNER JOIN cursos ON cursos.curso_id = participantes.curso_id WHERE usuarios.usuario_id=:usuario_id";
 
         $data = [
             "usuario_id" => $this->getUsuario_id(),
