@@ -6,7 +6,7 @@
                 <p class="text-2xl mb-5">Nuevo taller</p>
                 <form action="<?= htmlspecialchars(base_url . "Curso/add") ?>" method="post" enctype="multipart/form-data">
                     <div class="mb-3">
-                        <label for="carrera" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Ruta de aprendisaje</label>
+                        <label for="carrera" class="block mb-2 text-sm font-medium text-gray-900">Ruta de aprendisaje</label>
                         <select id="carrera" name="carrera" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                             <?php foreach ($carreras as $carrera) : ?>
                                 <option value="<?= $carrera["carrera_id"] ?>"><?= $carrera["carrera_nombre"] ?></option>
@@ -34,7 +34,7 @@
                         <input type="number" id="duracion" name="duracion" class="input-text" required>
                     </div>
                     <div class="mb-3">
-                        <label for="instructor" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Instructor</label>
+                        <label for="instructor" class="block mb-2 text-sm font-medium text-gray-900">Instructor</label>
                         <select id="carrera" name="instructor" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-md focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
                             <?php foreach ($instructores as $instructor) : ?>
                                 <option value="<?= $instructor["usuario_id"] ?>"><?= $instructor["usuario_nombre"] ?></option>
@@ -52,7 +52,7 @@
                     <div class="mb-3">
                         <label class="block mb-2 text-sm font-medium text-gray-900" for="insignia">Insignia del curso</label>
                         <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-md cursor-pointer bg-gray-50 focus:outline-none " aria-describedby="insignia_help" id="insignia" name="insignia" type="file" required>
-                        <p class="mt-1 text-sm text-gray-500 dark:text-gray-300" id="insignia_help">PNG (MAX. 800x400px).</p>
+                        <p class="mt-1 text-sm text-gray-500" id="insignia_help">PNG (MAX. 800x400px).</p>
                     </div>
                     <div class="flex justify-center ">
                         <button data-close-modal class="mx-5 btn btn-secundary">Cerrar</button>
@@ -115,7 +115,7 @@
                     <?php endforeach; ?>
                 </div>
                     <?php else:?>
-                        <p class="text-center py-5 text-gray-400 text-xl">Aún no te has inscrito a ningún taller, es el momento ¡Te invitamos a inscribirte!</p>
+                        <p class="text-center py-5 text-gray-400 text-xl">Aún no te has inscrito a ningún taller, es el momento <a class="text-pink-600 underline" href="<?=base_url?>Curso/alls">¡Te invitamos a inscribirte!</a></p>
                     <?php endif;?>
             </section>
         <?php elseif (!isset($_SESSION['identidad'])) : ?>

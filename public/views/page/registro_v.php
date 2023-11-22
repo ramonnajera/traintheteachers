@@ -3,6 +3,7 @@
         <div class="mx-auto w-full max-w-sm lg:w-96">
             <div>
                 <h2 class="mt-5 text-2xl font-bold leading-9 tracking-tight text-gray-900">Regístrate</h2>
+                <p class="text-gray-500">Utiliza tu cuenta de servicios UACH</p>
                 <p><?=$curso[0]["curso_nombre"]?></p>
                 <p class="mt-2 text-sm leading-6 text-gray-500">
                     ¿Ya tienes cuenta?

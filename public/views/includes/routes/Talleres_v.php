@@ -1,7 +1,8 @@
 <!-- Workshop list -->
-<h1 class="text-start px-32 mt-5 text-4xl font-medium tracking-tight text-gray-900">Talleres</h1>
+<div class="mx-auto">
+  <h1 class="text-start px-32 mt-5 text-4xl font-medium tracking-tight text-gray-900">Talleres</h1>
 <?php foreach ($cursos as $curso) : ?>
-  <div class="flex flex-col px-4 md:pb-10 md:px-32 h-full w-full justify-end container">
+  <div class="flex flex-col px-4 md:pb-10 md:px-32 h-full w-full container">
     <details class="ver">
       <summary class="ver">
         <ul role="list" class="grid grid-cols-1 md:justify-center px-3 md:px-auto">
@@ -115,5 +116,5 @@
       </div>
     </details>
   </div>
-  </div>
 <?php endforeach; ?>
+</div>
