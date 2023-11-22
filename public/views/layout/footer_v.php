@@ -115,13 +115,15 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.js.iife.js"></script>
+    <script src="<?=base_url?>assets/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/72c46a6083.js" crossorigin="anonymous"></script>
 
     <?php if (isset($_SESSION['identidad']) && isset($_SESSION['user']) && $_SESSION['tour']) : ?>
     <script>
         const origin = window.origin;
         const executed = localStorage.getItem("tour");
 
-        if (origin === "https://deposits-moms-practitioner-furniture.trycloudflare.com" && location.pathname === "/" && !executed) {
+        if (origin === "http://localhost:8080" && location.pathname === "/" && !executed) {
         const driver = window.driver.js.driver;
         localStorage.setItem("tour", true);
 

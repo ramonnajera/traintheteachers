@@ -80,7 +80,7 @@
         </div>
     </nav>
 
-    <dialog data-modal class="rounded-m ">
+    <!-- <dialog data-modal class="rounded-m ">
         <p class="text-2xl mb-5 pt-10 text-center">Ingresar</p>
         <form action="<?= htmlspecialchars(base_url . "User/login") ?>" method="post">
             <div class="mb-3 px-5 flex flex-col">
@@ -100,6 +100,6 @@
                 <button type="submit" class="btn btn-primary mr-5">Entrar</button>
             </div>
         </form>
-    </dialog>
+    </dialog> -->
 
     <?php require_once dirname(__FILE__) . '../../includes/appmessages_v.php'; ?>

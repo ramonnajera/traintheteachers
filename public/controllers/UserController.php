@@ -136,39 +136,6 @@ class UserController{
         header("Location:".base_url);
     }
 
-    // public function activar(){
-    //     $_respuestas = new responses();
-        
-    //     $id = isset($_GET['id']) && !empty($_GET['id']) ? $_GET['id'] :false;
-    //     $id = Utils::limpiarData($id,"int");
-    //     $id = Utils::validarData($id,"int");
-        
-    //     $status = isset($_GET['status']) && !empty($_GET['status']) ? $_GET['status'] :false;
-    //     $status = Utils::limpiarData($status,"boolean");
-    //     $status = Utils::validarData($status,"boolean");
-
-    //     if($id){
-    //         $_UserModel = new UserModel();
-    //         $_UserModel->setUsuario_id($id);
-    //         $_UserModel->setUsuario_activo($status);
-    //         $usuario = $_UserModel->updateActivo();
-    //         if($usuario){
-    //             $_respuestas->response["result"]["mensaje"] = "El usuario a sido activado";
-    //         }else{
-    //             $_respuestas->error_u00001();
-    //         }
-    //     }else{
-    //         $_respuestas->error_u00001();
-    //     }
-        
-    //     $_SESSION['respuesta'] = [
-    //         "status" => $_respuestas->response["status"],
-    //         "mensaje" => $_respuestas->response["result"]["mensaje"]
-    //     ];
-
-    //     header("Location:".base_url."Page/settings");
-    // }
-
     public function signup(){
         $_respuestas = new responses();
         $curso = isset($_GET['curso']) && !empty($_GET['curso']) ? $_GET['curso'] :false;

@@ -879,10 +879,6 @@ video {
   height: 100%;
 }
 
-.h-screen {
-  height: 100vh;
-}
-
 .max-h-16 {
   max-height: 4rem;
 }
@@ -953,10 +949,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-screen {
-  width: 100vw;
 }
 
 .min-w-full {
@@ -1185,10 +1177,6 @@ video {
 
 .self-end {
   align-self: flex-end;
-}
-
-.self-center {
-  align-self: center;
 }
 
 .overflow-hidden {
@@ -1665,10 +1653,6 @@ video {
   padding-top: 7%;
 }
 
-.pt-96 {
-  padding-top: 24rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -1683,10 +1667,6 @@ video {
 
 .text-start {
   text-align: start;
-}
-
-.align-middle {
-  vertical-align: middle;
 }
 
 .font-\[Faktum\] {
@@ -1732,14 +1712,14 @@ video {
   line-height: 1.25rem;
 }
 
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold {
