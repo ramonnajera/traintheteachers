@@ -4,7 +4,6 @@ DROP TABLE IF EXISTS carreras;
 DROP TABLE IF EXISTS intentos;
 DROP TABLE IF EXISTS usuarios;
 
-
 -- usuarios
 -- usuario_id
 -- usuario_nombre
