@@ -1,9 +1,9 @@
 {
     "conection":{
-        "server" : "postgresql",
-        "user" : "postgres",
-        "password" : "postgres",
-        "database" : "dev",
+        "server" : "localhost",
+        "user" : "train",
+        "password" : "N4j3r4210191",
+        "database" : "db_train",
         "port" : "5432"
     }
 }

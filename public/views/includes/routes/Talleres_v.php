@@ -57,6 +57,27 @@
                   </dt>
                   <dd class="text-sm font-medium leading-6 text-gray-900">Instructor: <?= $curso["usuario_nombre"] ?></dd>
                 </div>
+
+
+
+
+
+              <div class="mt-4 flex w-full flex-none gap-x-4 px-6">
+                <dt class="flex-none">
+                  <span class="sr-only">Horario</span>
+                  <svg class="h-6 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </dt>
+                <dd class="text-sm leading-6 text-gray-500">
+                  <p><?= $curso["curso_horario"] ?></p>
+                </dd>
+              </div>
+
+
+
+
+
                 <div class="mt-4 flex w-full flex-none gap-x-4 px-6">
                   <dt class="flex-none">
                     <span class="sr-only">Due date</span>

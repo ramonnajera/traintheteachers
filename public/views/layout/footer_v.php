@@ -123,7 +123,7 @@
         const origin = window.origin;
         const executed = localStorage.getItem("tour");
 
-        if (origin === "http://localhost:8080" && location.pathname === "/" && !executed) {
+        if (origin === "https://t3.uach.mx" && location.pathname === "/" && !executed) {
         const driver = window.driver.js.driver;
         localStorage.setItem("tour", true);
 

@@ -807,6 +807,10 @@ video {
   margin-top: auto;
 }
 
+.mb-32 {
+  margin-bottom: 8rem;
+}
+
 .block {
   display: block;
 }
@@ -2529,6 +2533,10 @@ html {
 
   .md\:mt-24 {
     margin-top: 6rem;
+  }
+
+  .md\:mb-0 {
+    margin-bottom: 0px;
   }
 
   .md\:block {
