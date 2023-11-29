@@ -106,4 +106,34 @@ CREATE TABLE participantes (
           REFERENCES cursos(curso_id)
 );
 
+-- insert de usuario de Bart
 insert into usuarios (usuario_nombre, usuario_pass, usuario_correo, usuario_activo,usuario_area, usuario_tipo) values ('Bart Lopez', '$2y$04$Cxa03AYd4nQxM1gbEb4H.eyTftjt4OJ7qvt/Pui3jf3f4KBmhN/aq', 'dalopez@uach.mx', 't', 'CIET','admin');
+
+-- insert de carreras/rutas
+INSERT INTO carreras (carrera_nombre, carrera_descripcion, carrera_img, carrera_insignia)
+VALUES ('PRODUCTIVIDAD', 'PRODUCTIVIDAD', '1.png', '2.png');
+
+INSERT INTO carreras (carrera_nombre, carrera_descripcion, carrera_img, carrera_insignia)
+VALUES ('DISEÑO, INTERACCIÓN Y CONTENIDO DIGITAL', 'DISEÑO, INTERACCIÓN Y CONTENIDO DIGITAL', '3.png', '4.png');
+
+INSERT INTO carreras (carrera_nombre, carrera_descripcion, carrera_img, carrera_insignia)
+VALUES ('DESARROLLO Y GESTIÓN DE APLICACIONES', 'DESARROLLO Y GESTIÓN DE APLICACIONES', '5.png', '6.png');
+
+INSERT INTO carreras (carrera_nombre, carrera_descripcion, carrera_img, carrera_insignia)
+VALUES ('GESTIÓN Y VISUALIZACIÓN DE DATOS', 'GESTIÓN Y VISUALIZACIÓN DE DATOS', '7.png', '8.png');
+
+INSERT INTO carreras (carrera_nombre, carrera_descripcion, carrera_img, carrera_insignia)
+VALUES ('ESTRATEGIAS DIDÁCTICAS DIGITALES I', 'ESTRATEGIAS DIDÁCTICAS DIGITALES I', '9.png', '10.png');
+
+-- inserts de cursos
+INSERT INTO cursos (usuario_id, carrera_id, curso_nombre, curso_descripcion, curso_modo, curso_status, curso_duracion, curso_instructor, curso_fecha, curso_horario, curso_insignia, curso_datec)
+VALUES (1, 2, 'Visualización de datos con Tableau Matutino', 'Acerca del taller:<br>Conocer el entorno de trabajo<br>Preparar y conectar datos<br>Crear hojas de visualización de datos<br>Integrar las visualizaciones en un dashboard<br>Nivel: Principiante<br>Modalidad: Online<br>Herramienta: Tableau<br>Producto a generar: Dashboard en Tableau public<br>Requisitos: Computadora o laptop.', 'virtual', 't', 4, 1, '2024-01-22', '9:00 am a 13:00 pm', '65612d43eed3f.png', '2023-11-24 16:09:55.979484-07');
+
+INSERT INTO cursos (usuario_id, carrera_id, curso_nombre, curso_descripcion, curso_modo, curso_status, curso_duracion, curso_instructor, curso_fecha, curso_horario, curso_insignia, curso_datec)
+VALUES (1, 3, 'Mejora tu gestión de proyectos con Trello, Kanban y Scrum Matutino', 'Aprenderás:ABC de Agile y ScrumDividir un proyecto en tareasEstimar la complejidad de cada tareaGestionar tareas en un tablero KanbanBonus: Mide el avance con un gráfico de burndown Nivel: PrincipianteModalidad: OnlineHerramienta: TrelloProducto a generar: Tablero Kanban en TrelloRequisitos: Computadora o laptop.', 'virtual', 't', 4, 1, '2024-01-19', '9:00 a 13:00', '656123363e15b.png', '2023-11-24 15:27:02.255197-07');
+
+INSERT INTO cursos (usuario_id, carrera_id, curso_nombre, curso_descripcion, curso_modo, curso_status, curso_duracion, curso_instructor, curso_fecha, curso_horario, curso_insignia, curso_datec)
+VALUES (1, 3, 'Crea y publica tu primera app de Realidad Aumentada', 'Crearás 2 filtros de Realidad Aumentada con seguimiento de rostro en tiempo real e interacciones básicas en pantalla. Publicaras tus filtros en Instagram o Facebook (taller sugerido como continuación del curso de Alternativas a Photoshop).', 'virtual', 't', 12, 1, '2024-01-17', '9:00 hrs - 13:00 hrs', '6561259469eee.png', '2023-11-24 15:37:08.435246-07');
+
+INSERT INTO cursos (usuario_id, carrera_id, curso_nombre, curso_descripcion, curso_modo, curso_status, curso_duracion, curso_instructor, curso_fecha, curso_horario, curso_insignia, curso_datec)
+VALUES (1, 3, 'Creación y consumo de APIs desde cero', '¡Todos podemos crear software! Conoce las bases de la integración de software consultando, extrayendo y presentando datos en una aplicación básica.', 'virtual', 't', 5, 1, '2024-01-24', '9:00 a 14:00 horas', '65612684d7d03.png', '2023-11-24 15:41:08.88491-07');
