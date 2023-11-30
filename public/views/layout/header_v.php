@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,900&display=swap" rel="stylesheet">
     <link href="<?= base_url ?>/assets/css/global.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.0.1/dist/driver.css" />
 
 
     <title>train the teachers</title>
@@ -71,7 +71,7 @@
                 <?php elseif (!isset($_SESSION['identidad'])) : ?>
                     <!-- <button data-open-modal class="btn btn-primary mx-3">Ingresar</button> -->
                     <a href="<?= htmlspecialchars(base_url . "Page/login") ?>" class="btn btn-primary mx-3">Ingresar</a>
-                    <a href="<?= htmlspecialchars(base_url . "Page/registro") ?>" class="block py-2 pl-3 pr-4 text-white border hover:bg-pink-400 hover:border-transparent ">Registro</a>
+                    <a href="<?= htmlspecialchars(base_url . "Page/registro") ?>" class="block py-2 pl-3 pr-4 mx-3 text-white border hover:bg-pink-400 hover:border-transparent ">Registro</a>
                 <?php endif; ?>
             </div>
         </div>
