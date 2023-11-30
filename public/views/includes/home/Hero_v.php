@@ -19,7 +19,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="mx-auto grid max-w-lg grid-cols-2 items-center gap-x-8 gap-y-10 py-20 sm:max-w-xl sm:grid-cols-3 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+		<div class="mx-auto grid max-w-lg grid-col items-center gap-x-8 gap-y-10 py-20 sm:max-w-xl sm:grid-cols-2 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-3">
 			<img class="col-span-2 max-h-20 w-full object-contain lg:col-span-1" src="assets/img/images/home/cgti-logo.png" alt="ciet" width={158} height={48} />
 
 			<img class="col-span-2 max-h-20 w-full object-contain lg:col-span-1" src="assets/img/images/home/cudd.png" alt="cudd" width={158} height={48} />
