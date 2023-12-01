@@ -7,7 +7,7 @@
           <div class="aspect-h-1 z-20 w-80 md:w-full overflow-hidden bg-gray-100 xl:aspect-h-8 xl:aspect-w-7">
             <img src="<?= base_url ?>assets/img/images/<?= $carrera["carrera_img"] ?>" alt="" class="h-full w-full object-cover object-center group-hover:opacity-75">
           </div>
-          <p class="flex absolute z-10 text-pink-300 text-3xl md:text-xl  pb-2">
+          <p class="flex absolute z-50 text-pink-300 text-3xl md:text-xl  pb-2">
             Ver talleres <span>&rarr;</span>
           </p>
           <!-- <h3 class="mt-4 text-md font-medium text-gray-700"><?= $carrera["carrera_nombre"] ?></h3> -->
