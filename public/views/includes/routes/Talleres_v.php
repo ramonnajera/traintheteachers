@@ -2,7 +2,7 @@
 <div class="mx-auto py-20 w-full">
   <h1 class="text-start px-32 mt-5 text-4xl font-medium tracking-tight text-gray-900">Talleres</h1>
   <?php foreach ($cursos as $curso) : ?>
-    <div class="flex flex-col px-10 md:pb-10 md:px-32 h-full w-full">
+    <div class="flex flex-col px-10 md:pb-10 md:px-10 lg:px-20 h-full w-full">
       <details class="ver">
         <summary class="ver">
           <ul role="list" class="grid grid-cols-1 md:justify-center px-3 md:px-auto">

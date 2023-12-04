@@ -2600,6 +2600,16 @@ html {
     padding-right: 8rem;
   }
 
+  .md\:px-3 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .md\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
   .md\:pb-10 {
     padding-bottom: 2.5rem;
   }
