@@ -36,7 +36,7 @@
             <tr>
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">#</th>
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nombre</th>
-            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descripcion</th>
+            <!-- <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descripcion</th> -->
             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
             </tr>
         </thead>
@@ -45,7 +45,7 @@
             <tr class="border-b hover:bg-pink-100 bg-gray-100 xl:bg-gray-100 py-10">
             <td class="py-4 px-6 border-b border-gray-200"><?=$carrera["carrera_id"]?></td>
             <td class="py-4 px-6 border-b border-gray-200"><?=$carrera["carrera_nombre"]?></td>
-            <td class="py-4 px-6 border-b border-gray-200"><?=$carrera["carrera_descripcion"]?></td>
+            <!-- <td class="py-4 px-6 border-b border-gray-200"><?=$carrera["carrera_descripcion"]?></td> -->
             <td>
             <a class="btn bg-red-600 text-white" href="<?=htmlspecialchars(base_url.'Carrera/delete?id=<?='.$carrera["carrera_id"])?>">Eliminar</a>
             </td>
