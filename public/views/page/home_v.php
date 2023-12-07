@@ -69,9 +69,9 @@
                 <thead class="bg-gray-50">
                     <tr>
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">#</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Curso</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ruta de aprendisaje</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descripcion</th>
+                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Curso</th>
+                        <!-- <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Descripcion</th> -->
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
                         <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
                     </tr>
@@ -82,7 +82,7 @@
                             <td class="py-4 px-6 border-b border-gray-200"><?= $data["curso_id"] ?></td>
                             <td class="py-4 px-6 border-b border-gray-200"><?= $data["carrera_nombre"] ?></td>
                             <td class="py-4 px-6 border-b border-gray-200"><?= $data["curso_nombre"] ?></td>
-                            <td class="py-4 px-6 border-b border-gray-200"><?= $data["curso_descripcion"] ?></td>
+                            <!-- <td class="py-4 px-6 border-b border-gray-200"><?= $data["curso_descripcion"] ?></td> -->
                             <td class="py-4 px-6 border-b border-gray-200 <?= $data["curso_status"] == true ? 'text-green-600' : 'text-red-600' ?>"><?= $data["curso_status"] == true ? 'Activo' : 'Inactivo' ?></td>
                             <td class="flex space-x-2 py-6 px-6 border-b border-gray-200">
                                 <a href="<?= htmlspecialchars(base_url.'Participante/all?id=<?='.$data["curso_id"]) ?>" class="btn btn-primary"><i class="fa-solid fa-users"></i></a>
