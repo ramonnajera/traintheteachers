@@ -85,9 +85,11 @@
                             <!-- <td class="py-4 px-6 border-b border-gray-200"><?= $data["curso_descripcion"] ?></td> -->
                             <td class="py-4 px-6 border-b border-gray-200 <?= $data["curso_status"] == true ? 'text-green-600' : 'text-red-600' ?>"><?= $data["curso_status"] == true ? 'Activo' : 'Inactivo' ?></td>
                             <td class="flex space-x-2 py-6 px-6 border-b border-gray-200">
-                                <a href="<?= htmlspecialchars(base_url.'Participante/all?id=<?='.$data["curso_id"]) ?>" class="btn btn-primary"><i class="fa-solid fa-users"></i></a>
-                                <a class="btn <?= $data["curso_status"] == true ? 'bg-yellow-400 hover:bg-yellow-700' : 'bg-slate-400 hover:bg-slate-600' ?> text-white" href="<?= htmlspecialchars(base_url.'Curso/statusUpdate?id=<?='. $data["curso_id"] . '&status=' . $data["curso_status"]) ?>"><i class="fa-solid <?= $data["curso_status"] == true ? 'fa-eye-slash' : 'fa-eye' ?>"></i></a>
-                                <a class="btn bg-red-600 hover:bg-red-700 text-white" href="<?= htmlspecialchars(base_url.'Curso/delete?id=<?='. $data["curso_id"]) ?>"><i class="fa-solid fa-trash"></i></a>
+                                <a href="<?= htmlspecialchars(base_url.'Participante/all?id='.$data["curso_id"]) ?>" class="btn btn-primary"><i class="fa-solid fa-users"></i></a>
+
+                                <a class="btn <?= $data["curso_status"] == true ? 'bg-yellow-400 hover:bg-yellow-700' : 'bg-slate-400 hover:bg-slate-600' ?> text-white" href="<?= htmlspecialchars(base_url.'Curso/statusUpdate?id='. $data["curso_id"] . '&status=' . $data["curso_status"]) ?>"><i class="fa-solid <?= $data["curso_status"] == true ? 'fa-eye-slash' : 'fa-eye' ?>"></i></a>
+
+                                <!-- <a class="btn bg-red-600 hover:bg-red-700 text-white" href="<?= htmlspecialchars(base_url.'Curso/delete?id='. $data["curso_id"]) ?>"><i class="fa-solid fa-trash"></i></a> -->
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -101,6 +103,32 @@
                 <p>Correo: <?= $_SESSION['identidad'][0]["usuario_correo"] ?></p>
                 <p>Area: <?= $_SESSION['identidad'][0]["usuario_area"] ?></p>
                 </d>
+            </div>
+            <div class="bg-[#EAF3F0] border-2 mt-4 py-1 px-3 rounded-xl mb-5">
+                <?php if(!empty($insignias)):?>
+                    <table class="w-fmd:min-w-full divide-y divide-gray-200 overflow-x-auto">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Curso</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Fecha inicio</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($insignias as $data) : ?>
+                            <?php if ($data["curso_fecha"] > date('Y-m-d')) : ?>
+                            <tr class="border-b hover:bg-orange-100 bg-gray-100">
+                                <td class="py-4 px-6 border-b border-gray-200"><?= $data["curso_nombre"] ?></td>
+                                <td class="py-4 px-6 border-b border-gray-200"><?= $data["curso_fecha"] ?></td>
+                                <td class="py-4 px-6 border-b border-gray-200">
+                                    <a href="<?= htmlspecialchars(base_url.'Participante/delete?id='.$data["curso_id"]) ?>" class="btn btn-primary"><i class="fa-solid fa-delete-left"></i> Desinscribirme</a>
+                                </td>
+                            </tr>
+                            <?php endif; ?>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                <?php endif; ?>
             </div>
             <section id="mis_insignias" class="bg-[#EAF3F0] border-2 pt-0 mb-4 rounded-xl">
                 <p class="text-center text-gray-600 font-bold text-2xl py-5">MIS INSIGNIAS</p>
