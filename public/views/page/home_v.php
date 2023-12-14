@@ -127,8 +127,8 @@
                                         <p class="text-2xl mb-5 pt-10 text-center">¿Estás seguro?</p>
                                         <!-- <p>Este es un modal con javascript</p> -->
                                         <div class=" pb-10 flex justify-center">
-                                            <button data-close-modal class="btn  border border-gray-500 text-black hover:text-white hover:border-transparent hover:bg-[#D5175E] mx-5">Cerrar</button>
-                                            <a href="<?= htmlspecialchars(base_url.'Participante/delete?id='.$data["curso_id"]) ?>" class="btn bg-red-600 text-white"><i class="fa-solid fa-delete-left"></i> Desinscribirme</a>
+                                            <button data-close-modal class="btn  border border-gray-500 text-black hover:text-white hover:border-transparent hover:bg-[#D5175E] mx-5">No</button>
+                                            <a href="<?= htmlspecialchars(base_url.'Participante/delete?id='.$data["curso_id"]) ?>" class="btn bg-red-600 text-white"><i class="fa-solid fa-delete-left"></i> Sí</a>
                                         </div>
                                     </dialog>
 
