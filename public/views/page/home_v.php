@@ -104,9 +104,10 @@
                 <p>Area: <?= $_SESSION['identidad'][0]["usuario_area"] ?></p>
                 </d>
             </div>
-            <div class="bg-[#EAF3F0] border-2 mt-4 py-1 px-3 rounded-xl mb-5">
+            <div class="mt-4 py-1 px-3 rounded-xl mb-5">
                 <?php if(!empty($insignias)):?>
-                    <table class="w-fmd:min-w-full divide-y divide-gray-200 overflow-x-auto">
+                    <h2 class="text-center text-gray-600 font-bold text-2xl py-5">PRÓXIMOS CURSOS</h2>
+                    <table class="w-full divide-y divide-gray-200 overflow-x-auto">
                         <thead class="bg-gray-50">
                             <tr>
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Curso</th>
@@ -122,16 +123,16 @@
                                 <td class="py-4 px-6 border-b border-gray-200"><?= $data["curso_fecha"] ?></td>
                                 <td class="py-4 px-6 border-b border-gray-200">
                                     <button data-open-modal class="btn btn-primary mx-3">Desinscribirme</button>
-                                    <dialog data-modal class="rounded-m ">
-                                        <p class="text-2xl mb-5 pt-10 text-center">Estas seguro</p>
-                                        <p>Este es un modal con javascript</p>
+                                    <dialog data-modal class="rounded-m px-10">
+                                        <p class="text-2xl mb-5 pt-10 text-center">¿Estas seguro?</p>
+                                        <!-- <p>Este es un modal con javascript</p> -->
                                         <div class=" pb-10 flex justify-center">
                                             <button data-close-modal class="btn  border border-gray-500 text-black hover:text-white hover:border-transparent hover:bg-[#D5175E] mx-5">Cerrar</button>
-                                            <a href="<?= htmlspecialchars(base_url.'Participante/delete?id='.$data["curso_id"]) ?>" class="btn btn-primary"><i class="fa-solid fa-delete-left"></i> Desinscribirme</a>
+                                            <a href="<?= htmlspecialchars(base_url.'Participante/delete?id='.$data["curso_id"]) ?>" class="btn bg-red-600 text-white"><i class="fa-solid fa-delete-left"></i> Desinscribirme</a>
                                         </div>
                                     </dialog>
 
-                                    <button data-open-modal class="btn btn-primary mx-3">Desinscribirme 2</button>
+                                    <!-- <button data-open-modal class="btn btn-primary mx-3">Desinscribirme 2</button>
                                     <dialog data-modal class="rounded-m ">
                                         <p class="text-2xl mb-5 pt-10 text-center">Estas seguro 2</p>
                                         <p>Este es otro modal</p>
@@ -139,7 +140,7 @@
                                             <button data-close-modal class="btn  border border-gray-500 text-black hover:text-white hover:border-transparent hover:bg-[#D5175E] mx-5">Cerrar</button>
                                             <a href="<?= htmlspecialchars(base_url.'Participante/delete?id='.$data["curso_id"]) ?>" class="btn btn-primary"><i class="fa-solid fa-delete-left"></i> Desinscribirme</a>
                                         </div>
-                                    </dialog>
+                                    </dialog> -->
 
                                 </td>
                             </tr>
