@@ -33,18 +33,34 @@ window.addEventListener('load', function() {
     //     })
     // }
 
+    // const openButtons = document.querySelectorAll("[data-open-modal]");
+    // const closeButton = document.querySelector("[data-close-modal]");
+    // const modal = document.querySelector("[data-modal]");
+
+    // openButtons.forEach(button => {
+    // button.addEventListener("click", () => {
+    //     modal.showModal();
+    // });
+    // });
+
+    // closeButton.addEventListener("click", () => {
+    // modal.close();
+    // });
+
     const openButtons = document.querySelectorAll("[data-open-modal]");
-    const closeButton = document.querySelector("[data-close-modal]");
-    const modal = document.querySelector("[data-modal]");
+    const closeButtons = document.querySelectorAll("[data-close-modal]");
+    const modals = document.querySelectorAll("[data-modal]");
 
-    openButtons.forEach(button => {
+    openButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
-        modal.showModal();
+        modals[index].showModal();
     });
     });
 
-    closeButton.addEventListener("click", () => {
-    modal.close();
+    closeButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+        modals[index].close();
+    });
     });
 
 });

@@ -121,7 +121,26 @@
                                 <td class="py-4 px-6 border-b border-gray-200"><?= $data["curso_nombre"] ?></td>
                                 <td class="py-4 px-6 border-b border-gray-200"><?= $data["curso_fecha"] ?></td>
                                 <td class="py-4 px-6 border-b border-gray-200">
-                                    <a href="<?= htmlspecialchars(base_url.'Participante/delete?id='.$data["curso_id"]) ?>" class="btn btn-primary"><i class="fa-solid fa-delete-left"></i> Desinscribirme</a>
+                                    <button data-open-modal class="btn btn-primary mx-3">Desinscribirme</button>
+                                    <dialog data-modal class="rounded-m ">
+                                        <p class="text-2xl mb-5 pt-10 text-center">Estas seguro</p>
+                                        <p>Este es un modal con javascript</p>
+                                        <div class=" pb-10 flex justify-center">
+                                            <button data-close-modal class="btn  border border-gray-500 text-black hover:text-white hover:border-transparent hover:bg-[#D5175E] mx-5">Cerrar</button>
+                                            <a href="<?= htmlspecialchars(base_url.'Participante/delete?id='.$data["curso_id"]) ?>" class="btn btn-primary"><i class="fa-solid fa-delete-left"></i> Desinscribirme</a>
+                                        </div>
+                                    </dialog>
+
+                                    <button data-open-modal class="btn btn-primary mx-3">Desinscribirme 2</button>
+                                    <dialog data-modal class="rounded-m ">
+                                        <p class="text-2xl mb-5 pt-10 text-center">Estas seguro 2</p>
+                                        <p>Este es otro modal</p>
+                                        <div class=" pb-10 flex justify-center">
+                                            <button data-close-modal class="btn  border border-gray-500 text-black hover:text-white hover:border-transparent hover:bg-[#D5175E] mx-5">Cerrar</button>
+                                            <a href="<?= htmlspecialchars(base_url.'Participante/delete?id='.$data["curso_id"]) ?>" class="btn btn-primary"><i class="fa-solid fa-delete-left"></i> Desinscribirme</a>
+                                        </div>
+                                    </dialog>
+
                                 </td>
                             </tr>
                             <?php endif; ?>
