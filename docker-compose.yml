@@ -22,7 +22,7 @@ services:
     restart: "no"
   # postgresql
   postgresql:
-    image: postgres:latest
+    image: postgres:11.18-alpine
     ports:
       - "5432:5432"
     environment:

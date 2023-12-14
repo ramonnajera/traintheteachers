@@ -199,4 +199,23 @@ class ParticipanteModel extends conection{
         
         return $cursos;
     }
+
+    public function deleteParticipante(){
+        $sql = "DELETE FROM participantes WHERE usuario_id=:usuario_id and curso_id=:curso_id;";
+
+        $data = [
+            "usuario_id" => $this->getUsuario_id(),
+            "curso_id" => $this->getCurso_id(),
+        ];
+
+        $delete = parent::nonQuery($sql, $data);
+
+        $result = false;
+        
+        if($delete){
+            $result = true;
+        }
+        
+        return $result;
+    }
 }

@@ -78,4 +78,31 @@ class ParticipanteController{
         header("Location:".base_url."Participante/all?id=".$curso);
     }
 
+    public function delete(){
+        $_respuestas = new responses();
+        $curso = isset($_GET['id']) ? $_GET['id'] :false;
+        $participante=isset($_SESSION["identidad"][0]["usuario_id"]) ? $_SESSION["identidad"][0]["usuario_id"] : false;
+        if($curso && $participante){
+            $_ParticipanteModel = new ParticipanteModel();
+            $_ParticipanteModel->setUsuario_id($participante);
+            $_ParticipanteModel->setCurso_id($curso);
+
+            $delete=$_ParticipanteModel->deleteParticipante();
+            if($delete){
+                $_respuestas->response["result"]["mensaje"] = "Desincripcion correcta";
+            }else{
+                $_respuestas->response["status"] = "error";
+                $_respuestas->response["result"]["mensaje"] = "No se logo desinscribir";
+            }
+
+        }else{
+            $_respuestas->error_u00001();
+        }
+        $_SESSION['respuesta'] = [
+            "status" => $_respuestas->response["status"],
+            "mensaje" => $_respuestas->response["result"]["mensaje"]
+        ];
+        header("Location:".base_url);
+    }
+
 }
