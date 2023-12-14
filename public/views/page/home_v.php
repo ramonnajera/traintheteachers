@@ -124,7 +124,7 @@
                                 <td class="py-4 px-6 border-b border-gray-200">
                                     <button data-open-modal class="btn btn-primary mx-3">Desinscribirme</button>
                                     <dialog data-modal class="rounded-m px-10">
-                                        <p class="text-2xl mb-5 pt-10 text-center">¿Estas seguro?</p>
+                                        <p class="text-2xl mb-5 pt-10 text-center">¿Estás seguro?</p>
                                         <!-- <p>Este es un modal con javascript</p> -->
                                         <div class=" pb-10 flex justify-center">
                                             <button data-close-modal class="btn  border border-gray-500 text-black hover:text-white hover:border-transparent hover:bg-[#D5175E] mx-5">Cerrar</button>
